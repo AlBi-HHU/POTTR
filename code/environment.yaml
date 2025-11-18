@@ -1,0 +1,15 @@
+name: pottr_env
+channels:
+  - conda-forge
+  - gurobi
+dependencies:
+  - python = 3.12.3
+  - pandas = 2.2.2
+  - networkx = 3.3
+  - gurobi = 12.0.0
+  - pydot = 3.0.1
+  - altair = 5.5.0
+  - scipy = 1.14.1
+  - filelock = 3.16.1
+  - pyreadr = 0.5.3
+  - openpyxl = 3.1.5

@@ -1,0 +1,8 @@
+.DS_Store
+._*
+
+.idea/
+Code/**/__pycache__
+Data/output/
+**/*.sol
+**/venv*

@@ -1,0 +1,1 @@
+green->-red green->-blue red->-yellow yellow->-purple yellow->-orange yellow->-grey
