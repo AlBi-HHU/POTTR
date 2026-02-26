@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="TSC2_M" label="TSC2_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="CHD8_M" label="CHD8_M" />
+      <node id="PRF1_M" label="PRF1_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="0" label="0" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="HCN1_N" label="HCN1_N" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="RAD21_M" label="RAD21_M" />
+      <node id="TSC2_N" label="TSC2_N" />
+      <node id="CASP8_M" label="CASP8_M" />
+    </nodes>
+    <edges>
+      <edge source="STIM1_M" target="SPEN_M" id="0" />
+      <edge source="TSC2_M" target="DNAH12_N" id="1" />
+      <edge source="NEB_N" target="PTEN_N" id="2" />
+      <edge source="CHD8_M" target="PRF1_M" id="3" />
+      <edge source="ASXL1_M" target="BAP1_M" id="4" />
+      <edge source="0" target="KEAP1_M" id="5" />
+      <edge source="0" target="KRAS_M" id="6" />
+      <edge source="0" target="PTPRU_M" id="7" />
+      <edge source="0" target="STIM1_M" id="8" />
+      <edge source="0" target="SPEN_M" id="9" />
+      <edge source="0" target="TSC2_M" id="10" />
+      <edge source="0" target="DNAH12_N" id="11" />
+      <edge source="0" target="NEB_N" id="12" />
+      <edge source="0" target="PTEN_N" id="13" />
+      <edge source="0" target="CHD8_M" id="14" />
+      <edge source="0" target="PRF1_M" id="15" />
+      <edge source="0" target="ASXL1_M" id="16" />
+      <edge source="0" target="BAP1_M" id="17" />
+      <edge source="0" target="ATM_M" id="18" />
+      <edge source="0" target="UBR5_N" id="19" />
+      <edge source="0" target="HCN1_N" id="20" />
+      <edge source="0" target="NFE2L2_M" id="21" />
+      <edge source="0" target="TP53_M" id="22" />
+      <edge source="0" target="RAD21_M" id="23" />
+      <edge source="0" target="TSC2_N" id="24" />
+      <edge source="0" target="CASP8_M" id="25" />
+      <edge source="ATM_M" target="UBR5_N" id="26" />
+      <edge source="HCN1_N" target="NFE2L2_M" id="27" />
+      <edge source="TP53_M" target="RAD21_M" id="28" />
+      <edge source="TSC2_N" target="CASP8_M" id="29" />
+    </edges>
+  </graph>
+</gexf>

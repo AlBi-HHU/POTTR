@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="RASA1_M" label="RASA1_M" />
+      <node id="WT1_M" label="WT1_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+      <node id="RNF43_M" label="RNF43_M" />
+      <node id="BRIP1_M" label="BRIP1_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="SMARCA4_N" label="SMARCA4_N" />
+      <node id="ATR_M" label="ATR_M" />
+      <node id="RASA1_N" label="RASA1_N" />
+      <node id="MGA_N" label="MGA_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="KEAP1_M" id="0" />
+      <edge source="0" target="TP53_M" id="1" />
+      <edge source="0" target="RASA1_M" id="2" />
+      <edge source="0" target="FAT1_M" id="3" />
+      <edge source="0" target="MGA_M" id="4" />
+      <edge source="0" target="WT1_M" id="5" />
+      <edge source="0" target="PTPRU_M" id="6" />
+      <edge source="0" target="DNAH12_N" id="7" />
+      <edge source="0" target="PIK3CG_N" id="8" />
+      <edge source="0" target="SPEN_M" id="9" />
+      <edge source="0" target="PLCG2_M" id="10" />
+      <edge source="0" target="MAP3K1_M" id="11" />
+      <edge source="0" target="RNF43_M" id="12" />
+      <edge source="0" target="BRIP1_M" id="13" />
+      <edge source="0" target="PTPRC_M" id="14" />
+      <edge source="0" target="SMARCA4_M" id="15" />
+      <edge source="0" target="SMARCA4_N" id="16" />
+      <edge source="0" target="ATR_M" id="17" />
+      <edge source="0" target="RASA1_N" id="18" />
+      <edge source="0" target="MGA_N" id="19" />
+      <edge source="FAT1_M" target="MGA_M" id="20" />
+      <edge source="TP53_M" target="WT1_M" id="21" />
+      <edge source="PTPRU_M" target="DNAH12_N" id="22" />
+      <edge source="PIK3CG_N" target="SPEN_M" id="23" />
+      <edge source="PLCG2_M" target="MAP3K1_M" id="24" />
+      <edge source="RNF43_M" target="BRIP1_M" id="25" />
+      <edge source="PTPRC_M" target="SMARCA4_M" id="26" />
+      <edge source="PTPRC_M" target="ATR_M" id="27" />
+      <edge source="SMARCA4_M" target="SMARCA4_N" id="28" />
+      <edge source="RASA1_N" target="MGA_N" id="29" />
+    </edges>
+  </graph>
+</gexf>

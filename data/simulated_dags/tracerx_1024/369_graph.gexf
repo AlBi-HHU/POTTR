@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="PRF1_M" label="PRF1_M" />
+      <node id="MSH2_M" label="MSH2_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="ACVR1B_N" label="ACVR1B_N" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="PMS1_M" label="PMS1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="U2AF1_M" label="U2AF1_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="ARID1B_N" label="ARID1B_N" />
+      <node id="FUBP1_M" label="FUBP1_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="ERCC3_M" label="ERCC3_M" />
+      <node id="CNOT3_M" label="CNOT3_M">
+        <attvalues>
+          <attvalue for="0" value="TP53_N" />
+        </attvalues>
+      </node>
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="TSC2_N" label="TSC2_N" />
+      <node id="FAS_M" label="FAS_M" />
+      <node id="PRDM1_N" label="PRDM1_N" />
+      <node id="TP53BP1_N" label="TP53BP1_N" />
+      <node id="TP53_N" label="TP53_N">
+        <attvalues>
+          <attvalue for="0" value="CNOT3_M" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="PRF1_M" target="MSH2_M" id="0" />
+      <edge source="KRAS_M" target="FAT1_M" id="1" />
+      <edge source="KRAS_M" target="ASXL2_M" id="2" />
+      <edge source="0" target="TP53_M" id="3" />
+      <edge source="0" target="SNX29_M" id="4" />
+      <edge source="0" target="PMS1_M" id="5" />
+      <edge source="0" target="U2AF1_M" id="6" />
+      <edge source="0" target="ERCC3_M" id="7" />
+      <edge source="0" target="TSC2_N" id="8" />
+      <edge source="0" target="FAS_M" id="9" />
+      <edge source="0" target="PRF1_M" id="10" />
+      <edge source="0" target="MSH2_M" id="11" />
+      <edge source="0" target="KRAS_M" id="12" />
+      <edge source="0" target="FAT1_M" id="13" />
+      <edge source="0" target="MGA_M" id="14" />
+      <edge source="0" target="ACVR1B_N" id="15" />
+      <edge source="0" target="STIM1_M" id="16" />
+      <edge source="0" target="PIK3CG_N" id="17" />
+      <edge source="0" target="PTPRB_M" id="18" />
+      <edge source="0" target="DICER1_M" id="19" />
+      <edge source="0" target="ASXL2_M" id="20" />
+      <edge source="0" target="GRIN2A_M" id="21" />
+      <edge source="0" target="ARID1B_N" id="22" />
+      <edge source="0" target="FUBP1_M" id="23" />
+      <edge source="0" target="PTPRC_M" id="24" />
+      <edge source="0" target="CNOT3_M" id="25" />
+      <edge source="0" target="PLXNB2_M" id="26" />
+      <edge source="0" target="PRDM1_N" id="27" />
+      <edge source="0" target="TP53BP1_N" id="28" />
+      <edge source="0" target="TP53_N" id="29" />
+      <edge source="MGA_M" target="ACVR1B_N" id="30" />
+      <edge source="SNX29_M" target="STIM1_M" id="31" />
+      <edge source="SNX29_M" target="PIK3CG_N" id="32" />
+      <edge source="PTPRB_M" target="DICER1_M" id="33" />
+      <edge source="GRIN2A_M" target="ARID1B_N" id="34" />
+      <edge source="FUBP1_M" target="PTPRC_M" id="35" />
+      <edge source="CNOT3_M" target="PLXNB2_M" id="36" />
+      <edge source="PRDM1_N" target="TP53BP1_N" id="37" />
+      <edge source="TP53_N" target="PLXNB2_M" id="38" />
+    </edges>
+  </graph>
+</gexf>

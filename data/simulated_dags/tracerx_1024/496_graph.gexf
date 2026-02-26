@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="0" label="0" />
+      <node id="NRXN1_N" label="NRXN1_N" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="KLF5_N" label="KLF5_N" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="FANCC_M" label="FANCC_M" />
+      <node id="ERCC2_M" label="ERCC2_M" />
+      <node id="KMT2D_N" label="KMT2D_N" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="PTCH1_M" label="PTCH1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="GRIN2A_N" label="GRIN2A_N" />
+      <node id="PMS1_M" label="PMS1_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="DOT1L_M" label="DOT1L_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+    </nodes>
+    <edges>
+      <edge source="ARID1A_N" target="KMT2D_M" id="0" />
+      <edge source="0" target="NRXN1_N" id="1" />
+      <edge source="0" target="STK11_M" id="2" />
+      <edge source="0" target="TP53_M" id="3" />
+      <edge source="0" target="KLF5_N" id="4" />
+      <edge source="0" target="ERCC2_M" id="5" />
+      <edge source="0" target="KMT2D_N" id="6" />
+      <edge source="0" target="PTPRC_M" id="7" />
+      <edge source="0" target="CREBBP_M" id="8" />
+      <edge source="0" target="DOT1L_M" id="9" />
+      <edge source="0" target="ARID1A_N" id="10" />
+      <edge source="0" target="KMT2D_M" id="11" />
+      <edge source="0" target="ASXL1_N" id="12" />
+      <edge source="0" target="STIM1_M" id="13" />
+      <edge source="0" target="TP53_N" id="14" />
+      <edge source="0" target="FANCC_M" id="15" />
+      <edge source="0" target="PIK3CG_N" id="16" />
+      <edge source="0" target="CTCF_M" id="17" />
+      <edge source="0" target="KRAS_M" id="18" />
+      <edge source="0" target="COL5A2_M" id="19" />
+      <edge source="0" target="ASXL1_M" id="20" />
+      <edge source="0" target="PTCH1_M" id="21" />
+      <edge source="0" target="SMARCA4_M" id="22" />
+      <edge source="0" target="MGA_M" id="23" />
+      <edge source="0" target="TET2_M" id="24" />
+      <edge source="0" target="PTPRU_M" id="25" />
+      <edge source="0" target="DNAH12_N" id="26" />
+      <edge source="0" target="GRIN2A_N" id="27" />
+      <edge source="0" target="PMS1_M" id="28" />
+      <edge source="0" target="STK11_N" id="29" />
+      <edge source="0" target="PTEN_N" id="30" />
+      <edge source="STK11_M" target="KRAS_M" id="31" />
+      <edge source="TP53_M" target="PTCH1_M" id="32" />
+      <edge source="ASXL1_N" target="STIM1_M" id="33" />
+      <edge source="TP53_N" target="FANCC_M" id="34" />
+      <edge source="PIK3CG_N" target="CTCF_M" id="35" />
+      <edge source="PTPRC_M" target="SMARCA4_M" id="36" />
+      <edge source="COL5A2_M" target="ASXL1_M" id="37" />
+      <edge source="MGA_M" target="TET2_M" id="38" />
+      <edge source="PTPRU_M" target="DNAH12_N" id="39" />
+      <edge source="GRIN2A_N" target="PMS1_M" id="40" />
+      <edge source="STK11_N" target="PTEN_N" id="41" />
+    </edges>
+  </graph>
+</gexf>

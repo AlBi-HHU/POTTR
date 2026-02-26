@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="TP53_M" label="TP53_M" />
+      <node id="CASP8_M" label="CASP8_M" />
+      <node id="0" label="0" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="MEN1_M" label="MEN1_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="SETD2_M" label="SETD2_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="BRAF_M" label="BRAF_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+    </nodes>
+    <edges>
+      <edge source="TP53_M" target="CASP8_M" id="0" />
+      <edge source="TP53_M" target="ERCC3_N" id="1" />
+      <edge source="0" target="TP53_M" id="2" />
+      <edge source="0" target="KRAS_M" id="3" />
+      <edge source="0" target="SETD2_M" id="4" />
+      <edge source="0" target="CASP8_M" id="5" />
+      <edge source="0" target="DICER1_M" id="6" />
+      <edge source="0" target="PTPRU_M" id="7" />
+      <edge source="0" target="FAT1_M" id="8" />
+      <edge source="0" target="MEN1_M" id="9" />
+      <edge source="0" target="ERCC3_N" id="10" />
+      <edge source="0" target="TP53_N" id="11" />
+      <edge source="0" target="PLCG2_M" id="12" />
+      <edge source="0" target="BRAF_M" id="13" />
+      <edge source="0" target="PTEN_N" id="14" />
+      <edge source="DICER1_M" target="PTPRU_M" id="15" />
+      <edge source="KRAS_M" target="PTEN_N" id="16" />
+      <edge source="FAT1_M" target="MEN1_M" id="17" />
+      <edge source="ERCC3_N" target="TP53_N" id="18" />
+      <edge source="PLCG2_M" target="BRAF_M" id="19" />
+    </edges>
+  </graph>
+</gexf>

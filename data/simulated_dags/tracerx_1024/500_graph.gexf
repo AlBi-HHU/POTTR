@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="ATF7IP_M" label="ATF7IP_M" />
+      <node id="NIN_M" label="NIN_M" />
+      <node id="RASA1_M" label="RASA1_M" />
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TP53BP1_M" label="TP53BP1_M" />
+      <node id="U2AF1_M" label="U2AF1_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="SGK223_M" label="SGK223_M" />
+      <node id="CBLB_M" label="CBLB_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="STK11_M" id="0" />
+      <edge source="0" target="NIN_M" id="1" />
+      <edge source="0" target="RASA1_M" id="2" />
+      <edge source="0" target="U2AF1_M" id="3" />
+      <edge source="0" target="TP53_N" id="4" />
+      <edge source="0" target="ATF7IP_M" id="5" />
+      <edge source="0" target="NOTCH2_M" id="6" />
+      <edge source="0" target="MTOR_M" id="7" />
+      <edge source="0" target="KRAS_M" id="8" />
+      <edge source="0" target="TP53BP1_M" id="9" />
+      <edge source="0" target="TP53_M" id="10" />
+      <edge source="0" target="SGK223_M" id="11" />
+      <edge source="0" target="CBLB_M" id="12" />
+      <edge source="0" target="ERCC3_N" id="13" />
+      <edge source="0" target="SNX29_M" id="14" />
+      <edge source="0" target="ASXL1_M" id="15" />
+      <edge source="TP53_N" target="ATF7IP_M" id="16" />
+      <edge source="NOTCH2_M" target="MTOR_M" id="17" />
+      <edge source="KRAS_M" target="TP53BP1_M" id="18" />
+      <edge source="TP53_M" target="SGK223_M" id="19" />
+      <edge source="CBLB_M" target="ERCC3_N" id="20" />
+      <edge source="SNX29_M" target="ASXL1_M" id="21" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="STK11_N" label="STK11_N" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="0" label="0" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="RIT1_M" label="RIT1_M" />
+      <node id="FAS_M" label="FAS_M" />
+      <node id="NCOR1_N" label="NCOR1_N" />
+      <node id="BHMT2_M" label="BHMT2_M">
+        <attvalues>
+          <attvalue for="0" value="ASXL1_N" />
+        </attvalues>
+      </node>
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="BRCA2_M" label="BRCA2_M" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+      <node id="ASXL1_N" label="ASXL1_N">
+        <attvalues>
+          <attvalue for="0" value="BHMT2_M" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="STK11_N" target="ASXL2_M" id="0" />
+      <edge source="STK11_N" target="ARID1A_N" id="1" />
+      <edge source="0" target="TP53_N" id="2" />
+      <edge source="0" target="KRAS_M" id="3" />
+      <edge source="0" target="RIT1_M" id="4" />
+      <edge source="0" target="RB1_N" id="5" />
+      <edge source="0" target="STK11_N" id="6" />
+      <edge source="0" target="ASXL2_M" id="7" />
+      <edge source="0" target="FAS_M" id="8" />
+      <edge source="0" target="NCOR1_N" id="9" />
+      <edge source="0" target="BHMT2_M" id="10" />
+      <edge source="0" target="STIM1_M" id="11" />
+      <edge source="0" target="ARID1A_N" id="12" />
+      <edge source="0" target="PTPRB_M" id="13" />
+      <edge source="0" target="SETDB1_M" id="14" />
+      <edge source="0" target="KEAP1_M" id="15" />
+      <edge source="0" target="CUX1_M" id="16" />
+      <edge source="0" target="PTPRU_M" id="17" />
+      <edge source="0" target="DNAH12_N" id="18" />
+      <edge source="0" target="BRCA2_M" id="19" />
+      <edge source="0" target="CTCF_M" id="20" />
+      <edge source="0" target="PLXNB2_M" id="21" />
+      <edge source="0" target="MAP3K1_M" id="22" />
+      <edge source="0" target="ASXL1_N" id="23" />
+      <edge source="FAS_M" target="NCOR1_N" id="24" />
+      <edge source="BHMT2_M" target="STIM1_M" id="25" />
+      <edge source="STIM1_M" target="CTCF_M" id="26" />
+      <edge source="PTPRB_M" target="SETDB1_M" id="27" />
+      <edge source="PTPRB_M" target="BRCA2_M" id="28" />
+      <edge source="KEAP1_M" target="CUX1_M" id="29" />
+      <edge source="PTPRU_M" target="DNAH12_N" id="30" />
+      <edge source="PLXNB2_M" target="MAP3K1_M" id="31" />
+      <edge source="ASXL1_N" target="STIM1_M" id="32" />
+    </edges>
+  </graph>
+</gexf>

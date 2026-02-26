@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="STK11_M" label="STK11_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="NOTCH2_M" label="NOTCH2_M">
+        <attvalues>
+          <attvalue for="0" value="ARID1A_N" />
+        </attvalues>
+      </node>
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="ARID1A_N" label="ARID1A_N">
+        <attvalues>
+          <attvalue for="0" value="NOTCH2_M" />
+        </attvalues>
+      </node>
+      <node id="0" label="0" />
+    </nodes>
+    <edges>
+      <edge source="STK11_M" target="KRAS_M" id="0" />
+      <edge source="NOTCH2_M" target="PIK3CG_N" id="1" />
+      <edge source="ARID1A_N" target="PIK3CG_N" id="2" />
+      <edge source="0" target="STK11_M" id="3" />
+      <edge source="0" target="KRAS_M" id="4" />
+      <edge source="0" target="NOTCH2_M" id="5" />
+      <edge source="0" target="PIK3CG_N" id="6" />
+      <edge source="0" target="ARID1A_N" id="7" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FANCM_M" label="FANCM_M" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="FLT4_M" label="FLT4_M" />
+      <node id="PIK3CA_M" label="PIK3CA_M" />
+      <node id="MEN1_M" label="MEN1_M" />
+      <node id="0" label="0" />
+      <node id="GATA3_M" label="GATA3_M" />
+    </nodes>
+    <edges>
+      <edge source="FANCM_M" target="KMT2C_M" id="0" />
+      <edge source="GRIN2A_M" target="FLT4_M" id="1" />
+      <edge source="PIK3CA_M" target="MEN1_M" id="2" />
+      <edge source="0" target="GATA3_M" id="3" />
+      <edge source="0" target="FANCM_M" id="4" />
+      <edge source="0" target="KMT2C_M" id="5" />
+      <edge source="0" target="GRIN2A_M" id="6" />
+      <edge source="0" target="FLT4_M" id="7" />
+      <edge source="0" target="PIK3CA_M" id="8" />
+      <edge source="0" target="MEN1_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

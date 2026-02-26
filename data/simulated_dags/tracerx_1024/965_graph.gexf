@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FGFR3_M" label="FGFR3_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="NRXN1_N" label="NRXN1_N" />
+      <node id="PATZ1_N" label="PATZ1_N" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="DNAH12_M" label="DNAH12_M" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="TSC2_M" label="TSC2_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="SMARCA4_N" label="SMARCA4_N" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="ATF7IP_M" label="ATF7IP_M" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="TSC1_M" label="TSC1_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="TSHR_M" label="TSHR_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="FAT1_N" label="FAT1_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="MTOR_N" label="MTOR_N" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="ATR_M" label="ATR_M" />
+    </nodes>
+    <edges>
+      <edge source="FGFR3_M" target="FAT1_M" id="0" />
+      <edge source="NRXN1_N" target="PATZ1_N" id="1" />
+      <edge source="COL2A1_M" target="ASXL1_M" id="2" />
+      <edge source="0" target="TP53_M" id="3" />
+      <edge source="0" target="MGA_N" id="4" />
+      <edge source="0" target="TSHR_M" id="5" />
+      <edge source="0" target="STK11_N" id="6" />
+      <edge source="0" target="FGFR3_M" id="7" />
+      <edge source="0" target="FAT1_M" id="8" />
+      <edge source="0" target="NRXN1_N" id="9" />
+      <edge source="0" target="PATZ1_N" id="10" />
+      <edge source="0" target="COL2A1_M" id="11" />
+      <edge source="0" target="ASXL1_M" id="12" />
+      <edge source="0" target="DNAH12_M" id="13" />
+      <edge source="0" target="HIST1H4E_M" id="14" />
+      <edge source="0" target="ARID1A_N" id="15" />
+      <edge source="0" target="TSC2_M" id="16" />
+      <edge source="0" target="SMARCA4_M" id="17" />
+      <edge source="0" target="SMARCA4_N" id="18" />
+      <edge source="0" target="CREBBP_M" id="19" />
+      <edge source="0" target="ATF7IP_M" id="20" />
+      <edge source="0" target="FLT4_N" id="21" />
+      <edge source="0" target="TSC1_M" id="22" />
+      <edge source="0" target="CUX1_M" id="23" />
+      <edge source="0" target="DICER1_M" id="24" />
+      <edge source="0" target="KEAP1_M" id="25" />
+      <edge source="0" target="FAT1_N" id="26" />
+      <edge source="0" target="KMT2C_M" id="27" />
+      <edge source="0" target="MTOR_N" id="28" />
+      <edge source="0" target="STIM1_M" id="29" />
+      <edge source="0" target="ATR_M" id="30" />
+      <edge source="DNAH12_M" target="HIST1H4E_M" id="31" />
+      <edge source="ARID1A_N" target="TSC2_M" id="32" />
+      <edge source="SMARCA4_M" target="SMARCA4_N" id="33" />
+      <edge source="SMARCA4_M" target="CUX1_M" id="34" />
+      <edge source="CREBBP_M" target="ATF7IP_M" id="35" />
+      <edge source="FLT4_N" target="TSC1_M" id="36" />
+      <edge source="DICER1_M" target="CREBBP_M" id="37" />
+      <edge source="KEAP1_M" target="FAT1_N" id="38" />
+      <edge source="KMT2C_M" target="MTOR_N" id="39" />
+      <edge source="STIM1_M" target="ATR_M" id="40" />
+    </edges>
+  </graph>
+</gexf>

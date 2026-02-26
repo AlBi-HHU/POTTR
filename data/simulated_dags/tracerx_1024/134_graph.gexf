@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="ERCC4_M" label="ERCC4_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="RB1_M" label="RB1_M" />
+      <node id="NRXN1_N" label="NRXN1_N" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="CASP8_M" label="CASP8_M" />
+      <node id="SERPINB13_M" label="SERPINB13_M" />
+      <node id="NCOR1_N" label="NCOR1_N" />
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="BIVM-ERCC5_N" label="BIVM-ERCC5_N" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="ANK2_N" label="ANK2_N" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="NEB_N" label="NEB_N">
+        <attvalues>
+          <attvalue for="0" value="DICER1_M" />
+        </attvalues>
+      </node>
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="MLH1_M" label="MLH1_M" />
+      <node id="0" label="0" />
+      <node id="DICER1_M" label="DICER1_M">
+        <attvalues>
+          <attvalue for="0" value="NEB_N" />
+        </attvalues>
+      </node>
+      <node id="STK11_N" label="STK11_N" />
+      <node id="LAMA4_N" label="LAMA4_N" />
+    </nodes>
+    <edges>
+      <edge source="KRAS_M" target="ERCC4_M" id="0" />
+      <edge source="KRAS_M" target="TP53_M" id="1" />
+      <edge source="TP53_M" target="UBR5_N" id="2" />
+      <edge source="TP53_M" target="MLH1_M" id="3" />
+      <edge source="TP53_M" target="LAMA4_N" id="4" />
+      <edge source="PTPRC_M" target="CUX1_M" id="5" />
+      <edge source="RB1_M" target="NRXN1_N" id="6" />
+      <edge source="ARID1A_N" target="CASP8_M" id="7" />
+      <edge source="SERPINB13_M" target="NCOR1_N" id="8" />
+      <edge source="PTPRU_M" target="MGA_M" id="9" />
+      <edge source="BIVM-ERCC5_N" target="EP300_M" id="10" />
+      <edge source="ANK2_N" target="BAP1_M" id="11" />
+      <edge source="CREBBP_M" target="TET2_M" id="12" />
+      <edge source="NEB_N" target="SMARCA4_M" id="13" />
+      <edge source="0" target="SMARCA4_M" id="14" />
+      <edge source="0" target="STK11_N" id="15" />
+      <edge source="0" target="KRAS_M" id="16" />
+      <edge source="0" target="ERCC4_M" id="17" />
+      <edge source="0" target="TP53_M" id="18" />
+      <edge source="0" target="PTPRC_M" id="19" />
+      <edge source="0" target="CUX1_M" id="20" />
+      <edge source="0" target="RB1_M" id="21" />
+      <edge source="0" target="NRXN1_N" id="22" />
+      <edge source="0" target="ARID1A_N" id="23" />
+      <edge source="0" target="CASP8_M" id="24" />
+      <edge source="0" target="SERPINB13_M" id="25" />
+      <edge source="0" target="NCOR1_N" id="26" />
+      <edge source="0" target="UBR5_N" id="27" />
+      <edge source="0" target="PTPRU_M" id="28" />
+      <edge source="0" target="MGA_M" id="29" />
+      <edge source="0" target="BIVM-ERCC5_N" id="30" />
+      <edge source="0" target="EP300_M" id="31" />
+      <edge source="0" target="ANK2_N" id="32" />
+      <edge source="0" target="BAP1_M" id="33" />
+      <edge source="0" target="CREBBP_M" id="34" />
+      <edge source="0" target="TET2_M" id="35" />
+      <edge source="0" target="NEB_N" id="36" />
+      <edge source="0" target="MLH1_M" id="37" />
+      <edge source="0" target="DICER1_M" id="38" />
+      <edge source="0" target="LAMA4_N" id="39" />
+      <edge source="DICER1_M" target="SMARCA4_M" id="40" />
+    </edges>
+  </graph>
+</gexf>

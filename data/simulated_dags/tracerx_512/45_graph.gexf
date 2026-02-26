@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="TIMM17A_M" label="TIMM17A_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="0" label="0" />
+      <node id="APC_N" label="APC_N" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="RYR2_N" label="RYR2_N" />
+      <node id="CTNNB1_M" label="CTNNB1_M" />
+      <node id="CSMD3_N" label="CSMD3_N" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+    </nodes>
+    <edges>
+      <edge source="TIMM17A_M" target="FAT1_M" id="0" />
+      <edge source="0" target="APC_N" id="1" />
+      <edge source="0" target="KRAS_M" id="2" />
+      <edge source="0" target="IQGAP2_N" id="3" />
+      <edge source="0" target="TIMM17A_M" id="4" />
+      <edge source="0" target="FAT1_M" id="5" />
+      <edge source="0" target="RYR2_N" id="6" />
+      <edge source="0" target="CTNNB1_M" id="7" />
+      <edge source="0" target="CSMD3_N" id="8" />
+      <edge source="0" target="EP300_M" id="9" />
+      <edge source="0" target="NEB_N" id="10" />
+      <edge source="0" target="PTEN_N" id="11" />
+      <edge source="RYR2_N" target="CTNNB1_M" id="12" />
+      <edge source="CSMD3_N" target="EP300_M" id="13" />
+      <edge source="NEB_N" target="PTEN_N" id="14" />
+    </edges>
+  </graph>
+</gexf>

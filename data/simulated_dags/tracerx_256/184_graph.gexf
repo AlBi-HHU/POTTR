@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="ARID2_M" label="ARID2_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="MEN1_M" label="MEN1_M" />
+      <node id="RPS2_M" label="RPS2_M" />
+      <node id="CUL3_M" label="CUL3_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+      <node id="NCOR1_M" label="NCOR1_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="ATF7IP_M" label="ATF7IP_M" />
+      <node id="FAS_M" label="FAS_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="PLCG2_M" id="0" />
+      <edge source="0" target="TP53_M" id="1" />
+      <edge source="0" target="RPS2_M" id="2" />
+      <edge source="0" target="CUL3_M" id="3" />
+      <edge source="0" target="KEAP1_M" id="4" />
+      <edge source="0" target="RB1_N" id="5" />
+      <edge source="0" target="TP53_N" id="6" />
+      <edge source="0" target="ARID2_M" id="7" />
+      <edge source="0" target="ATM_M" id="8" />
+      <edge source="0" target="SETDB1_M" id="9" />
+      <edge source="0" target="FAT1_M" id="10" />
+      <edge source="0" target="MEN1_M" id="11" />
+      <edge source="0" target="MAP3K1_M" id="12" />
+      <edge source="0" target="NCOR1_M" id="13" />
+      <edge source="0" target="COL2A1_M" id="14" />
+      <edge source="0" target="STIM1_M" id="15" />
+      <edge source="0" target="CREBBP_M" id="16" />
+      <edge source="0" target="ATF7IP_M" id="17" />
+      <edge source="0" target="FAS_M" id="18" />
+      <edge source="0" target="PLXNB2_M" id="19" />
+      <edge source="TP53_N" target="ARID2_M" id="20" />
+      <edge source="TP53_N" target="PLXNB2_M" id="21" />
+      <edge source="TP53_M" target="MAP3K1_M" id="22" />
+      <edge source="TP53_M" target="FAS_M" id="23" />
+      <edge source="ATM_M" target="SETDB1_M" id="24" />
+      <edge source="FAT1_M" target="MEN1_M" id="25" />
+      <edge source="KEAP1_M" target="NCOR1_M" id="26" />
+      <edge source="COL2A1_M" target="STIM1_M" id="27" />
+      <edge source="CREBBP_M" target="ATF7IP_M" id="28" />
+    </edges>
+  </graph>
+</gexf>

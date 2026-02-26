@@ -21,7 +21,7 @@ The easiest way to get POTTR running is by using [a conda distribution like mini
 
 After setting up conda (installation + initialization for your shell), create a new environment with the provided `environment.yaml` which contains the required dependencies for POTTR.
 
-In the [Code](Code/) directory execute:
+In the [code](code/) directory execute:
 
 ```shell
 conda env create -f environment.yaml
@@ -45,28 +45,35 @@ We provide cell differentiation maps generated with [Carta](https://github.com/r
 
 ## Execution
 
-In the [code](Code/) directory, run POTTR via the `./run_POTTR.py` Python script.
+In the [code](code/) directory, run POTTR via the `./run_POTTR.py` Python script.
 
 ### Program arguments
 
 The following arguments are available:
 
-| Argument          | Argument long form               | Description                                                                              |
-|-------------------|----------------------------------|------------------------------------------------------------------------------------------|
-| -h                | --help                           | show help message and exit                                                               |
-| -o <path>         | --output-path <path>             | Path to store output files                                                               |
-| -d <dags>         | --dags <dags>                    | File or directory containing transitively closed DAGs (incomplete posets)                |
-| -k <k>            | --k <k>                          | Number k of incomplete posets to search for common trajectory                            |
-| -c <cores>        | --cores <cores>                  | Number cores / threads Gurobi should use; default 0, Gurobi will use all available cores |
-| -parallel         | --parallelize                    | Enable parallel processing for creating conflict graph                                   |
-| -pool <pool size> | --solution-pool-size <pool size> | Solution pool size for Gurobi to retrieve multiple solutions                             |
-| -v                | --verbose                        | Increase output verbosity                                                                |
-| -dots             | --draw_dots                      | Create trajectory png files (only recommended for small instances)                       |
+| Argument          | Argument long form                 | Description                                                                                                                             |
+|-------------------|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| -h                | --help                             | show help message and exit                                                                                                              |
+| -o <path>         | --output-path <path>               | Path to store output files                                                                                                              |
+| -d <dags>         | --dags <dags>                      | File or directory containing transitively closed DAGs (incomplete posets)                                                               |
+| -k <k>            | --k <k>                            | Number k of incomplete posets to search for common trajectory                                                                           |
+| -rt <threshold>   | --resolution_threshold <threshold> | Optional threshold of orders a ≺ b that must be observed in the data to resolve a hidden order a ~ b to a ≺ b (default=1)               |
+| -rf               | --resolution_frequency             | Optional flag to only resolve hidden orders a ~ b in the direction of the most frequent order, i.e. either a ≺ b or b ≺ a, but not both |
+| -c <cores>        | --cores <cores>                    | Number cores / threads Gurobi should use; default 0, Gurobi will use all available cores                                                |
+| -parallel         | --parallelize                      | Enable parallel processing for creating conflict graph                                                                                  |
+| -pool <pool size> | --solution-pool-size <pool size>   | Solution pool size for Gurobi to retrieve multiple solutions                                                                            |
+| -v                | --verbose                          | Increase output verbosity                                                                                                               |
+| -dots             | --draw_dots                        | Create trajectory png files (only recommended for small instances)                                                                      |
 
+Especially in tumor trees inferred from bulk sequencing data, mutation clusters are very common. Mutations in such a cluster are related by a hidden order, which POTTR can resolve to a certain order.
+Generally, it is sufficient for POTTR to observe one tumor tree with a known order for a mutation pair to resolve the hidden relation between this pair in a different tumor graph.
+However, to increase confidence in the resolution, you might want to require a larger number of tumor trees supporting a certain order to resolve a hidden order to that order.
+Or, in case that a ~ b, a ≺ b, and b ≺ a are observed in the data, you probably wish to resolve a cluster only in the direction of the most frequent order a ≺ b or b ≺ a, but not in both directions.
+This you can achieve through the parameters `--resolution_threshold` and `--resolution_frequency`.
 
 ### Example execution with test data
 
-In the [Code](Code/) directory execute:
+In the [code](code/) directory execute:
 
 ```shell
 python run_POTTR.py --dags ../Data/test_data/ --output-path ../Data/output -k 3 -v

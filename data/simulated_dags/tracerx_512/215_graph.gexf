@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="0" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="PLXNB2_N" label="PLXNB2_N" />
+      <node id="ACVR1B_M" label="ACVR1B_M">
+        <attvalues>
+          <attvalue for="0" value="SETD2_M" />
+        </attvalues>
+      </node>
+      <node id="NF2_M" label="NF2_M" />
+      <node id="SETD2_M" label="SETD2_M">
+        <attvalues>
+          <attvalue for="0" value="ACVR1B_M" />
+        </attvalues>
+      </node>
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="NBN_M" label="NBN_M" />
+      <node id="ARID1B_M" label="ARID1B_M" />
+      <node id="APC_M" label="APC_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="IKZF1_M" label="IKZF1_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="FAT1_M" id="0" />
+      <edge source="0" target="IKZF1_M" id="1" />
+      <edge source="0" target="KEAP1_M" id="2" />
+      <edge source="0" target="PLXNB2_N" id="3" />
+      <edge source="0" target="ACVR1B_M" id="4" />
+      <edge source="0" target="NF2_M" id="5" />
+      <edge source="0" target="SETD2_M" id="6" />
+      <edge source="0" target="DICER1_M" id="7" />
+      <edge source="0" target="SMARCA4_M" id="8" />
+      <edge source="0" target="NBN_M" id="9" />
+      <edge source="0" target="ARID1B_M" id="10" />
+      <edge source="0" target="APC_M" id="11" />
+      <edge source="0" target="SPEN_M" id="12" />
+      <edge source="0" target="ATM_M" id="13" />
+      <edge source="0" target="COL5A2_M" id="14" />
+      <edge source="0" target="IQGAP2_N" id="15" />
+      <edge source="0" target="KMT2D_M" id="16" />
+      <edge source="0" target="COL2A1_M" id="17" />
+      <edge source="0" target="STIM1_M" id="18" />
+      <edge source="KEAP1_M" target="PLXNB2_N" id="19" />
+      <edge source="ACVR1B_M" target="NF2_M" id="20" />
+      <edge source="SETD2_M" target="NF2_M" id="21" />
+      <edge source="DICER1_M" target="SMARCA4_M" id="22" />
+      <edge source="NBN_M" target="ARID1B_M" id="23" />
+      <edge source="APC_M" target="SPEN_M" id="24" />
+      <edge source="ATM_M" target="COL5A2_M" id="25" />
+      <edge source="IQGAP2_N" target="KMT2D_M" id="26" />
+      <edge source="COL2A1_M" target="STIM1_M" id="27" />
+    </edges>
+  </graph>
+</gexf>

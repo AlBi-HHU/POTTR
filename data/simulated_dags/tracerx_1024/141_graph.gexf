@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="0" label="0" />
+    </nodes>
+    <edges>
+      <edge source="ASXL1_N" target="MTOR_M" id="0" />
+      <edge source="0" target="ASXL1_N" id="1" />
+      <edge source="0" target="MTOR_M" id="2" />
+    </edges>
+  </graph>
+</gexf>

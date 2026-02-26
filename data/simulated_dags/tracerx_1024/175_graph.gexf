@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ATM_M" label="ATM_M" />
+      <node id="RIMS2_N" label="RIMS2_N" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="0" label="0" />
+      <node id="PALB2_M" label="PALB2_M" />
+      <node id="BCLAF1_M" label="BCLAF1_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="STK11_M" label="STK11_M" />
+    </nodes>
+    <edges>
+      <edge source="ATM_M" target="RIMS2_N" id="0" />
+      <edge source="PTPRC_M" target="HIST1H4E_M" id="1" />
+      <edge source="0" target="PALB2_M" id="2" />
+      <edge source="0" target="BCLAF1_M" id="3" />
+      <edge source="0" target="CDKN2A_M" id="4" />
+      <edge source="0" target="STK11_M" id="5" />
+      <edge source="0" target="ATM_M" id="6" />
+      <edge source="0" target="RIMS2_N" id="7" />
+      <edge source="0" target="PTPRC_M" id="8" />
+      <edge source="0" target="HIST1H4E_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

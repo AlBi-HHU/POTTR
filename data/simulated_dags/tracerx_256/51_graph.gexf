@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="FAT1_N" label="FAT1_N" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="FANCM_N" label="FANCM_N" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="0" label="0" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="FBXO11_M" label="FBXO11_M" />
+    </nodes>
+    <edges>
+      <edge source="KRAS_M" target="CIC_M" id="0" />
+      <edge source="STK11_N" target="SMARCA4_M" id="1" />
+      <edge source="DICER1_M" target="EZH1_M" id="2" />
+      <edge source="TP53_M" target="FAT1_N" id="3" />
+      <edge source="FAT1_N" target="FBXO11_M" id="4" />
+      <edge source="PTPRB_M" target="DICER1_M" id="5" />
+      <edge source="FANCM_N" target="POT1_M" id="6" />
+      <edge source="COL5A2_M" target="STIM1_M" id="7" />
+      <edge source="0" target="CDKN2A_N" id="8" />
+      <edge source="0" target="KRAS_M" id="9" />
+      <edge source="0" target="CIC_M" id="10" />
+      <edge source="0" target="STK11_N" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+      <edge source="0" target="DICER1_M" id="13" />
+      <edge source="0" target="EZH1_M" id="14" />
+      <edge source="0" target="TP53_M" id="15" />
+      <edge source="0" target="FAT1_N" id="16" />
+      <edge source="0" target="PTPRB_M" id="17" />
+      <edge source="0" target="FANCM_N" id="18" />
+      <edge source="0" target="POT1_M" id="19" />
+      <edge source="0" target="COL5A2_M" id="20" />
+      <edge source="0" target="STIM1_M" id="21" />
+      <edge source="0" target="FBXO11_M" id="22" />
+    </edges>
+  </graph>
+</gexf>

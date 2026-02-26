@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="MBD1_M" label="MBD1_M" />
+      <node id="AXIN1_N" label="AXIN1_N" />
+      <node id="CNOT3_N" label="CNOT3_N" />
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+    </nodes>
+    <edges>
+      <edge source="SMARCA4_M" target="TNFAIP3_M" id="0" />
+      <edge source="NFE2L2_M" target="MBD1_M" id="1" />
+      <edge source="AXIN1_N" target="CNOT3_N" id="2" />
+      <edge source="NOTCH2_M" target="PIK3CG_N" id="3" />
+      <edge source="0" target="TP53_M" id="4" />
+      <edge source="0" target="SMARCA4_M" id="5" />
+      <edge source="0" target="TNFAIP3_M" id="6" />
+      <edge source="0" target="NFE2L2_M" id="7" />
+      <edge source="0" target="MBD1_M" id="8" />
+      <edge source="0" target="AXIN1_N" id="9" />
+      <edge source="0" target="CNOT3_N" id="10" />
+      <edge source="0" target="NOTCH2_M" id="11" />
+      <edge source="0" target="PIK3CG_N" id="12" />
+    </edges>
+  </graph>
+</gexf>

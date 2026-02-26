@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="RYR2_N" label="RYR2_N" />
+      <node id="FANCM_N" label="FANCM_N" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="FANCC_M" label="FANCC_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="MLH1_M" label="MLH1_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="0" label="0" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="NOTCH1_N" label="NOTCH1_N" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="FLCN_M" label="FLCN_M" />
+      <node id="CNOT3_M" label="CNOT3_M" />
+    </nodes>
+    <edges>
+      <edge source="RYR2_N" target="FANCM_N" id="0" />
+      <edge source="TP53_N" target="FANCC_M" id="1" />
+      <edge source="ARID1A_N" target="MLH1_M" id="2" />
+      <edge source="STK11_N" target="SMARCA4_M" id="3" />
+      <edge source="0" target="PTEN_N" id="4" />
+      <edge source="0" target="RYR2_N" id="5" />
+      <edge source="0" target="FANCM_N" id="6" />
+      <edge source="0" target="TP53_N" id="7" />
+      <edge source="0" target="FANCC_M" id="8" />
+      <edge source="0" target="ARID1A_N" id="9" />
+      <edge source="0" target="MLH1_M" id="10" />
+      <edge source="0" target="STK11_N" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+      <edge source="0" target="NOTCH1_N" id="13" />
+      <edge source="0" target="CREBBP_M" id="14" />
+      <edge source="0" target="IQGAP2_N" id="15" />
+      <edge source="0" target="MTOR_M" id="16" />
+      <edge source="0" target="FLCN_M" id="17" />
+      <edge source="0" target="CNOT3_M" id="18" />
+      <edge source="NOTCH1_N" target="CREBBP_M" id="19" />
+      <edge source="IQGAP2_N" target="MTOR_M" id="20" />
+      <edge source="FLCN_M" target="CNOT3_M" id="21" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="DOT1L_M" label="DOT1L_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="EPB41L3_N" label="EPB41L3_N" />
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="DOT1L_M" id="0" />
+      <edge source="0" target="STK11_M" id="1" />
+      <edge source="0" target="MGA_M" id="2" />
+      <edge source="0" target="BHMT2_M" id="3" />
+      <edge source="0" target="DICER1_M" id="4" />
+      <edge source="0" target="EPB41L3_N" id="5" />
+      <edge source="0" target="FLT4_N" id="6" />
+      <edge source="0" target="TP53_M" id="7" />
+      <edge source="0" target="ERCC3_N" id="8" />
+      <edge source="BHMT2_M" target="DICER1_M" id="9" />
+      <edge source="EPB41L3_N" target="FLT4_N" id="10" />
+      <edge source="TP53_M" target="ERCC3_N" id="11" />
+    </edges>
+  </graph>
+</gexf>

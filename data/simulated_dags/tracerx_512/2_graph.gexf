@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="ATR_M" label="ATR_M" />
+      <node id="0" label="0" />
+      <node id="ITGBL1_N" label="ITGBL1_N" />
+      <node id="LAMA4_N" label="LAMA4_N" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+    </nodes>
+    <edges>
+      <edge source="ASXL1_M" target="ATR_M" id="0" />
+      <edge source="0" target="ITGBL1_N" id="1" />
+      <edge source="0" target="ASXL1_M" id="2" />
+      <edge source="0" target="ATR_M" id="3" />
+      <edge source="0" target="LAMA4_N" id="4" />
+      <edge source="0" target="PTPRC_M" id="5" />
+      <edge source="LAMA4_N" target="PTPRC_M" id="6" />
+    </edges>
+  </graph>
+</gexf>

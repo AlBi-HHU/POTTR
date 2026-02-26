@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="TP53_M" label="TP53_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="0" label="0" />
+      <node id="ERCC4_N" label="ERCC4_N" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="NTRK1_N" label="NTRK1_N" />
+      <node id="ARID2_N" label="ARID2_N" />
+      <node id="SMAD4_M" label="SMAD4_M" />
+      <node id="CREBBP_N" label="CREBBP_N" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="ARID1B_M" label="ARID1B_M" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="NF1_N" label="NF1_N" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PIK3R1_M" label="PIK3R1_M" />
+      <node id="FBXO11_M" label="FBXO11_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="RASA1_N" label="RASA1_N" />
+      <node id="ZFP36L1_M" label="ZFP36L1_M" />
+    </nodes>
+    <edges>
+      <edge source="TP53_M" target="PLXNB2_M" id="0" />
+      <edge source="TP53_M" target="SETDB1_M" id="1" />
+      <edge source="ASXL2_M" target="PTEN_N" id="2" />
+      <edge source="0" target="ERCC4_N" id="3" />
+      <edge source="0" target="POT1_M" id="4" />
+      <edge source="0" target="TP53_M" id="5" />
+      <edge source="0" target="PLXNB2_M" id="6" />
+      <edge source="0" target="ASXL2_M" id="7" />
+      <edge source="0" target="PTEN_N" id="8" />
+      <edge source="0" target="SETDB1_M" id="9" />
+      <edge source="0" target="NTRK1_N" id="10" />
+      <edge source="0" target="ARID2_N" id="11" />
+      <edge source="0" target="SMAD4_M" id="12" />
+      <edge source="0" target="CREBBP_N" id="13" />
+      <edge source="0" target="FAT1_M" id="14" />
+      <edge source="0" target="ARID1B_M" id="15" />
+      <edge source="0" target="CDKN2A_M" id="16" />
+      <edge source="0" target="NF1_N" id="17" />
+      <edge source="0" target="ARID1A_N" id="18" />
+      <edge source="0" target="DICER1_M" id="19" />
+      <edge source="0" target="STK11_N" id="20" />
+      <edge source="0" target="PIK3R1_M" id="21" />
+      <edge source="0" target="FBXO11_M" id="22" />
+      <edge source="0" target="KEAP1_M" id="23" />
+      <edge source="0" target="CUX1_M" id="24" />
+      <edge source="0" target="EZH1_M" id="25" />
+      <edge source="0" target="TNFAIP3_M" id="26" />
+      <edge source="0" target="RASA1_N" id="27" />
+      <edge source="0" target="ZFP36L1_M" id="28" />
+      <edge source="NTRK1_N" target="ARID2_N" id="29" />
+      <edge source="SMAD4_M" target="CREBBP_N" id="30" />
+      <edge source="FAT1_M" target="ARID1B_M" id="31" />
+      <edge source="CDKN2A_M" target="NF1_N" id="32" />
+      <edge source="ARID1A_N" target="DICER1_M" id="33" />
+      <edge source="ARID1A_N" target="FBXO11_M" id="34" />
+      <edge source="STK11_N" target="PIK3R1_M" id="35" />
+      <edge source="KEAP1_M" target="CUX1_M" id="36" />
+      <edge source="EZH1_M" target="TNFAIP3_M" id="37" />
+      <edge source="RASA1_N" target="ZFP36L1_M" id="38" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="0" label="0" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="ZMYM2_M" label="ZMYM2_M" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="SMARCB1_M" label="SMARCB1_M">
+        <attvalues>
+          <attvalue for="0" value="STK11_N" />
+        </attvalues>
+      </node>
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="STK11_N" label="STK11_N">
+        <attvalues>
+          <attvalue for="0" value="SMARCB1_M" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="KEAP1_M" target="CUX1_M" id="0" />
+      <edge source="0" target="STK11_M" id="1" />
+      <edge source="0" target="TET2_M" id="2" />
+      <edge source="0" target="CDKN2A_N" id="3" />
+      <edge source="0" target="KEAP1_M" id="4" />
+      <edge source="0" target="CUX1_M" id="5" />
+      <edge source="0" target="KEAP1_N" id="6" />
+      <edge source="0" target="UBR5_N" id="7" />
+      <edge source="0" target="KRAS_M" id="8" />
+      <edge source="0" target="ZMYM2_M" id="9" />
+      <edge source="0" target="SPEN_M" id="10" />
+      <edge source="0" target="COL5A2_M" id="11" />
+      <edge source="0" target="PIK3CG_N" id="12" />
+      <edge source="0" target="PTPRB_M" id="13" />
+      <edge source="0" target="ASXL1_N" id="14" />
+      <edge source="0" target="STIM1_M" id="15" />
+      <edge source="0" target="SMARCB1_M" id="16" />
+      <edge source="0" target="SMARCA4_M" id="17" />
+      <edge source="0" target="TP53_M" id="18" />
+      <edge source="0" target="B2M_N" id="19" />
+      <edge source="0" target="STK11_N" id="20" />
+      <edge source="STK11_M" target="SPEN_M" id="21" />
+      <edge source="KEAP1_N" target="UBR5_N" id="22" />
+      <edge source="KRAS_M" target="ZMYM2_M" id="23" />
+      <edge source="COL5A2_M" target="PIK3CG_N" id="24" />
+      <edge source="COL5A2_M" target="PTPRB_M" id="25" />
+      <edge source="ASXL1_N" target="STIM1_M" id="26" />
+      <edge source="SMARCB1_M" target="SMARCA4_M" id="27" />
+      <edge source="TP53_M" target="B2M_N" id="28" />
+      <edge source="STK11_N" target="SMARCA4_M" id="29" />
+    </edges>
+  </graph>
+</gexf>

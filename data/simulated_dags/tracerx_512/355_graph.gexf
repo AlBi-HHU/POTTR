@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ERBB2_M" label="ERBB2_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="0" label="0" />
+      <node id="COL5A2_N" label="COL5A2_N" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="TBL1XR1_M" label="TBL1XR1_M" />
+      <node id="NCOA6_M" label="NCOA6_M" />
+      <node id="PIK3R1_M" label="PIK3R1_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+    </nodes>
+    <edges>
+      <edge source="ERBB2_M" target="CREBBP_M" id="0" />
+      <edge source="0" target="COL5A2_N" id="1" />
+      <edge source="0" target="NCOA6_M" id="2" />
+      <edge source="0" target="ERBB2_M" id="3" />
+      <edge source="0" target="CREBBP_M" id="4" />
+      <edge source="0" target="TP53_M" id="5" />
+      <edge source="0" target="TBL1XR1_M" id="6" />
+      <edge source="0" target="PIK3R1_M" id="7" />
+      <edge source="0" target="PLXNB2_M" id="8" />
+      <edge source="0" target="STK11_N" id="9" />
+      <edge source="0" target="CUX1_M" id="10" />
+      <edge source="0" target="PTPRC_M" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+      <edge source="0" target="UBR5_M" id="13" />
+      <edge source="TP53_M" target="TBL1XR1_M" id="14" />
+      <edge source="TP53_M" target="UBR5_M" id="15" />
+      <edge source="PIK3R1_M" target="PLXNB2_M" id="16" />
+      <edge source="STK11_N" target="CUX1_M" id="17" />
+      <edge source="PTPRC_M" target="SMARCA4_M" id="18" />
+    </edges>
+  </graph>
+</gexf>

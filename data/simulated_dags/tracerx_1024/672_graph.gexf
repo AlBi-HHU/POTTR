@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="NCOR1_M" label="NCOR1_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="0" label="0" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="BCLAF1_M" label="BCLAF1_M">
+        <attvalues>
+          <attvalue for="0" value="CDKN2A_N" />
+        </attvalues>
+      </node>
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="KMT2C_N" label="KMT2C_N" />
+      <node id="AXIN1_M" label="AXIN1_M" />
+      <node id="RPS2_M" label="RPS2_M" />
+      <node id="NRXN1_N" label="NRXN1_N" />
+      <node id="WT1_N" label="WT1_N" />
+      <node id="PLXNB2_N" label="PLXNB2_N" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="CDKN2A_N" label="CDKN2A_N">
+        <attvalues>
+          <attvalue for="0" value="BCLAF1_M" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="FLT4_N" target="NCOR1_M" id="0" />
+      <edge source="ATM_M" target="SETDB1_M" id="1" />
+      <edge source="0" target="KEAP1_M" id="2" />
+      <edge source="0" target="EZH1_M" id="3" />
+      <edge source="0" target="FLT4_N" id="4" />
+      <edge source="0" target="NCOR1_M" id="5" />
+      <edge source="0" target="ATM_M" id="6" />
+      <edge source="0" target="SETDB1_M" id="7" />
+      <edge source="0" target="STIM1_M" id="8" />
+      <edge source="0" target="BAP1_M" id="9" />
+      <edge source="0" target="BCLAF1_M" id="10" />
+      <edge source="0" target="UBR5_N" id="11" />
+      <edge source="0" target="ARID1A_N" id="12" />
+      <edge source="0" target="MTOR_M" id="13" />
+      <edge source="0" target="KMT2C_N" id="14" />
+      <edge source="0" target="AXIN1_M" id="15" />
+      <edge source="0" target="RPS2_M" id="16" />
+      <edge source="0" target="NRXN1_N" id="17" />
+      <edge source="0" target="WT1_N" id="18" />
+      <edge source="0" target="PLXNB2_N" id="19" />
+      <edge source="0" target="CDKN2A_N" id="20" />
+      <edge source="STIM1_M" target="BAP1_M" id="21" />
+      <edge source="BCLAF1_M" target="UBR5_N" id="22" />
+      <edge source="ARID1A_N" target="MTOR_M" id="23" />
+      <edge source="KMT2C_N" target="AXIN1_M" id="24" />
+      <edge source="RPS2_M" target="NRXN1_N" id="25" />
+      <edge source="WT1_N" target="PLXNB2_N" id="26" />
+      <edge source="CDKN2A_N" target="UBR5_N" id="27" />
+    </edges>
+  </graph>
+</gexf>

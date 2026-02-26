@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M">
+        <attvalues>
+          <attvalue for="0" value="BHMT2_M" />
+        </attvalues>
+      </node>
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="TNFAIP3_N" label="TNFAIP3_N" />
+      <node id="FAT1_N" label="FAT1_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="APC_M" label="APC_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="AXIN1_M" label="AXIN1_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="BHMT2_M" label="BHMT2_M">
+        <attvalues>
+          <attvalue for="0" value="TP53_M" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="NOTCH2_M" target="STIM1_M" id="0" />
+      <edge source="0" target="TP53_M" id="1" />
+      <edge source="0" target="FAT1_N" id="2" />
+      <edge source="0" target="NOTCH2_M" id="3" />
+      <edge source="0" target="STIM1_M" id="4" />
+      <edge source="0" target="DICER1_M" id="5" />
+      <edge source="0" target="EZH1_M" id="6" />
+      <edge source="0" target="POLE_M" id="7" />
+      <edge source="0" target="TNFAIP3_N" id="8" />
+      <edge source="0" target="STK11_N" id="9" />
+      <edge source="0" target="MGA_N" id="10" />
+      <edge source="0" target="APC_M" id="11" />
+      <edge source="0" target="UBR5_M" id="12" />
+      <edge source="0" target="PLXNB2_M" id="13" />
+      <edge source="0" target="AXIN1_M" id="14" />
+      <edge source="0" target="COL2A1_M" id="15" />
+      <edge source="0" target="PIK3CG_N" id="16" />
+      <edge source="0" target="BHMT2_M" id="17" />
+      <edge source="TP53_M" target="DICER1_M" id="18" />
+      <edge source="DICER1_M" target="EZH1_M" id="19" />
+      <edge source="POLE_M" target="TNFAIP3_N" id="20" />
+      <edge source="STK11_N" target="MGA_N" id="21" />
+      <edge source="APC_M" target="UBR5_M" id="22" />
+      <edge source="PLXNB2_M" target="AXIN1_M" id="23" />
+      <edge source="COL2A1_M" target="PIK3CG_N" id="24" />
+      <edge source="BHMT2_M" target="DICER1_M" id="25" />
+    </edges>
+  </graph>
+</gexf>

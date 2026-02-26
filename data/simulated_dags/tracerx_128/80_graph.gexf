@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="PTPRB_M" label="PTPRB_M">
+        <attvalues>
+          <attvalue for="0" value="ASXL1_N" />
+        </attvalues>
+      </node>
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="BIVM-ERCC5_M" label="BIVM-ERCC5_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+      <node id="PTCH1_M" label="PTCH1_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="EXT1_M" label="EXT1_M" />
+      <node id="ASXL1_N" label="ASXL1_N">
+        <attvalues>
+          <attvalue for="0" value="PTPRB_M" />
+        </attvalues>
+      </node>
+      <node id="ATR_M" label="ATR_M" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="CTNNB1_M" label="CTNNB1_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="SMC3_M" label="SMC3_M" />
+      <node id="CDH1_M" label="CDH1_M" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="CSMD3_N" label="CSMD3_N" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="APC_M" label="APC_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="TSHR_M" label="TSHR_M">
+        <attvalues>
+          <attvalue for="0" value="SMARCA4_M" />
+        </attvalues>
+      </node>
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M">
+        <attvalues>
+          <attvalue for="0" value="TSHR_M" />
+        </attvalues>
+      </node>
+      <node id="TP53BP1_M" label="TP53BP1_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="TP53_M" id="0" />
+      <edge source="0" target="COL2A1_M" id="1" />
+      <edge source="0" target="KRAS_M" id="2" />
+      <edge source="0" target="MAP3K1_M" id="3" />
+      <edge source="0" target="APC_M" id="4" />
+      <edge source="0" target="PTPRB_M" id="5" />
+      <edge source="0" target="MTOR_M" id="6" />
+      <edge source="0" target="PTEN_N" id="7" />
+      <edge source="0" target="BIVM-ERCC5_M" id="8" />
+      <edge source="0" target="NFE2L2_M" id="9" />
+      <edge source="0" target="UBR5_M" id="10" />
+      <edge source="0" target="PTCH1_M" id="11" />
+      <edge source="0" target="ASXL1_M" id="12" />
+      <edge source="0" target="CTCF_M" id="13" />
+      <edge source="0" target="TP53_N" id="14" />
+      <edge source="0" target="EXT1_M" id="15" />
+      <edge source="0" target="ASXL1_N" id="16" />
+      <edge source="0" target="ATR_M" id="17" />
+      <edge source="0" target="TET2_M" id="18" />
+      <edge source="0" target="CTNNB1_M" id="19" />
+      <edge source="0" target="PTPRC_M" id="20" />
+      <edge source="0" target="SMC3_M" id="21" />
+      <edge source="0" target="CDH1_M" id="22" />
+      <edge source="0" target="SETDB1_M" id="23" />
+      <edge source="0" target="BHMT2_M" id="24" />
+      <edge source="0" target="CSMD3_N" id="25" />
+      <edge source="0" target="GRIN2A_M" id="26" />
+      <edge source="0" target="CHD4_M" id="27" />
+      <edge source="0" target="TSHR_M" id="28" />
+      <edge source="0" target="KEAP1_M" id="29" />
+      <edge source="0" target="PATZ1_M" id="30" />
+      <edge source="0" target="SMARCA4_M" id="31" />
+      <edge source="0" target="TP53BP1_M" id="32" />
+      <edge source="0" target="ARID1A_N" id="33" />
+      <edge source="TP53_M" target="PTCH1_M" id="34" />
+      <edge source="TP53_M" target="SMC3_M" id="35" />
+      <edge source="TP53_M" target="GRIN2A_M" id="36" />
+      <edge source="PTPRB_M" target="MTOR_M" id="37" />
+      <edge source="PTEN_N" target="BIVM-ERCC5_M" id="38" />
+      <edge source="NFE2L2_M" target="UBR5_M" id="39" />
+      <edge source="NFE2L2_M" target="TET2_M" id="40" />
+      <edge source="NFE2L2_M" target="CHD4_M" id="41" />
+      <edge source="ASXL1_M" target="CTCF_M" id="42" />
+      <edge source="TP53_N" target="EXT1_M" id="43" />
+      <edge source="TP53_N" target="ATR_M" id="44" />
+      <edge source="ASXL1_N" target="MTOR_M" id="45" />
+      <edge source="CTNNB1_M" target="PTPRC_M" id="46" />
+      <edge source="CDH1_M" target="SETDB1_M" id="47" />
+      <edge source="BHMT2_M" target="ASXL1_M" id="48" />
+      <edge source="CSMD3_N" target="PTEN_N" id="49" />
+      <edge source="TSHR_M" target="UBR5_M" id="50" />
+      <edge source="KEAP1_M" target="PATZ1_M" id="51" />
+      <edge source="SMARCA4_M" target="UBR5_M" id="52" />
+      <edge source="TP53BP1_M" target="ARID1A_N" id="53" />
+    </edges>
+  </graph>
+</gexf>

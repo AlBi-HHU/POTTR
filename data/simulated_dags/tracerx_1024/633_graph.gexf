@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="GPS2_M" label="GPS2_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="CYLD_M" label="CYLD_M" />
+    </nodes>
+    <edges>
+      <edge source="CREBBP_M" target="MGA_N" id="0" />
+      <edge source="STK11_N" target="GPS2_M" id="1" />
+      <edge source="0" target="TP53_M" id="2" />
+      <edge source="0" target="CREBBP_M" id="3" />
+      <edge source="0" target="MGA_N" id="4" />
+      <edge source="0" target="STK11_N" id="5" />
+      <edge source="0" target="GPS2_M" id="6" />
+      <edge source="0" target="ATM_M" id="7" />
+      <edge source="0" target="CYLD_M" id="8" />
+      <edge source="ATM_M" target="CYLD_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

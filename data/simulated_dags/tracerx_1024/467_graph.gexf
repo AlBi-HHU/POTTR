@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="ZFP36L1_M" label="ZFP36L1_M" />
+      <node id="DNAH12_M" label="DNAH12_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="DICER1_M" label="DICER1_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="ZFP36L1_M" id="0" />
+      <edge source="0" target="DNAH12_M" id="1" />
+      <edge source="0" target="STK11_N" id="2" />
+      <edge source="0" target="SNX29_M" id="3" />
+      <edge source="0" target="STIM1_M" id="4" />
+      <edge source="0" target="ASXL1_N" id="5" />
+      <edge source="0" target="DICER1_M" id="6" />
+      <edge source="SNX29_M" target="STIM1_M" id="7" />
+      <edge source="ASXL1_N" target="DICER1_M" id="8" />
+    </edges>
+  </graph>
+</gexf>

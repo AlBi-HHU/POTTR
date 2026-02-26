@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="TP53_M" label="TP53_M" />
+      <node id="TP53BP1_M" label="TP53BP1_M" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="0" label="0" />
+      <node id="CASP8_N" label="CASP8_N" />
+      <node id="SGK223_M" label="SGK223_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="FUBP1_M" label="FUBP1_M" />
+      <node id="CBL_N" label="CBL_N" />
+      <node id="NOTCH1_M" label="NOTCH1_M" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="FANCM_N" label="FANCM_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="NSD1_M" label="NSD1_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="CDH1_M" label="CDH1_M" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="EGFR_M" label="EGFR_M" />
+    </nodes>
+    <edges>
+      <edge source="TP53_M" target="TP53BP1_M" id="0" />
+      <edge source="TP53_M" target="GRIN2A_M" id="1" />
+      <edge source="NEB_N" target="SMARCA4_M" id="2" />
+      <edge source="NEB_N" target="PTEN_N" id="3" />
+      <edge source="0" target="CASP8_N" id="4" />
+      <edge source="0" target="NOTCH1_M" id="5" />
+      <edge source="0" target="CDH1_M" id="6" />
+      <edge source="0" target="POT1_M" id="7" />
+      <edge source="0" target="EGFR_M" id="8" />
+      <edge source="0" target="TP53_M" id="9" />
+      <edge source="0" target="TP53BP1_M" id="10" />
+      <edge source="0" target="NEB_N" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+      <edge source="0" target="SGK223_M" id="13" />
+      <edge source="0" target="CHD4_M" id="14" />
+      <edge source="0" target="FUBP1_M" id="15" />
+      <edge source="0" target="CBL_N" id="16" />
+      <edge source="0" target="NF1_M" id="17" />
+      <edge source="0" target="FANCM_N" id="18" />
+      <edge source="0" target="PTEN_N" id="19" />
+      <edge source="0" target="GRIN2A_M" id="20" />
+      <edge source="0" target="NSD1_M" id="21" />
+      <edge source="0" target="PLXNB2_M" id="22" />
+      <edge source="0" target="COL2A1_M" id="23" />
+      <edge source="0" target="STIM1_M" id="24" />
+      <edge source="SGK223_M" target="CHD4_M" id="25" />
+      <edge source="FUBP1_M" target="CBL_N" id="26" />
+      <edge source="NF1_M" target="FANCM_N" id="27" />
+      <edge source="NSD1_M" target="PLXNB2_M" id="28" />
+      <edge source="COL2A1_M" target="STIM1_M" id="29" />
+    </edges>
+  </graph>
+</gexf>

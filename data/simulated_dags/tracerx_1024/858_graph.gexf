@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="LAMA4_N" label="LAMA4_N" />
+      <node id="MLH1_M" label="MLH1_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="ATR_M" label="ATR_M" />
+      <node id="0" label="0" />
+    </nodes>
+    <edges>
+      <edge source="LAMA4_N" target="MLH1_M" id="0" />
+      <edge source="STK11_M" target="HIST1H4E_M" id="1" />
+      <edge source="PIK3CG_N" target="ATR_M" id="2" />
+      <edge source="0" target="LAMA4_N" id="3" />
+      <edge source="0" target="MLH1_M" id="4" />
+      <edge source="0" target="STK11_M" id="5" />
+      <edge source="0" target="HIST1H4E_M" id="6" />
+      <edge source="0" target="PIK3CG_N" id="7" />
+      <edge source="0" target="ATR_M" id="8" />
+    </edges>
+  </graph>
+</gexf>

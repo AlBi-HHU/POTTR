@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="CBLB_M" label="CBLB_M" />
+      <node id="DNM2_M" label="DNM2_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="0" label="0" />
+      <node id="ITGBL1_M" label="ITGBL1_M" />
+      <node id="BRAF_M" label="BRAF_M" />
+      <node id="PMS2_M" label="PMS2_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="ACVR1B_N" label="ACVR1B_N" />
+      <node id="CASP8_N" label="CASP8_N" />
+      <node id="AXIN1_M" label="AXIN1_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CHEK2_M" label="CHEK2_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="AXIN2_M" label="AXIN2_M" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="SGK223_M" label="SGK223_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="CNOT3_M" label="CNOT3_M" />
+      <node id="CYLD_M" label="CYLD_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="RNF43_M" label="RNF43_M" />
+      <node id="CDK12_M" label="CDK12_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="SMAD4_M" label="SMAD4_M" />
+    </nodes>
+    <edges>
+      <edge source="CBLB_M" target="DNM2_M" id="0" />
+      <edge source="COL5A2_M" target="ASXL1_M" id="1" />
+      <edge source="0" target="ITGBL1_M" id="2" />
+      <edge source="0" target="NFE2L2_M" id="3" />
+      <edge source="0" target="KMT2C_M" id="4" />
+      <edge source="0" target="TP53_M" id="5" />
+      <edge source="0" target="PTPRC_M" id="6" />
+      <edge source="0" target="STK11_N" id="7" />
+      <edge source="0" target="RNF43_M" id="8" />
+      <edge source="0" target="CBLB_M" id="9" />
+      <edge source="0" target="DNM2_M" id="10" />
+      <edge source="0" target="COL5A2_M" id="11" />
+      <edge source="0" target="ASXL1_M" id="12" />
+      <edge source="0" target="BRAF_M" id="13" />
+      <edge source="0" target="PMS2_M" id="14" />
+      <edge source="0" target="PLXNB2_M" id="15" />
+      <edge source="0" target="ACVR1B_N" id="16" />
+      <edge source="0" target="CASP8_N" id="17" />
+      <edge source="0" target="AXIN1_M" id="18" />
+      <edge source="0" target="DICER1_M" id="19" />
+      <edge source="0" target="PTPRU_M" id="20" />
+      <edge source="0" target="KEAP1_M" id="21" />
+      <edge source="0" target="CHEK2_M" id="22" />
+      <edge source="0" target="TP53_N" id="23" />
+      <edge source="0" target="AXIN2_M" id="24" />
+      <edge source="0" target="CREBBP_M" id="25" />
+      <edge source="0" target="KMT2D_M" id="26" />
+      <edge source="0" target="CDKN2A_M" id="27" />
+      <edge source="0" target="SGK223_M" id="28" />
+      <edge source="0" target="CNOT3_M" id="29" />
+      <edge source="0" target="CYLD_M" id="30" />
+      <edge source="0" target="CDK12_M" id="31" />
+      <edge source="0" target="TNFAIP3_M" id="32" />
+      <edge source="0" target="SMAD4_M" id="33" />
+      <edge source="BRAF_M" target="PMS2_M" id="34" />
+      <edge source="PLXNB2_M" target="ACVR1B_N" id="35" />
+      <edge source="CASP8_N" target="AXIN1_M" id="36" />
+      <edge source="DICER1_M" target="PTPRU_M" id="37" />
+      <edge source="KEAP1_M" target="CHEK2_M" id="38" />
+      <edge source="TP53_N" target="AXIN2_M" id="39" />
+      <edge source="TP53_M" target="SGK223_M" id="40" />
+      <edge source="TP53_M" target="SMAD4_M" id="41" />
+      <edge source="CREBBP_M" target="KMT2D_M" id="42" />
+      <edge source="CDKN2A_M" target="PLXNB2_M" id="43" />
+      <edge source="CNOT3_M" target="CYLD_M" id="44" />
+      <edge source="CDK12_M" target="TNFAIP3_M" id="45" />
+    </edges>
+  </graph>
+</gexf>

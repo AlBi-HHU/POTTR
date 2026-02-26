@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="POLE_N" label="POLE_N" />
+      <node id="CASP8_M" label="CASP8_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="TP53_N" id="0" />
+      <edge source="0" target="STK11_N" id="1" />
+      <edge source="0" target="CUX1_M" id="2" />
+      <edge source="0" target="NF1_M" id="3" />
+      <edge source="0" target="MTOR_M" id="4" />
+      <edge source="0" target="RB1_N" id="5" />
+      <edge source="0" target="EP300_M" id="6" />
+      <edge source="0" target="FLT4_N" id="7" />
+      <edge source="0" target="CIC_M" id="8" />
+      <edge source="0" target="POLE_N" id="9" />
+      <edge source="0" target="CASP8_M" id="10" />
+      <edge source="STK11_N" target="CUX1_M" id="11" />
+      <edge source="NF1_M" target="MTOR_M" id="12" />
+      <edge source="RB1_N" target="EP300_M" id="13" />
+      <edge source="FLT4_N" target="CIC_M" id="14" />
+      <edge source="POLE_N" target="CASP8_M" id="15" />
+    </edges>
+  </graph>
+</gexf>

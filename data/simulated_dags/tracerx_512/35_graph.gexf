@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="BRCA2_M" label="BRCA2_M" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="CNOT3_M" label="CNOT3_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="STK11_N" label="STK11_N">
+        <attvalues>
+          <attvalue for="0" value="NEB_N" />
+        </attvalues>
+      </node>
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="ARID1B_M" label="ARID1B_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="TP53_N" label="TP53_N">
+        <attvalues>
+          <attvalue for="0" value="SDHC_M" />
+        </attvalues>
+      </node>
+      <node id="CEP76_M" label="CEP76_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="SMARCC2_M" label="SMARCC2_M" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="APC_M" label="APC_M" />
+      <node id="MSH2_M" label="MSH2_M" />
+      <node id="NF1_N" label="NF1_N" />
+      <node id="NOTCH1_N" label="NOTCH1_N" />
+      <node id="FLCN_M" label="FLCN_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="SDHC_M" label="SDHC_M">
+        <attvalues>
+          <attvalue for="0" value="TP53_N" />
+        </attvalues>
+      </node>
+      <node id="PIK3CA_M" label="PIK3CA_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+      <node id="NEB_N" label="NEB_N">
+        <attvalues>
+          <attvalue for="0" value="STK11_N" />
+        </attvalues>
+      </node>
+      <node id="RNF43_M" label="RNF43_M" />
+      <node id="DNM2_M" label="DNM2_M" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="FH_M" label="FH_M" />
+      <node id="CBL_N" label="CBL_N" />
+      <node id="ZFP36L1_N" label="ZFP36L1_N" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+    </nodes>
+    <edges>
+      <edge source="BRCA2_M" target="TET2_M" id="0" />
+      <edge source="CNOT3_M" target="PLXNB2_M" id="1" />
+      <edge source="STK11_N" target="SMARCA4_M" id="2" />
+      <edge source="ASXL2_M" target="PTEN_N" id="3" />
+      <edge source="FAT1_M" target="ARID1B_M" id="4" />
+      <edge source="FAT1_M" target="POT1_M" id="5" />
+      <edge source="PTPRU_M" target="DNAH12_N" id="6" />
+      <edge source="TP53_N" target="CEP76_M" id="7" />
+      <edge source="EZH1_M" target="TNFAIP3_M" id="8" />
+      <edge source="KEAP1_M" target="ASXL2_M" id="9" />
+      <edge source="KRAS_M" target="SMARCC2_M" id="10" />
+      <edge source="KMT2C_M" target="APC_M" id="11" />
+      <edge source="MSH2_M" target="NF1_N" id="12" />
+      <edge source="NOTCH1_N" target="FLCN_M" id="13" />
+      <edge source="0" target="TP53_M" id="14" />
+      <edge source="0" target="BRCA2_M" id="15" />
+      <edge source="0" target="TET2_M" id="16" />
+      <edge source="0" target="CNOT3_M" id="17" />
+      <edge source="0" target="PLXNB2_M" id="18" />
+      <edge source="0" target="STK11_N" id="19" />
+      <edge source="0" target="SMARCA4_M" id="20" />
+      <edge source="0" target="ASXL2_M" id="21" />
+      <edge source="0" target="PTEN_N" id="22" />
+      <edge source="0" target="FAT1_M" id="23" />
+      <edge source="0" target="ARID1B_M" id="24" />
+      <edge source="0" target="PTPRU_M" id="25" />
+      <edge source="0" target="DNAH12_N" id="26" />
+      <edge source="0" target="TP53_N" id="27" />
+      <edge source="0" target="CEP76_M" id="28" />
+      <edge source="0" target="EZH1_M" id="29" />
+      <edge source="0" target="TNFAIP3_M" id="30" />
+      <edge source="0" target="KEAP1_M" id="31" />
+      <edge source="0" target="KRAS_M" id="32" />
+      <edge source="0" target="SMARCC2_M" id="33" />
+      <edge source="0" target="KMT2C_M" id="34" />
+      <edge source="0" target="APC_M" id="35" />
+      <edge source="0" target="MSH2_M" id="36" />
+      <edge source="0" target="NF1_N" id="37" />
+      <edge source="0" target="NOTCH1_N" id="38" />
+      <edge source="0" target="FLCN_M" id="39" />
+      <edge source="0" target="SDHC_M" id="40" />
+      <edge source="0" target="PIK3CA_M" id="41" />
+      <edge source="0" target="UBR5_M" id="42" />
+      <edge source="0" target="NEB_N" id="43" />
+      <edge source="0" target="RNF43_M" id="44" />
+      <edge source="0" target="DNM2_M" id="45" />
+      <edge source="0" target="POT1_M" id="46" />
+      <edge source="0" target="FH_M" id="47" />
+      <edge source="0" target="CBL_N" id="48" />
+      <edge source="0" target="ZFP36L1_N" id="49" />
+      <edge source="0" target="HIST1H4E_M" id="50" />
+      <edge source="SDHC_M" target="CEP76_M" id="51" />
+      <edge source="PIK3CA_M" target="UBR5_M" id="52" />
+      <edge source="NEB_N" target="SMARCA4_M" id="53" />
+      <edge source="RNF43_M" target="DNM2_M" id="54" />
+      <edge source="FH_M" target="CBL_N" id="55" />
+      <edge source="ZFP36L1_N" target="HIST1H4E_M" id="56" />
+    </edges>
+  </graph>
+</gexf>

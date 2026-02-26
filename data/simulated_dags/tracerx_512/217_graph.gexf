@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="RASA1_M" label="RASA1_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="EXT1_M" label="EXT1_M" />
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="FANCM_M" label="FANCM_M" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="RNF43_M" label="RNF43_M" />
+      <node id="TSC2_M" label="TSC2_M" />
+      <node id="SETD2_M" label="SETD2_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="EGFR_M" label="EGFR_M" />
+      <node id="FBXO11_M" label="FBXO11_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+    </nodes>
+    <edges>
+      <edge source="RASA1_M" target="CHD4_M" id="0" />
+      <edge source="PATZ1_M" target="EXT1_M" id="1" />
+      <edge source="0" target="KRAS_M" id="2" />
+      <edge source="0" target="FANCM_M" id="3" />
+      <edge source="0" target="SETD2_M" id="4" />
+      <edge source="0" target="IQGAP2_N" id="5" />
+      <edge source="0" target="RASA1_M" id="6" />
+      <edge source="0" target="CHD4_M" id="7" />
+      <edge source="0" target="PATZ1_M" id="8" />
+      <edge source="0" target="EXT1_M" id="9" />
+      <edge source="0" target="TP53_M" id="10" />
+      <edge source="0" target="HIST1H4E_M" id="11" />
+      <edge source="0" target="POLE_M" id="12" />
+      <edge source="0" target="RNF43_M" id="13" />
+      <edge source="0" target="TSC2_M" id="14" />
+      <edge source="0" target="TP53_N" id="15" />
+      <edge source="0" target="EGFR_M" id="16" />
+      <edge source="0" target="FBXO11_M" id="17" />
+      <edge source="0" target="PTPRC_M" id="18" />
+      <edge source="0" target="ASXL2_M" id="19" />
+      <edge source="0" target="KEAP1_M" id="20" />
+      <edge source="0" target="UBR5_N" id="21" />
+      <edge source="0" target="EZH1_M" id="22" />
+      <edge source="0" target="TNFAIP3_M" id="23" />
+      <edge source="KRAS_M" target="TP53_N" id="24" />
+      <edge source="TP53_M" target="HIST1H4E_M" id="25" />
+      <edge source="POLE_M" target="RNF43_M" id="26" />
+      <edge source="POLE_M" target="TSC2_M" id="27" />
+      <edge source="EGFR_M" target="FBXO11_M" id="28" />
+      <edge source="PTPRC_M" target="ASXL2_M" id="29" />
+      <edge source="KEAP1_M" target="UBR5_N" id="30" />
+      <edge source="EZH1_M" target="TNFAIP3_M" id="31" />
+    </edges>
+  </graph>
+</gexf>

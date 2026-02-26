@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="LAMA4_N" label="LAMA4_N" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="0" label="0" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="SERPINB13_M" label="SERPINB13_M" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+    </nodes>
+    <edges>
+      <edge source="NFE2L2_M" target="LAMA4_N" id="0" />
+      <edge source="RB1_N" target="B2M_N" id="1" />
+      <edge source="0" target="CREBBP_M" id="2" />
+      <edge source="0" target="COL2A1_M" id="3" />
+      <edge source="0" target="NFE2L2_M" id="4" />
+      <edge source="0" target="LAMA4_N" id="5" />
+      <edge source="0" target="RB1_N" id="6" />
+      <edge source="0" target="B2M_N" id="7" />
+      <edge source="0" target="NOTCH2_M" id="8" />
+      <edge source="0" target="DICER1_M" id="9" />
+      <edge source="0" target="KEAP1_M" id="10" />
+      <edge source="0" target="SMARCA4_M" id="11" />
+      <edge source="0" target="SERPINB13_M" id="12" />
+      <edge source="0" target="KMT2D_M" id="13" />
+      <edge source="NOTCH2_M" target="DICER1_M" id="14" />
+      <edge source="KEAP1_M" target="SMARCA4_M" id="15" />
+      <edge source="SERPINB13_M" target="KMT2D_M" id="16" />
+    </edges>
+  </graph>
+</gexf>

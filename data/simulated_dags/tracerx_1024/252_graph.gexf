@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="CBLB_M" label="CBLB_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="TSC1_M" label="TSC1_M" />
+      <node id="ATF7IP_N" label="ATF7IP_N" />
+      <node id="STAT3_M" label="STAT3_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="CBLB_M" id="0" />
+      <edge source="0" target="TP53_N" id="1" />
+      <edge source="0" target="STK11_N" id="2" />
+      <edge source="0" target="TSC1_M" id="3" />
+      <edge source="0" target="POLE_M" id="4" />
+      <edge source="0" target="TNFAIP3_M" id="5" />
+      <edge source="0" target="ATF7IP_N" id="6" />
+      <edge source="0" target="STAT3_M" id="7" />
+      <edge source="POLE_M" target="TNFAIP3_M" id="8" />
+      <edge source="ATF7IP_N" target="STAT3_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

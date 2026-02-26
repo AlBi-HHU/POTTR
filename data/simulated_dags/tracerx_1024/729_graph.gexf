@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="ARHGAP35_M" label="ARHGAP35_M" />
+      <node id="NF2_M" label="NF2_M" />
+      <node id="0" label="0" />
+      <node id="NCOR1_M" label="NCOR1_M" />
+      <node id="SETD2_M" label="SETD2_M" />
+      <node id="CSMD3_N" label="CSMD3_N" />
+      <node id="SETD2_N" label="SETD2_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="TNR_N" label="TNR_N" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="ATF7IP_N" label="ATF7IP_N" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="TP53_M" label="TP53_M" />
+    </nodes>
+    <edges>
+      <edge source="NOTCH2_M" target="PIK3CG_N" id="0" />
+      <edge source="ARHGAP35_M" target="NF2_M" id="1" />
+      <edge source="0" target="NCOR1_M" id="2" />
+      <edge source="0" target="SETD2_M" id="3" />
+      <edge source="0" target="CSMD3_N" id="4" />
+      <edge source="0" target="STK11_N" id="5" />
+      <edge source="0" target="TNR_N" id="6" />
+      <edge source="0" target="CIC_M" id="7" />
+      <edge source="0" target="ATF7IP_N" id="8" />
+      <edge source="0" target="TP53_M" id="9" />
+      <edge source="0" target="NOTCH2_M" id="10" />
+      <edge source="0" target="PIK3CG_N" id="11" />
+      <edge source="0" target="ARHGAP35_M" id="12" />
+      <edge source="0" target="NF2_M" id="13" />
+      <edge source="0" target="SETD2_N" id="14" />
+      <edge source="0" target="PTEN_N" id="15" />
+      <edge source="0" target="NEB_N" id="16" />
+      <edge source="0" target="SMARCA4_M" id="17" />
+      <edge source="0" target="KRAS_M" id="18" />
+      <edge source="0" target="NF1_M" id="19" />
+      <edge source="0" target="CREBBP_M" id="20" />
+      <edge source="0" target="GRIN2A_M" id="21" />
+      <edge source="0" target="ARID1A_N" id="22" />
+      <edge source="0" target="STK11_M" id="23" />
+      <edge source="0" target="DICER1_M" id="24" />
+      <edge source="0" target="PTPRU_M" id="25" />
+      <edge source="SETD2_N" target="PTEN_N" id="26" />
+      <edge source="NEB_N" target="SMARCA4_M" id="27" />
+      <edge source="KRAS_M" target="NF1_M" id="28" />
+      <edge source="CREBBP_M" target="GRIN2A_M" id="29" />
+      <edge source="ARID1A_N" target="STK11_M" id="30" />
+      <edge source="DICER1_M" target="PTPRU_M" id="31" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="RIMS2_N" label="RIMS2_N" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+    </nodes>
+    <edges>
+      <edge source="STK11_N" target="PTEN_N" id="0" />
+      <edge source="0" target="TP53_M" id="1" />
+      <edge source="0" target="STK11_N" id="2" />
+      <edge source="0" target="PTEN_N" id="3" />
+      <edge source="0" target="MGA_N" id="4" />
+      <edge source="0" target="RIMS2_N" id="5" />
+      <edge source="0" target="SNX29_M" id="6" />
+      <edge source="0" target="ASXL1_M" id="7" />
+      <edge source="MGA_N" target="RIMS2_N" id="8" />
+      <edge source="SNX29_M" target="ASXL1_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

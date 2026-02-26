@@ -24,16 +24,6 @@ def log(string):
         print(string)
 
 
-def get_graphs_from_lines(lines, tree_numbers):
-    log('Start parallel creation of graphs from input')
-    graphs = {}
-    for evol_process in lines:
-        patient_graphs = get_graphs_parallel(lines[evol_process], tree_numbers[evol_process])
-        graphs[evol_process] = patient_graphs
-
-    return graphs
-
-
 def file_name_match(file_name):
     # indicator for multiple trees per evolutionary process is '-'
     if '-' in file_name:
@@ -47,7 +37,7 @@ def file_name_match(file_name):
     return evolution, phylo_tree
 
 
-def read_multiple_graphs_per_evolution(path: str, out: str, verbose_flag: bool=False):
+def read_multiple_graphs_per_evolution(path: str, out: str, parallel_processes: int, verbose_flag: bool=False):
     global verbose
     verbose = verbose_flag
 
@@ -56,34 +46,37 @@ def read_multiple_graphs_per_evolution(path: str, out: str, verbose_flag: bool=F
         exit(-1)
 
     log('Start iterating over multiple input trees for each evolution')
-    # iterate over TRACERx input files TODO: generalize to other input data
-    evolution_lines = {}
-    phylo_tree_numbers = {}
+    evol_processes = [] # triplet list with id, tree number and the read in line
 
+    '''
+    if provided a single txt file, each line is assumed to be a distinct evolutionary process, 
+    i.e. distinct tumor / patient
+    '''
     if path.endswith('.txt'):
         with open(path) as f:
             for i, line in enumerate(f):
-                evolution_lines[str(i)] = [line]
-                phylo_tree_numbers[str(i)] = [str(i) + '-0']
-        graphs = get_graphs_from_lines(evolution_lines, phylo_tree_numbers)
+                evol_processes.append((str(i), str(i) + '-0', line))
+        graphs = get_graphs_parallel(evol_processes, parallel_processes)
     else:
         filelist = glob.glob(path + '/*.txt')
         for file in sorted(filelist):
             file_name = file.split('/')[-1]
             # requires tree id "-\d+"
             evolution, phylo_tree = file_name_match(file_name)
+
+            # read in multiple trees per patient, but skip over duplicates
+            tmp_duplicates = dict()
             with (open(file, 'r') as f):
                 for line in f:
                     tmp = line.strip().split(' ')
                     sorted_line = ' '.join(sorted(tmp)) + '\n'
-                    if evolution not in evolution_lines:
-                        evolution_lines[evolution] = [sorted_line]
-                        phylo_tree_numbers[evolution] = [phylo_tree]
+                    if sorted_line in tmp_duplicates:
+                        continue
                     else:
-                        if sorted_line not in evolution_lines[evolution]:
-                            evolution_lines[evolution].append(sorted_line)
-                            phylo_tree_numbers[evolution].append(phylo_tree)
-        graphs = get_graphs_from_lines(evolution_lines, phylo_tree_numbers)
+                        evol_processes.append((evolution, phylo_tree, sorted_line))
+                        tmp_duplicates[sorted_line] = None
+
+        graphs = get_graphs_parallel(evol_processes, parallel_processes)
 
         # allow for graphs in gexf format
         gexflist = glob.glob(path + '/*.gexf')
@@ -92,6 +85,12 @@ def read_multiple_graphs_per_evolution(path: str, out: str, verbose_flag: bool=F
             evolution, phylo_tree = file_name_match(file_name)
             # read in graph from gexf file
             graph = nx.read_gexf(gexf_file)
+
+            for n, data in graph.nodes(data=True):
+                if 'cluster_nodes' in data:
+                    val = data.get('cluster_nodes')
+                    data['cluster_nodes'] = set(val.split(',')) if val else set()
+
             # add root node and connect it to all other nodes
             graph.add_node('0')
             graph.add_edges_from([('0', node) for node in graph.nodes if node != '0'])
@@ -102,8 +101,11 @@ def read_multiple_graphs_per_evolution(path: str, out: str, verbose_flag: bool=F
             else:
                 graphs[evolution] = [graph]
 
-    df = pd.DataFrame([(p, len(n)) for p, n in phylo_tree_numbers.items()], columns=['evolution', 'distinct trees'])
-    df.to_csv(out + '/number_of_distinct_dags_per_sample.csv')
+    if verbose:
+        id_tree_pairs = [(e, len(trees)) for e, trees in graphs.items()]
+        df = pd.DataFrame(id_tree_pairs, columns=['evolution', 'distinct trees'])
+        df.to_csv(out + '/number_of_distinct_trees_per_patient.csv')
+        num = sum([pair[1] for pair in id_tree_pairs])
+        log('Number of graphs read from input: ' + str(num))
 
-    log('Number of graphs read from input: ' + str(len(graphs)))
     return graphs

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="UBR5_N" label="UBR5_N" />
+      <node id="CBLB_M" label="CBLB_M" />
+      <node id="CHD8_N" label="CHD8_N" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="CUL3_N" label="CUL3_N" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="0" label="0" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="EGFR_M" label="EGFR_M" />
+    </nodes>
+    <edges>
+      <edge source="KEAP1_N" target="UBR5_N" id="0" />
+      <edge source="CBLB_M" target="CHD8_N" id="1" />
+      <edge source="ERCC3_N" target="CUL3_N" id="2" />
+      <edge source="STK11_N" target="GRIN2A_M" id="3" />
+      <edge source="0" target="FAT1_M" id="4" />
+      <edge source="0" target="EGFR_M" id="5" />
+      <edge source="0" target="KEAP1_N" id="6" />
+      <edge source="0" target="UBR5_N" id="7" />
+      <edge source="0" target="CBLB_M" id="8" />
+      <edge source="0" target="CHD8_N" id="9" />
+      <edge source="0" target="ERCC3_N" id="10" />
+      <edge source="0" target="CUL3_N" id="11" />
+      <edge source="0" target="STK11_N" id="12" />
+      <edge source="0" target="GRIN2A_M" id="13" />
+    </edges>
+  </graph>
+</gexf>

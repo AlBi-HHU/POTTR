@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="0" label="0" />
+      <node id="PPP3CA_M" label="PPP3CA_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="EXT1_M" label="EXT1_M" />
+      <node id="GATA3_N" label="GATA3_N" />
+      <node id="PTK2B_M" label="PTK2B_M" />
+    </nodes>
+    <edges>
+      <edge source="ARID1A_N" target="ASXL1_M" id="0" />
+      <edge source="0" target="PPP3CA_M" id="1" />
+      <edge source="0" target="ARID1A_N" id="2" />
+      <edge source="0" target="ASXL1_M" id="3" />
+      <edge source="0" target="CREBBP_M" id="4" />
+      <edge source="0" target="EXT1_M" id="5" />
+      <edge source="0" target="GATA3_N" id="6" />
+      <edge source="0" target="PTK2B_M" id="7" />
+      <edge source="CREBBP_M" target="EXT1_M" id="8" />
+      <edge source="GATA3_N" target="PTK2B_M" id="9" />
+    </edges>
+  </graph>
+</gexf>

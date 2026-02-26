@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="NOTCH1_N" label="NOTCH1_N" />
+      <node id="AXIN2_M" label="AXIN2_M" />
+      <node id="CASP8_N" label="CASP8_N" />
+      <node id="CNOT3_M" label="CNOT3_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="ATR_M" label="ATR_M" />
+      <node id="0" label="0" />
+      <node id="ACVR1B_N" label="ACVR1B_N" />
+      <node id="MUTYH_M" label="MUTYH_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+    </nodes>
+    <edges>
+      <edge source="NOTCH1_N" target="AXIN2_M" id="0" />
+      <edge source="CASP8_N" target="CNOT3_M" id="1" />
+      <edge source="PIK3CG_N" target="ATR_M" id="2" />
+      <edge source="0" target="ACVR1B_N" id="3" />
+      <edge source="0" target="NOTCH1_N" id="4" />
+      <edge source="0" target="AXIN2_M" id="5" />
+      <edge source="0" target="CASP8_N" id="6" />
+      <edge source="0" target="CNOT3_M" id="7" />
+      <edge source="0" target="PIK3CG_N" id="8" />
+      <edge source="0" target="ATR_M" id="9" />
+      <edge source="0" target="MUTYH_M" id="10" />
+      <edge source="0" target="SMARCA4_M" id="11" />
+      <edge source="MUTYH_M" target="SMARCA4_M" id="12" />
+    </edges>
+  </graph>
+</gexf>

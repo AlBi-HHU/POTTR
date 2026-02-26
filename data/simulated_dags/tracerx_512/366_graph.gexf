@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="FANCC_M" label="FANCC_M" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="KMT2B_M" label="KMT2B_M" />
+      <node id="NCOR1_N" label="NCOR1_N" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="NCOR1_M" label="NCOR1_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="NOTCH1_M" label="NOTCH1_M" />
+      <node id="APC_N" label="APC_N" />
+      <node id="PIK3CA_M" label="PIK3CA_M" />
+      <node id="ARID2_N" label="ARID2_N" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="HOXB3_N" label="HOXB3_N" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="CBLB_M" label="CBLB_M" />
+      <node id="ARID1B_N" label="ARID1B_N" />
+      <node id="EGFR_M" label="EGFR_M" />
+      <node id="DOT1L_M" label="DOT1L_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TSC2_M" label="TSC2_M" />
+      <node id="AXIN1_M" label="AXIN1_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="KEAP1_M" id="0" />
+      <edge source="0" target="TP53_M" id="1" />
+      <edge source="0" target="NOTCH1_M" id="2" />
+      <edge source="0" target="TP53_N" id="3" />
+      <edge source="0" target="FANCC_M" id="4" />
+      <edge source="0" target="NEB_N" id="5" />
+      <edge source="0" target="PTEN_N" id="6" />
+      <edge source="0" target="RB1_N" id="7" />
+      <edge source="0" target="SPEN_M" id="8" />
+      <edge source="0" target="KMT2B_M" id="9" />
+      <edge source="0" target="NCOR1_N" id="10" />
+      <edge source="0" target="KMT2C_M" id="11" />
+      <edge source="0" target="B2M_N" id="12" />
+      <edge source="0" target="FLT4_N" id="13" />
+      <edge source="0" target="NCOR1_M" id="14" />
+      <edge source="0" target="ARID1A_N" id="15" />
+      <edge source="0" target="DICER1_M" id="16" />
+      <edge source="0" target="APC_N" id="17" />
+      <edge source="0" target="PIK3CA_M" id="18" />
+      <edge source="0" target="ARID2_N" id="19" />
+      <edge source="0" target="ATM_M" id="20" />
+      <edge source="0" target="HOXB3_N" id="21" />
+      <edge source="0" target="EZH1_M" id="22" />
+      <edge source="0" target="TNFAIP3_M" id="23" />
+      <edge source="0" target="CBLB_M" id="24" />
+      <edge source="0" target="ARID1B_N" id="25" />
+      <edge source="0" target="EGFR_M" id="26" />
+      <edge source="0" target="DOT1L_M" id="27" />
+      <edge source="0" target="KRAS_M" id="28" />
+      <edge source="0" target="TSC2_M" id="29" />
+      <edge source="0" target="AXIN1_M" id="30" />
+      <edge source="TP53_N" target="FANCC_M" id="31" />
+      <edge source="NEB_N" target="PTEN_N" id="32" />
+      <edge source="PTEN_N" target="AXIN1_M" id="33" />
+      <edge source="TP53_M" target="ARID2_N" id="34" />
+      <edge source="RB1_N" target="SPEN_M" id="35" />
+      <edge source="KMT2B_M" target="NCOR1_N" id="36" />
+      <edge source="KMT2C_M" target="B2M_N" id="37" />
+      <edge source="FLT4_N" target="NCOR1_M" id="38" />
+      <edge source="ARID1A_N" target="DICER1_M" id="39" />
+      <edge source="APC_N" target="PIK3CA_M" id="40" />
+      <edge source="ATM_M" target="HOXB3_N" id="41" />
+      <edge source="EZH1_M" target="TNFAIP3_M" id="42" />
+      <edge source="CBLB_M" target="ARID1B_N" id="43" />
+      <edge source="EGFR_M" target="DOT1L_M" id="44" />
+      <edge source="KRAS_M" target="TSC2_M" id="45" />
+    </edges>
+  </graph>
+</gexf>

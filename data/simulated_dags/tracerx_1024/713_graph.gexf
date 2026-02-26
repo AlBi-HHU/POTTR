@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ARID2_M" label="ARID2_M" />
+      <node id="PRDM1_M" label="PRDM1_M" />
+      <node id="0" label="0" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="SMARCA4_N" label="SMARCA4_N" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="DNAH12_M" label="DNAH12_M" />
+      <node id="ARID2_N" label="ARID2_N" />
+      <node id="FLT4_N" label="FLT4_N" />
+      <node id="TSC1_M" label="TSC1_M" />
+    </nodes>
+    <edges>
+      <edge source="ARID2_M" target="PRDM1_M" id="0" />
+      <edge source="0" target="CUX1_M" id="1" />
+      <edge source="0" target="TP53_N" id="2" />
+      <edge source="0" target="SMARCA4_N" id="3" />
+      <edge source="0" target="ARID2_N" id="4" />
+      <edge source="0" target="ARID2_M" id="5" />
+      <edge source="0" target="PRDM1_M" id="6" />
+      <edge source="0" target="PTPRB_M" id="7" />
+      <edge source="0" target="ASXL1_M" id="8" />
+      <edge source="0" target="IQGAP2_N" id="9" />
+      <edge source="0" target="KMT2D_M" id="10" />
+      <edge source="0" target="ATM_M" id="11" />
+      <edge source="0" target="DNAH12_M" id="12" />
+      <edge source="0" target="FLT4_N" id="13" />
+      <edge source="0" target="TSC1_M" id="14" />
+      <edge source="PTPRB_M" target="ASXL1_M" id="15" />
+      <edge source="IQGAP2_N" target="KMT2D_M" id="16" />
+      <edge source="ATM_M" target="DNAH12_M" id="17" />
+      <edge source="FLT4_N" target="TSC1_M" id="18" />
+    </edges>
+  </graph>
+</gexf>

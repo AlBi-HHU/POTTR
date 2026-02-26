@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="NCOA6_M" label="NCOA6_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="FBXW7_N" label="FBXW7_N" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+    </nodes>
+    <edges>
+      <edge source="PTPRB_M" target="MTOR_M" id="0" />
+      <edge source="CUX1_M" target="NCOA6_M" id="1" />
+      <edge source="DICER1_M" target="FAT1_M" id="2" />
+      <edge source="SMARCA4_M" target="PTEN_N" id="3" />
+      <edge source="SNX29_M" target="DICER1_M" id="4" />
+      <edge source="NFE2L2_M" target="SMARCA4_M" id="5" />
+      <edge source="PIK3CG_N" target="CTCF_M" id="6" />
+      <edge source="0" target="TP53_M" id="7" />
+      <edge source="0" target="PTPRB_M" id="8" />
+      <edge source="0" target="MTOR_M" id="9" />
+      <edge source="0" target="CUX1_M" id="10" />
+      <edge source="0" target="NCOA6_M" id="11" />
+      <edge source="0" target="DICER1_M" id="12" />
+      <edge source="0" target="FAT1_M" id="13" />
+      <edge source="0" target="SMARCA4_M" id="14" />
+      <edge source="0" target="PTEN_N" id="15" />
+      <edge source="0" target="SNX29_M" id="16" />
+      <edge source="0" target="NFE2L2_M" id="17" />
+      <edge source="0" target="PIK3CG_N" id="18" />
+      <edge source="0" target="CTCF_M" id="19" />
+      <edge source="0" target="FBXW7_N" id="20" />
+      <edge source="0" target="MAP3K1_M" id="21" />
+      <edge source="FBXW7_N" target="MAP3K1_M" id="22" />
+    </edges>
+  </graph>
+</gexf>

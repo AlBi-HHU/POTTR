@@ -60,28 +60,23 @@ def get_graph_from_line(read_line, name):
         return None
 
 
-def process_split(split: Iterable, names: list):
-    graphs = []
-    for l, line in enumerate(split):
-        graph = get_graph_from_line(line, names[l])
-        graphs.append(graph)
-
-    return graphs
+def process_split(split: Iterable):
+    evol_id, phylo_tree, line = split
+    graph = get_graph_from_line(line, phylo_tree)
+    return evol_id, graph
 
 
-def get_graphs_parallel(lines: list, line_ids: list, num_workers: int=os.cpu_count()):
-    split_size = max(1, len(lines) // num_workers)
-
-    splits = [lines[i:i + split_size] for i in range(0, len(lines), split_size)]
-    splits_ids = [line_ids[i:i + split_size] for i in range(0, len(line_ids), split_size)]
+def get_graphs_parallel(trees_to_build: list, num_workers: int=os.cpu_count()):
+    graphs = {x[0]: [] for x in trees_to_build}
+    split_size = max(1, len(graphs) // num_workers)
 
     with Pool(processes=num_workers) as pool:
-        results = pool.starmap(process_split, zip(splits, splits_ids))
-        pool.close()  # No more tasks will be submitted to the pool
-        pool.join()  # Wait for worker processes to finish
+        for evol_id, graph in pool.imap_unordered(process_split, trees_to_build, chunksize=split_size):
+            if graph:
+                graphs[evol_id].append(graph)
 
-    graph_collection = [graph for result in results for graph in result if graph]
-    return graph_collection
+    print(len(graphs), sum([len(graphs[i]) for i in graphs]))
+    return graphs
 
 
 def get_graphs_single_thread(lines: list, names: list, verbose: bool=False):

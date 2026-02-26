@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="FUBP1_M" label="FUBP1_M" />
+      <node id="ARID1B_M" label="ARID1B_M" />
+      <node id="PTEN_M" label="PTEN_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="ARID1A_M" label="ARID1A_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="TP53_M" id="0" />
+      <edge source="0" target="KRAS_M" id="1" />
+      <edge source="0" target="FUBP1_M" id="2" />
+      <edge source="0" target="ARID1B_M" id="3" />
+      <edge source="0" target="PTEN_M" id="4" />
+      <edge source="0" target="PTPRC_M" id="5" />
+      <edge source="0" target="ASXL2_M" id="6" />
+      <edge source="0" target="EP300_M" id="7" />
+      <edge source="0" target="ARID1A_M" id="8" />
+      <edge source="0" target="PTEN_N" id="9" />
+      <edge source="TP53_M" target="EP300_M" id="10" />
+      <edge source="ARID1B_M" target="PTEN_M" id="11" />
+      <edge source="PTPRC_M" target="ASXL2_M" id="12" />
+      <edge source="ARID1A_M" target="PTEN_N" id="13" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="PTEN_M" label="PTEN_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="0" label="0" />
+      <node id="FLCN_M" label="FLCN_M" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="PPP3CA_M" label="PPP3CA_M" />
+      <node id="ZFP36L1_N" label="ZFP36L1_N" />
+      <node id="FAT1_N" label="FAT1_N" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="ARID2_M" label="ARID2_M" />
+      <node id="B2M_M" label="B2M_M" />
+    </nodes>
+    <edges>
+      <edge source="PTEN_M" target="COL5A2_M" id="0" />
+      <edge source="DICER1_M" target="CREBBP_M" id="1" />
+      <edge source="DICER1_M" target="POLE_M" id="2" />
+      <edge source="DICER1_M" target="EZH1_M" id="3" />
+      <edge source="0" target="FLCN_M" id="4" />
+      <edge source="0" target="PTEN_M" id="5" />
+      <edge source="0" target="COL5A2_M" id="6" />
+      <edge source="0" target="DICER1_M" id="7" />
+      <edge source="0" target="CREBBP_M" id="8" />
+      <edge source="0" target="POLE_M" id="9" />
+      <edge source="0" target="KEAP1_N" id="10" />
+      <edge source="0" target="PPP3CA_M" id="11" />
+      <edge source="0" target="ZFP36L1_N" id="12" />
+      <edge source="0" target="FAT1_N" id="13" />
+      <edge source="0" target="RB1_N" id="14" />
+      <edge source="0" target="EP300_M" id="15" />
+      <edge source="0" target="EZH1_M" id="16" />
+      <edge source="0" target="ASXL1_N" id="17" />
+      <edge source="0" target="STIM1_M" id="18" />
+      <edge source="0" target="ARID2_M" id="19" />
+      <edge source="0" target="B2M_M" id="20" />
+      <edge source="KEAP1_N" target="PPP3CA_M" id="21" />
+      <edge source="ZFP36L1_N" target="FAT1_N" id="22" />
+      <edge source="RB1_N" target="EP300_M" id="23" />
+      <edge source="ASXL1_N" target="STIM1_M" id="24" />
+      <edge source="ARID2_M" target="B2M_M" id="25" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="0" label="0" />
+      <node id="CMTR2_M" label="CMTR2_M" />
+      <node id="NEB_N" label="NEB_N" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="PASK_N" label="PASK_N" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="ERCC4_N" label="ERCC4_N" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="DNAH12_N" label="DNAH12_N" />
+      <node id="EXT2_M" label="EXT2_M" />
+      <node id="ECT2L_M" label="ECT2L_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="BRAF_M" label="BRAF_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="APC_M" label="APC_M" />
+    </nodes>
+    <edges>
+      <edge source="PTPRB_M" target="ASXL1_M" id="0" />
+      <edge source="PTPRB_M" target="STIM1_M" id="1" />
+      <edge source="PTPRB_M" target="EP300_M" id="2" />
+      <edge source="PTPRB_M" target="KMT2D_M" id="3" />
+      <edge source="0" target="CMTR2_M" id="4" />
+      <edge source="0" target="PASK_N" id="5" />
+      <edge source="0" target="BRAF_M" id="6" />
+      <edge source="0" target="COL5A2_M" id="7" />
+      <edge source="0" target="APC_M" id="8" />
+      <edge source="0" target="PTPRB_M" id="9" />
+      <edge source="0" target="ASXL1_M" id="10" />
+      <edge source="0" target="STIM1_M" id="11" />
+      <edge source="0" target="NEB_N" id="12" />
+      <edge source="0" target="ASXL2_M" id="13" />
+      <edge source="0" target="EP300_M" id="14" />
+      <edge source="0" target="ERCC4_N" id="15" />
+      <edge source="0" target="PLCG2_M" id="16" />
+      <edge source="0" target="KRAS_M" id="17" />
+      <edge source="0" target="DNAH12_N" id="18" />
+      <edge source="0" target="EXT2_M" id="19" />
+      <edge source="0" target="ECT2L_M" id="20" />
+      <edge source="0" target="TP53_M" id="21" />
+      <edge source="0" target="CDKN2A_N" id="22" />
+      <edge source="0" target="KMT2D_M" id="23" />
+      <edge source="NEB_N" target="ASXL2_M" id="24" />
+      <edge source="ERCC4_N" target="PLCG2_M" id="25" />
+      <edge source="KRAS_M" target="DNAH12_N" id="26" />
+      <edge source="EXT2_M" target="ECT2L_M" id="27" />
+      <edge source="TP53_M" target="CDKN2A_N" id="28" />
+    </edges>
+  </graph>
+</gexf>

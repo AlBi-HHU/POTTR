@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="SMARCB1_M" label="SMARCB1_M" />
+      <node id="ANK2_N" label="ANK2_N" />
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="EPB41L3_N" label="EPB41L3_N" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="PIK3R1_M" label="PIK3R1_M" />
+      <node id="POLE_N" label="POLE_N" />
+      <node id="HOXB3_N" label="HOXB3_N" />
+      <node id="EXT1_M" label="EXT1_M" />
+      <node id="CTNNB1_M" label="CTNNB1_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="STK11_M" label="STK11_M" />
+    </nodes>
+    <edges>
+      <edge source="SMARCB1_M" target="ANK2_N" id="0" />
+      <edge source="0" target="KRAS_M" id="1" />
+      <edge source="0" target="ATM_M" id="2" />
+      <edge source="0" target="KMT2D_M" id="3" />
+      <edge source="0" target="CDKN2A_M" id="4" />
+      <edge source="0" target="SMARCB1_M" id="5" />
+      <edge source="0" target="ANK2_N" id="6" />
+      <edge source="0" target="EPB41L3_N" id="7" />
+      <edge source="0" target="CIC_M" id="8" />
+      <edge source="0" target="CUX1_M" id="9" />
+      <edge source="0" target="TP53_M" id="10" />
+      <edge source="0" target="PIK3R1_M" id="11" />
+      <edge source="0" target="POLE_N" id="12" />
+      <edge source="0" target="HOXB3_N" id="13" />
+      <edge source="0" target="EXT1_M" id="14" />
+      <edge source="0" target="CTNNB1_M" id="15" />
+      <edge source="0" target="STK11_M" id="16" />
+      <edge source="KRAS_M" target="CUX1_M" id="17" />
+      <edge source="EPB41L3_N" target="CIC_M" id="18" />
+      <edge source="TP53_M" target="PIK3R1_M" id="19" />
+      <edge source="POLE_N" target="HOXB3_N" id="20" />
+      <edge source="EXT1_M" target="CTNNB1_M" id="21" />
+      <edge source="STK11_M" target="KRAS_M" id="22" />
+    </edges>
+  </graph>
+</gexf>

@@ -10,7 +10,7 @@ from gurobipy import GRB
 # ---------------------------------------------------------------------------- #
 
 
-def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_graphs: dict, k: int, cores: int, solution_pool_size: int=5000, verbose: bool=False):
+def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_graphs: dict, k: int, path: str, cores: int, solution_pool_size: int=5000, verbose: bool=False):
     m = gp.Model('POTTR')
     if cores > 0:
         m.setParam('Threads', cores)

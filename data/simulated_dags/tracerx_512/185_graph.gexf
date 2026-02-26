@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="CHEK2_N" label="CHEK2_N" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="ACVR1B_N" label="ACVR1B_N" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TP53BP1_M" label="TP53BP1_M" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="DNM2_M" label="DNM2_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="CHEK2_N" id="0" />
+      <edge source="0" target="KEAP1_M" id="1" />
+      <edge source="0" target="ASXL1_N" id="2" />
+      <edge source="0" target="TET2_M" id="3" />
+      <edge source="0" target="CREBBP_M" id="4" />
+      <edge source="0" target="NF1_M" id="5" />
+      <edge source="0" target="ACVR1B_N" id="6" />
+      <edge source="0" target="BAP1_M" id="7" />
+      <edge source="0" target="RB1_N" id="8" />
+      <edge source="0" target="KRAS_M" id="9" />
+      <edge source="0" target="TP53BP1_M" id="10" />
+      <edge source="0" target="PTPRC_M" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+      <edge source="0" target="ASXL1_M" id="13" />
+      <edge source="0" target="DNM2_M" id="14" />
+      <edge source="NF1_M" target="ACVR1B_N" id="15" />
+      <edge source="BAP1_M" target="RB1_N" id="16" />
+      <edge source="KRAS_M" target="TP53BP1_M" id="17" />
+      <edge source="PTPRC_M" target="SMARCA4_M" id="18" />
+      <edge source="ASXL1_M" target="DNM2_M" id="19" />
+    </edges>
+  </graph>
+</gexf>

@@ -11,7 +11,7 @@ import convert_to_mastro_format
 import networkx as nx
 from read_input_dags import read_multiple_graphs_per_evolution
 from create_graphs import add_attributes, get_graphs_parallel, get_graphs_single_thread
-from compute_conflict_graph import get_conflict_graphs_parallel, get_conflict_graphs_single_thread, get_union_conflict_graph
+from compute_conflict_graph import *
 from MASTRO_significance_test import compute_significance
 from draw_trajectory import draw_trajectory_graph
 
@@ -34,6 +34,10 @@ def get_parser():
                         help='File or directory containing transitively closed DAGs (incomplete posets)')
     parser.add_argument('--k', '-k', required=True, dest='k', type=int,
                         help='Number k of incomplete posets to search for common trajectory')
+    parser.add_argument('--resolution_threshold', '-rt', dest='resolution_threshold', type=int,
+                        help='Number of edges required to resolve a cluster')
+    parser.add_argument('--resolution_frequency', '-rf', action='store_true',
+                        help='Only allow resolution in the direction of the the most frequent edge for a cluster node pair')
     parser.add_argument('--cores', '-c', dest='cores', type=int, default=1,
                         help='Number cores / threads Gurobi should use; default 0, Gurobi will use all available cores')
     parser.add_argument('--parallelize', '-parallel', action='store_true',
@@ -108,7 +112,8 @@ def main():
     log(f'Reading dags {dags}')
 
     # graphs will be transformed into a dict of graphs
-    graphs_dict = read_multiple_graphs_per_evolution(dags, directory, verbose)
+    graphs_dict = read_multiple_graphs_per_evolution(path=dags, out=directory,
+                                                     parallel_processes=args.cores, verbose_flag=verbose)
     # since graphs is a dictionary, the graph pairs for the conflict computation must be computed from the dict values
     graph_pairs = []
     for p1, p2 in itertools.combinations(graphs_dict.keys(), 2):
@@ -123,11 +128,17 @@ def main():
     # create union conflict graph
     if parallel:
         log('Create pairwise conflict graphs parallel')
-        pairwise_conflict_graphs = get_conflict_graphs_parallel(graph_pairs=graph_pairs, verbose=verbose, num_workers=args.cores)
+        pairwise_conflict_graphs, potential_conflicts = get_conflict_graphs_parallel(graph_pairs=graph_pairs, verbose=verbose, num_workers=args.cores)
         log('Compute union conflict graph')
         union_graph = get_union_conflict_graph(pairwise_conflict_graphs=pairwise_conflict_graphs, verbose=verbose)
     else:
-        union_graph = get_conflict_graphs_single_thread(graph_pairs=graph_pairs, verbose=verbose)
+        union_graph, potential_conflicts = get_conflict_graphs_single_thread(graph_pairs=graph_pairs, verbose=verbose)
+
+    # add edges if certain clusters should not be resolved, e.g. if confidence of resolution is too low
+    if args.resolution_frequency:
+        add_low_frequency_edges_union_graph(union_graph, potential_conflicts)
+    if args.resolution_threshold:
+        add_resolution_threshold_edges(union_graph, potential_conflicts, args.resolution_threshold)
     log('Done creating conflict graph')
 
     log('Start ILP')
@@ -233,7 +244,8 @@ def main():
     if len(trajectories[0].nodes) < 13:
         log('Run significance test')
         results_significance = os.path.join(directory, 'significance_output.txt')
-        compute_significance.run_stat_significancce_test(converted_file, dags, results_significance)
+        compute_significance.run_stat_significancce_test(support_file=converted_file, graph_file=dags,
+                                                         output_file=results_significance, cores=args.cores)
     else:
         print('Trajectory size is too large to execute the significance test.')
 

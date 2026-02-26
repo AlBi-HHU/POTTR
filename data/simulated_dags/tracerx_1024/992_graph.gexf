@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="ADCY2_N" label="ADCY2_N" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="CMTR2_N" label="CMTR2_N" />
+      <node id="PPP3CA_M" label="PPP3CA_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="CTNNB1_M" label="CTNNB1_M" />
+      <node id="XPA_M" label="XPA_M" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="0" label="0" />
+      <node id="ZFP36L1_M" label="ZFP36L1_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="DICER1_N" label="DICER1_N" />
+      <node id="BRCA2_M" label="BRCA2_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+    </nodes>
+    <edges>
+      <edge source="ADCY2_N" target="COL5A2_M" id="0" />
+      <edge source="CMTR2_N" target="PPP3CA_M" id="1" />
+      <edge source="KRAS_M" target="CTNNB1_M" id="2" />
+      <edge source="XPA_M" target="EP300_M" id="3" />
+      <edge source="0" target="ZFP36L1_M" id="4" />
+      <edge source="0" target="COL2A1_M" id="5" />
+      <edge source="0" target="ADCY2_N" id="6" />
+      <edge source="0" target="COL5A2_M" id="7" />
+      <edge source="0" target="CMTR2_N" id="8" />
+      <edge source="0" target="PPP3CA_M" id="9" />
+      <edge source="0" target="KRAS_M" id="10" />
+      <edge source="0" target="CTNNB1_M" id="11" />
+      <edge source="0" target="XPA_M" id="12" />
+      <edge source="0" target="EP300_M" id="13" />
+      <edge source="0" target="PTPRC_M" id="14" />
+      <edge source="0" target="SMARCA4_M" id="15" />
+      <edge source="0" target="DICER1_N" id="16" />
+      <edge source="0" target="BRCA2_M" id="17" />
+      <edge source="0" target="TP53_M" id="18" />
+      <edge source="0" target="UBR5_M" id="19" />
+      <edge source="PTPRC_M" target="SMARCA4_M" id="20" />
+      <edge source="DICER1_N" target="BRCA2_M" id="21" />
+      <edge source="TP53_M" target="UBR5_M" id="22" />
+    </edges>
+  </graph>
+</gexf>

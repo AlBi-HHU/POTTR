@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PATZ1_N" label="PATZ1_N" />
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="PTEN_M" label="PTEN_M" />
+      <node id="0" label="0" />
+      <node id="KMT2C_N" label="KMT2C_N" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="WRN_M" label="WRN_M" />
+      <node id="KMT2D_N" label="KMT2D_N" />
+      <node id="NOTCH1_N" label="NOTCH1_N" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="BLM_M" label="BLM_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="BAP1_M" label="BAP1_M" />
+    </nodes>
+    <edges>
+      <edge source="STK11_N" target="PATZ1_N" id="0" />
+      <edge source="KEAP1_N" target="COL5A2_M" id="1" />
+      <edge source="SNX29_M" target="PIK3CG_N" id="2" />
+      <edge source="TP53_N" target="PTEN_M" id="3" />
+      <edge source="0" target="KMT2C_N" id="4" />
+      <edge source="0" target="BLM_M" id="5" />
+      <edge source="0" target="STK11_N" id="6" />
+      <edge source="0" target="PATZ1_N" id="7" />
+      <edge source="0" target="KEAP1_N" id="8" />
+      <edge source="0" target="COL5A2_M" id="9" />
+      <edge source="0" target="SNX29_M" id="10" />
+      <edge source="0" target="PIK3CG_N" id="11" />
+      <edge source="0" target="TP53_N" id="12" />
+      <edge source="0" target="PTEN_M" id="13" />
+      <edge source="0" target="POLE_M" id="14" />
+      <edge source="0" target="TNFAIP3_M" id="15" />
+      <edge source="0" target="WRN_M" id="16" />
+      <edge source="0" target="KMT2D_N" id="17" />
+      <edge source="0" target="NOTCH1_N" id="18" />
+      <edge source="0" target="B2M_N" id="19" />
+      <edge source="0" target="STIM1_M" id="20" />
+      <edge source="0" target="BAP1_M" id="21" />
+      <edge source="POLE_M" target="TNFAIP3_M" id="22" />
+      <edge source="WRN_M" target="KMT2D_N" id="23" />
+      <edge source="NOTCH1_N" target="B2M_N" id="24" />
+      <edge source="STIM1_M" target="BAP1_M" id="25" />
+    </edges>
+  </graph>
+</gexf>

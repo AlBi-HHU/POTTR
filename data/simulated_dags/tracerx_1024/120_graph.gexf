@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="TBL1XR1_M" label="TBL1XR1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CMTR2_M" label="CMTR2_M" />
+      <node id="MAP3K1_M" label="MAP3K1_M" />
+      <node id="KMT2B_M" label="KMT2B_M" />
+      <node id="CDH1_M" label="CDH1_M" />
+      <node id="TET2_M" label="TET2_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="EXT2_M" label="EXT2_M" />
+      <node id="ODAM_N" label="ODAM_N" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="PTCH1_M" label="PTCH1_M" />
+      <node id="MGA_M" label="MGA_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="CREBBP_M" id="0" />
+      <edge source="0" target="MAP3K1_M" id="1" />
+      <edge source="0" target="TP53_M" id="2" />
+      <edge source="0" target="TBL1XR1_M" id="3" />
+      <edge source="0" target="KEAP1_M" id="4" />
+      <edge source="0" target="CMTR2_M" id="5" />
+      <edge source="0" target="KMT2B_M" id="6" />
+      <edge source="0" target="CDH1_M" id="7" />
+      <edge source="0" target="TET2_M" id="8" />
+      <edge source="0" target="NFE2L2_M" id="9" />
+      <edge source="0" target="BHMT2_M" id="10" />
+      <edge source="0" target="ASXL1_M" id="11" />
+      <edge source="0" target="SPEN_M" id="12" />
+      <edge source="0" target="ERCC3_N" id="13" />
+      <edge source="0" target="CDKN2A_N" id="14" />
+      <edge source="0" target="HIST1H4E_M" id="15" />
+      <edge source="0" target="KRAS_M" id="16" />
+      <edge source="0" target="CHD4_M" id="17" />
+      <edge source="0" target="EXT2_M" id="18" />
+      <edge source="0" target="ODAM_N" id="19" />
+      <edge source="0" target="PLCG2_M" id="20" />
+      <edge source="0" target="PTCH1_M" id="21" />
+      <edge source="0" target="MGA_M" id="22" />
+      <edge source="TP53_M" target="TBL1XR1_M" id="23" />
+      <edge source="KEAP1_M" target="CMTR2_M" id="24" />
+      <edge source="KMT2B_M" target="CDH1_M" id="25" />
+      <edge source="TET2_M" target="NFE2L2_M" id="26" />
+      <edge source="BHMT2_M" target="ASXL1_M" id="27" />
+      <edge source="SPEN_M" target="ERCC3_N" id="28" />
+      <edge source="CDKN2A_N" target="HIST1H4E_M" id="29" />
+      <edge source="KRAS_M" target="CHD4_M" id="30" />
+      <edge source="EXT2_M" target="ODAM_N" id="31" />
+      <edge source="PLCG2_M" target="PTCH1_M" id="32" />
+      <edge source="MGA_M" target="KMT2B_M" id="33" />
+    </edges>
+  </graph>
+</gexf>

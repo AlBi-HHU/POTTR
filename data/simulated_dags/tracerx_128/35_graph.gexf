@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FLCN_M" label="FLCN_M" />
+      <node id="PBRM1_M" label="PBRM1_M" />
+      <node id="0" label="0" />
+      <node id="PMS1_N" label="PMS1_N" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="TNR_N" label="TNR_N" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="NCOR1_N" label="NCOR1_N" />
+      <node id="ZFP36L1_M" label="ZFP36L1_M" />
+    </nodes>
+    <edges>
+      <edge source="FLCN_M" target="PBRM1_M" id="0" />
+      <edge source="0" target="PMS1_N" id="1" />
+      <edge source="0" target="NF1_M" id="2" />
+      <edge source="0" target="TNR_N" id="3" />
+      <edge source="0" target="ZFP36L1_M" id="4" />
+      <edge source="0" target="FLCN_M" id="5" />
+      <edge source="0" target="PBRM1_M" id="6" />
+      <edge source="0" target="KEAP1_M" id="7" />
+      <edge source="0" target="NCOR1_N" id="8" />
+      <edge source="KEAP1_M" target="NCOR1_N" id="9" />
+    </edges>
+  </graph>
+</gexf>

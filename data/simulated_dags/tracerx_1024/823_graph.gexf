@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="TET2_M" label="TET2_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="WT1_M" label="WT1_M" />
+      <node id="0" label="0" />
+      <node id="CDK12_M" label="CDK12_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="U2AF1_M" label="U2AF1_M" />
+      <node id="DNMT3A_M" label="DNMT3A_M" />
+      <node id="TIMM17A_N" label="TIMM17A_N" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="BRCA1_M" label="BRCA1_M" />
+      <node id="FBXW7_M" label="FBXW7_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="CYLD_M" label="CYLD_M" />
+      <node id="CUL3_M" label="CUL3_M" />
+      <node id="UBR5_N" label="UBR5_N" />
+    </nodes>
+    <edges>
+      <edge source="TET2_M" target="COL5A2_M" id="0" />
+      <edge source="TP53_M" target="WT1_M" id="1" />
+      <edge source="0" target="TP53_M" id="2" />
+      <edge source="0" target="KRAS_M" id="3" />
+      <edge source="0" target="U2AF1_M" id="4" />
+      <edge source="0" target="CDKN2A_M" id="5" />
+      <edge source="0" target="STK11_N" id="6" />
+      <edge source="0" target="TET2_M" id="7" />
+      <edge source="0" target="COL5A2_M" id="8" />
+      <edge source="0" target="WT1_M" id="9" />
+      <edge source="0" target="CDK12_M" id="10" />
+      <edge source="0" target="TNFAIP3_M" id="11" />
+      <edge source="0" target="DNMT3A_M" id="12" />
+      <edge source="0" target="TIMM17A_N" id="13" />
+      <edge source="0" target="BRCA1_M" id="14" />
+      <edge source="0" target="FBXW7_M" id="15" />
+      <edge source="0" target="SMARCA4_M" id="16" />
+      <edge source="0" target="KEAP1_M" id="17" />
+      <edge source="0" target="EZH1_M" id="18" />
+      <edge source="0" target="CYLD_M" id="19" />
+      <edge source="0" target="CUL3_M" id="20" />
+      <edge source="0" target="UBR5_N" id="21" />
+      <edge source="CDK12_M" target="TNFAIP3_M" id="22" />
+      <edge source="KRAS_M" target="KEAP1_M" id="23" />
+      <edge source="DNMT3A_M" target="TIMM17A_N" id="24" />
+      <edge source="STK11_N" target="SMARCA4_M" id="25" />
+      <edge source="BRCA1_M" target="FBXW7_M" id="26" />
+      <edge source="EZH1_M" target="CYLD_M" id="27" />
+      <edge source="CUL3_M" target="UBR5_N" id="28" />
+    </edges>
+  </graph>
+</gexf>

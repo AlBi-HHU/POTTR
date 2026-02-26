@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="SGK223_M" label="SGK223_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="PTCH1_M" label="PTCH1_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="IQGAP2_N" label="IQGAP2_N" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="0" label="0" />
+      <node id="MSH2_M" label="MSH2_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="MUTYH_M" label="MUTYH_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+    </nodes>
+    <edges>
+      <edge source="SGK223_M" target="CHD4_M" id="0" />
+      <edge source="PTCH1_M" target="ASXL2_M" id="1" />
+      <edge source="IQGAP2_N" target="PIK3CG_N" id="2" />
+      <edge source="0" target="MSH2_M" id="3" />
+      <edge source="0" target="NFE2L2_M" id="4" />
+      <edge source="0" target="KEAP1_M" id="5" />
+      <edge source="0" target="SGK223_M" id="6" />
+      <edge source="0" target="CHD4_M" id="7" />
+      <edge source="0" target="PTCH1_M" id="8" />
+      <edge source="0" target="ASXL2_M" id="9" />
+      <edge source="0" target="IQGAP2_N" id="10" />
+      <edge source="0" target="PIK3CG_N" id="11" />
+      <edge source="0" target="MTOR_M" id="12" />
+      <edge source="0" target="BAP1_M" id="13" />
+      <edge source="0" target="MUTYH_M" id="14" />
+      <edge source="0" target="TP53_M" id="15" />
+      <edge source="0" target="SETDB1_M" id="16" />
+      <edge source="0" target="BHMT2_M" id="17" />
+      <edge source="0" target="ASXL1_M" id="18" />
+      <edge source="MTOR_M" target="BAP1_M" id="19" />
+      <edge source="MUTYH_M" target="TP53_M" id="20" />
+      <edge source="TP53_M" target="SETDB1_M" id="21" />
+      <edge source="BHMT2_M" target="ASXL1_M" id="22" />
+    </edges>
+  </graph>
+</gexf>

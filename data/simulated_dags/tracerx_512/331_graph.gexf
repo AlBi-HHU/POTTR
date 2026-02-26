@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="STK11_N" label="STK11_N" />
+      <node id="TP53BP1_M" label="TP53BP1_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="LAMA4_N" label="LAMA4_N" />
+      <node id="GNPTAB_M" label="GNPTAB_M" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="0" label="0" />
+      <node id="SETD2_N" label="SETD2_N" />
+    </nodes>
+    <edges>
+      <edge source="STK11_N" target="TP53BP1_M" id="0" />
+      <edge source="TP53_M" target="LAMA4_N" id="1" />
+      <edge source="GNPTAB_M" target="B2M_N" id="2" />
+      <edge source="NFE2L2_M" target="SMARCA4_M" id="3" />
+      <edge source="0" target="SETD2_N" id="4" />
+      <edge source="0" target="STK11_N" id="5" />
+      <edge source="0" target="TP53BP1_M" id="6" />
+      <edge source="0" target="TP53_M" id="7" />
+      <edge source="0" target="LAMA4_N" id="8" />
+      <edge source="0" target="GNPTAB_M" id="9" />
+      <edge source="0" target="B2M_N" id="10" />
+      <edge source="0" target="NFE2L2_M" id="11" />
+      <edge source="0" target="SMARCA4_M" id="12" />
+    </edges>
+  </graph>
+</gexf>

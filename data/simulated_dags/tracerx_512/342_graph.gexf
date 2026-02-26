@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="0" label="0" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="CHD8_M" label="CHD8_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="CUX1_M" label="CUX1_M" />
+      <node id="GNPTAB_M" label="GNPTAB_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="SMC3_M" label="SMC3_M" />
+    </nodes>
+    <edges>
+      <edge source="BHMT2_M" target="MTOR_M" id="0" />
+      <edge source="0" target="CIC_M" id="1" />
+      <edge source="0" target="GNPTAB_M" id="2" />
+      <edge source="0" target="SNX29_M" id="3" />
+      <edge source="0" target="BHMT2_M" id="4" />
+      <edge source="0" target="MTOR_M" id="5" />
+      <edge source="0" target="CDKN2A_M" id="6" />
+      <edge source="0" target="CHD8_M" id="7" />
+      <edge source="0" target="COL5A2_M" id="8" />
+      <edge source="0" target="DICER1_M" id="9" />
+      <edge source="0" target="TP53_N" id="10" />
+      <edge source="0" target="CUX1_M" id="11" />
+      <edge source="0" target="SMC3_M" id="12" />
+      <edge source="CDKN2A_M" target="CHD8_M" id="13" />
+      <edge source="CDKN2A_M" target="SMC3_M" id="14" />
+      <edge source="COL5A2_M" target="DICER1_M" id="15" />
+      <edge source="TP53_N" target="CUX1_M" id="16" />
+    </edges>
+  </graph>
+</gexf>

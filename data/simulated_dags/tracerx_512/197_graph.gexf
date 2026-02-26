@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="KMT2D_N" label="KMT2D_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M">
+        <attvalues>
+          <attvalue for="0" value="GATA3_M" />
+        </attvalues>
+      </node>
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="FANCD2_M" label="FANCD2_M" />
+      <node id="GATA3_M" label="GATA3_M">
+        <attvalues>
+          <attvalue for="0" value="SMARCA4_M" />
+        </attvalues>
+      </node>
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="ATM_M" label="ATM_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="TP53_M" label="TP53_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="KRAS_M" id="0" />
+      <edge source="0" target="FANCD2_M" id="1" />
+      <edge source="0" target="SNX29_M" id="2" />
+      <edge source="0" target="ATM_M" id="3" />
+      <edge source="0" target="STK11_M" id="4" />
+      <edge source="0" target="TP53_M" id="5" />
+      <edge source="0" target="STIM1_M" id="6" />
+      <edge source="0" target="CTCF_M" id="7" />
+      <edge source="0" target="STK11_N" id="8" />
+      <edge source="0" target="PATZ1_M" id="9" />
+      <edge source="0" target="FAT1_M" id="10" />
+      <edge source="0" target="ERCC3_N" id="11" />
+      <edge source="0" target="KMT2D_N" id="12" />
+      <edge source="0" target="PTEN_N" id="13" />
+      <edge source="0" target="SMARCA4_M" id="14" />
+      <edge source="0" target="KMT2D_M" id="15" />
+      <edge source="0" target="GATA3_M" id="16" />
+      <edge source="0" target="MTOR_M" id="17" />
+      <edge source="0" target="BAP1_M" id="18" />
+      <edge source="STIM1_M" target="CTCF_M" id="19" />
+      <edge source="STK11_N" target="PATZ1_M" id="20" />
+      <edge source="FAT1_M" target="ERCC3_N" id="21" />
+      <edge source="KMT2D_N" target="PTEN_N" id="22" />
+      <edge source="SMARCA4_M" target="KMT2D_M" id="23" />
+      <edge source="GATA3_M" target="KMT2D_M" id="24" />
+      <edge source="MTOR_M" target="CTCF_M" id="25" />
+      <edge source="MTOR_M" target="BAP1_M" id="26" />
+    </edges>
+  </graph>
+</gexf>

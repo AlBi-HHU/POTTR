@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="0" label="0" />
+      <node id="NIN_M" label="NIN_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+    </nodes>
+    <edges>
+      <edge source="FAT1_M" target="MGA_M" id="0" />
+      <edge source="0" target="NIN_M" id="1" />
+      <edge source="0" target="FAT1_M" id="2" />
+      <edge source="0" target="MGA_M" id="3" />
+      <edge source="0" target="SNX29_M" id="4" />
+      <edge source="0" target="PIK3CG_N" id="5" />
+      <edge source="SNX29_M" target="PIK3CG_N" id="6" />
+    </edges>
+  </graph>
+</gexf>

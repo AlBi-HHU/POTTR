@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="PTPRU_M" label="PTPRU_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="0" label="0" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="ZMYM2_M" label="ZMYM2_M" />
+      <node id="ARID2_M" label="ARID2_M" />
+      <node id="AXIN2_M" label="AXIN2_M" />
+      <node id="NOTCH1_M" label="NOTCH1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="CMTR2_M" label="CMTR2_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="BUB1B_N" label="BUB1B_N" />
+      <node id="WRN_M" label="WRN_M" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+    </nodes>
+    <edges>
+      <edge source="PTPRU_M" target="MGA_M" id="0" />
+      <edge source="0" target="STK11_N" id="1" />
+      <edge source="0" target="ZMYM2_M" id="2" />
+      <edge source="0" target="ARID2_M" id="3" />
+      <edge source="0" target="CMTR2_M" id="4" />
+      <edge source="0" target="WRN_M" id="5" />
+      <edge source="0" target="PTPRU_M" id="6" />
+      <edge source="0" target="MGA_M" id="7" />
+      <edge source="0" target="TP53_M" id="8" />
+      <edge source="0" target="FAT1_M" id="9" />
+      <edge source="0" target="AXIN2_M" id="10" />
+      <edge source="0" target="NOTCH1_M" id="11" />
+      <edge source="0" target="KRAS_M" id="12" />
+      <edge source="0" target="ARID1A_N" id="13" />
+      <edge source="0" target="BUB1B_N" id="14" />
+      <edge source="0" target="PTPRB_M" id="15" />
+      <edge source="0" target="DICER1_M" id="16" />
+      <edge source="0" target="KEAP1_M" id="17" />
+      <edge source="0" target="SPEN_M" id="18" />
+      <edge source="TP53_M" target="FAT1_M" id="19" />
+      <edge source="TP53_M" target="AXIN2_M" id="20" />
+      <edge source="NOTCH1_M" target="KRAS_M" id="21" />
+      <edge source="ARID1A_N" target="BUB1B_N" id="22" />
+      <edge source="PTPRB_M" target="DICER1_M" id="23" />
+      <edge source="KEAP1_M" target="SPEN_M" id="24" />
+    </edges>
+  </graph>
+</gexf>

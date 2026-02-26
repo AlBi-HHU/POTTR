@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="AXIN2_M" label="AXIN2_M" />
+      <node id="CREBBP_M" label="CREBBP_M" />
+      <node id="FBXW7_M" label="FBXW7_M" />
+      <node id="FANCM_M" label="FANCM_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M" />
+    </nodes>
+    <edges>
+      <edge source="AXIN2_M" target="CREBBP_M" id="0" />
+      <edge source="FBXW7_M" target="FANCM_M" id="1" />
+      <edge source="COL2A1_M" target="MTOR_M" id="2" />
+      <edge source="SNX29_M" target="PIK3CG_N" id="3" />
+      <edge source="0" target="KRAS_M" id="4" />
+      <edge source="0" target="AXIN2_M" id="5" />
+      <edge source="0" target="CREBBP_M" id="6" />
+      <edge source="0" target="FBXW7_M" id="7" />
+      <edge source="0" target="FANCM_M" id="8" />
+      <edge source="0" target="COL2A1_M" id="9" />
+      <edge source="0" target="MTOR_M" id="10" />
+      <edge source="0" target="SNX29_M" id="11" />
+      <edge source="0" target="PIK3CG_N" id="12" />
+    </edges>
+  </graph>
+</gexf>

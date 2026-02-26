@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="STIM1_M" label="STIM1_M">
+        <attvalues>
+          <attvalue for="0" value="MTOR_M" />
+        </attvalues>
+      </node>
+      <node id="BAP1_M" label="BAP1_M" />
+      <node id="0" label="0" />
+      <node id="PTEN_M" label="PTEN_M" />
+      <node id="MTOR_M" label="MTOR_M">
+        <attvalues>
+          <attvalue for="0" value="STIM1_M" />
+        </attvalues>
+      </node>
+      <node id="KEAP1_N" label="KEAP1_N" />
+    </nodes>
+    <edges>
+      <edge source="STIM1_M" target="BAP1_M" id="0" />
+      <edge source="0" target="PTEN_M" id="1" />
+      <edge source="0" target="KEAP1_N" id="2" />
+      <edge source="0" target="STIM1_M" id="3" />
+      <edge source="0" target="BAP1_M" id="4" />
+      <edge source="0" target="MTOR_M" id="5" />
+      <edge source="MTOR_M" target="BAP1_M" id="6" />
+    </edges>
+  </graph>
+</gexf>

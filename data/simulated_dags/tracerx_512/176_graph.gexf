@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="0" label="0" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="RB1_M" label="RB1_M" />
+      <node id="CDKN2A_M" label="CDKN2A_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="EZH1_M" label="EZH1_M" />
+      <node id="ATR_N" label="ATR_N" />
+    </nodes>
+    <edges>
+      <edge source="SNX29_M" target="ASXL1_M" id="0" />
+      <edge source="0" target="NF1_M" id="1" />
+      <edge source="0" target="CDKN2A_M" id="2" />
+      <edge source="0" target="ATR_N" id="3" />
+      <edge source="0" target="SNX29_M" id="4" />
+      <edge source="0" target="ASXL1_M" id="5" />
+      <edge source="0" target="TP53_M" id="6" />
+      <edge source="0" target="RB1_M" id="7" />
+      <edge source="0" target="KRAS_M" id="8" />
+      <edge source="0" target="PIK3CG_N" id="9" />
+      <edge source="0" target="CTCF_M" id="10" />
+      <edge source="0" target="DICER1_M" id="11" />
+      <edge source="0" target="EZH1_M" id="12" />
+      <edge source="TP53_M" target="RB1_M" id="13" />
+      <edge source="TP53_M" target="KRAS_M" id="14" />
+      <edge source="PIK3CG_N" target="CTCF_M" id="15" />
+      <edge source="DICER1_M" target="EZH1_M" id="16" />
+    </edges>
+  </graph>
+</gexf>

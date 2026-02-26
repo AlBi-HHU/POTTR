@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="TNFRSF14_N" label="TNFRSF14_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="KMT2D_M" label="KMT2D_M" />
+      <node id="SNX29_M" label="SNX29_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="KMT2B_M" label="KMT2B_M" />
+      <node id="CDH1_M" label="CDH1_M" />
+      <node id="ITGBL1_N" label="ITGBL1_N" />
+      <node id="EGFR_M" label="EGFR_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="ASXL1_N" label="ASXL1_N" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="PTEN_M" label="PTEN_M" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="GRIN2A_M" label="GRIN2A_M" />
+      <node id="EP300_M" label="EP300_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="TNFRSF14_N" id="0" />
+      <edge source="0" target="ITGBL1_N" id="1" />
+      <edge source="0" target="EGFR_M" id="2" />
+      <edge source="0" target="GRIN2A_M" id="3" />
+      <edge source="0" target="SMARCA4_M" id="4" />
+      <edge source="0" target="KMT2D_M" id="5" />
+      <edge source="0" target="SNX29_M" id="6" />
+      <edge source="0" target="PIK3CG_N" id="7" />
+      <edge source="0" target="KMT2B_M" id="8" />
+      <edge source="0" target="CDH1_M" id="9" />
+      <edge source="0" target="KRAS_M" id="10" />
+      <edge source="0" target="TP53_M" id="11" />
+      <edge source="0" target="ASXL1_N" id="12" />
+      <edge source="0" target="MTOR_M" id="13" />
+      <edge source="0" target="PTEN_M" id="14" />
+      <edge source="0" target="PATZ1_M" id="15" />
+      <edge source="0" target="EP300_M" id="16" />
+      <edge source="SMARCA4_M" target="KMT2D_M" id="17" />
+      <edge source="SNX29_M" target="PIK3CG_N" id="18" />
+      <edge source="KMT2B_M" target="CDH1_M" id="19" />
+      <edge source="KRAS_M" target="TP53_M" id="20" />
+      <edge source="TP53_M" target="EP300_M" id="21" />
+      <edge source="ASXL1_N" target="MTOR_M" id="22" />
+      <edge source="PTEN_M" target="PATZ1_M" id="23" />
+    </edges>
+  </graph>
+</gexf>

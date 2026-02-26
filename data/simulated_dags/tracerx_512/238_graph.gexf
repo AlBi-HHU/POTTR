@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="DNM2_M" label="DNM2_M" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="SLC4A5_M" label="SLC4A5_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="FAT1_M" label="FAT1_M" />
+      <node id="0" label="0" />
+    </nodes>
+    <edges>
+      <edge source="COL2A1_M" target="ASXL1_M" id="0" />
+      <edge source="KRAS_M" target="DNM2_M" id="1" />
+      <edge source="CDKN2A_N" target="SLC4A5_M" id="2" />
+      <edge source="SPEN_M" target="PTPRC_M" id="3" />
+      <edge source="MGA_N" target="FAT1_M" id="4" />
+      <edge source="0" target="COL2A1_M" id="5" />
+      <edge source="0" target="ASXL1_M" id="6" />
+      <edge source="0" target="KRAS_M" id="7" />
+      <edge source="0" target="DNM2_M" id="8" />
+      <edge source="0" target="CDKN2A_N" id="9" />
+      <edge source="0" target="SLC4A5_M" id="10" />
+      <edge source="0" target="SPEN_M" id="11" />
+      <edge source="0" target="PTPRC_M" id="12" />
+      <edge source="0" target="MGA_N" id="13" />
+      <edge source="0" target="FAT1_M" id="14" />
+    </edges>
+  </graph>
+</gexf>

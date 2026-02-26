@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="PIK3R1_M" label="PIK3R1_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="NF1_N" label="NF1_N" />
+      <node id="PMS1_M" label="PMS1_M" />
+      <node id="RIMS2_N" label="RIMS2_N" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+      <node id="RIT1_M" label="RIT1_M" />
+      <node id="DARC_N" label="DARC_N" />
+      <node id="NCOR1_N" label="NCOR1_N" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="CDKN2A_N" label="CDKN2A_N" />
+      <node id="CEP76_M" label="CEP76_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="MYH2_N" label="MYH2_N" />
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="BUB1B_N" label="BUB1B_N" />
+      <node id="NOTCH1_M" label="NOTCH1_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="SPEN_M" label="SPEN_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="MGA_M" id="0" />
+      <edge source="0" target="NF1_N" id="1" />
+      <edge source="0" target="RIT1_M" id="2" />
+      <edge source="0" target="MYH2_N" id="3" />
+      <edge source="0" target="NOTCH1_M" id="4" />
+      <edge source="0" target="STK11_N" id="5" />
+      <edge source="0" target="PIK3R1_M" id="6" />
+      <edge source="0" target="DICER1_M" id="7" />
+      <edge source="0" target="SMARCA4_M" id="8" />
+      <edge source="0" target="PMS1_M" id="9" />
+      <edge source="0" target="RIMS2_N" id="10" />
+      <edge source="0" target="BHMT2_M" id="11" />
+      <edge source="0" target="PIK3CG_N" id="12" />
+      <edge source="0" target="DARC_N" id="13" />
+      <edge source="0" target="NCOR1_N" id="14" />
+      <edge source="0" target="TP53_M" id="15" />
+      <edge source="0" target="CDKN2A_N" id="16" />
+      <edge source="0" target="CEP76_M" id="17" />
+      <edge source="0" target="KRAS_M" id="18" />
+      <edge source="0" target="ASXL2_M" id="19" />
+      <edge source="0" target="KEAP1_N" id="20" />
+      <edge source="0" target="BUB1B_N" id="21" />
+      <edge source="0" target="STIM1_M" id="22" />
+      <edge source="0" target="SPEN_M" id="23" />
+      <edge source="STK11_N" target="PIK3R1_M" id="24" />
+      <edge source="DICER1_M" target="SMARCA4_M" id="25" />
+      <edge source="PMS1_M" target="RIMS2_N" id="26" />
+      <edge source="BHMT2_M" target="PIK3CG_N" id="27" />
+      <edge source="DARC_N" target="NCOR1_N" id="28" />
+      <edge source="TP53_M" target="CDKN2A_N" id="29" />
+      <edge source="TP53_M" target="CEP76_M" id="30" />
+      <edge source="KRAS_M" target="ASXL2_M" id="31" />
+      <edge source="KEAP1_N" target="BUB1B_N" id="32" />
+      <edge source="STIM1_M" target="SPEN_M" id="33" />
+    </edges>
+  </graph>
+</gexf>

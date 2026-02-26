@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="NCOR1_M" label="NCOR1_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="KEAP1_N" label="KEAP1_N" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="POLE_M" label="POLE_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="ZMYM2_M" label="ZMYM2_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="FANCE_M" label="FANCE_M" />
+      <node id="FAT1_M" label="FAT1_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="KRAS_M" id="0" />
+      <edge source="0" target="MGA_M" id="1" />
+      <edge source="0" target="KEAP1_M" id="2" />
+      <edge source="0" target="NCOR1_M" id="3" />
+      <edge source="0" target="STK11_M" id="4" />
+      <edge source="0" target="KEAP1_N" id="5" />
+      <edge source="0" target="BHMT2_M" id="6" />
+      <edge source="0" target="MTOR_M" id="7" />
+      <edge source="0" target="POLE_M" id="8" />
+      <edge source="0" target="TNFAIP3_M" id="9" />
+      <edge source="0" target="PATZ1_M" id="10" />
+      <edge source="0" target="RB1_N" id="11" />
+      <edge source="0" target="ZMYM2_M" id="12" />
+      <edge source="0" target="SMARCA4_M" id="13" />
+      <edge source="0" target="FANCE_M" id="14" />
+      <edge source="0" target="FAT1_M" id="15" />
+      <edge source="KRAS_M" target="FAT1_M" id="16" />
+      <edge source="KEAP1_M" target="NCOR1_M" id="17" />
+      <edge source="KEAP1_M" target="PATZ1_M" id="18" />
+      <edge source="STK11_M" target="KEAP1_N" id="19" />
+      <edge source="BHMT2_M" target="MTOR_M" id="20" />
+      <edge source="POLE_M" target="TNFAIP3_M" id="21" />
+      <edge source="RB1_N" target="ZMYM2_M" id="22" />
+      <edge source="SMARCA4_M" target="FANCE_M" id="23" />
+    </edges>
+  </graph>
+</gexf>

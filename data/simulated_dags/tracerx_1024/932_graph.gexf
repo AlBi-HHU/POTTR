@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="COL2A1_M" label="COL2A1_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="FANCM_M" label="FANCM_M" />
+      <node id="KMT2D_N" label="KMT2D_N" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="RB1_N" label="RB1_N" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="BRIP1_M" label="BRIP1_M" />
+      <node id="BRCA2_M" label="BRCA2_M" />
+      <node id="JAK2_M" label="JAK2_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="EXT1_M" label="EXT1_M" />
+      <node id="ERCC3_N" label="ERCC3_N" />
+      <node id="CUL3_N" label="CUL3_N" />
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="APC_M" label="APC_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="CBLB_N" label="CBLB_N" />
+      <node id="STK11_M" label="STK11_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="PATZ1_M" id="0" />
+      <edge source="0" target="RB1_N" id="1" />
+      <edge source="0" target="STK11_N" id="2" />
+      <edge source="0" target="CBLB_N" id="3" />
+      <edge source="0" target="COL2A1_M" id="4" />
+      <edge source="0" target="DICER1_M" id="5" />
+      <edge source="0" target="PTPRB_M" id="6" />
+      <edge source="0" target="FANCM_M" id="7" />
+      <edge source="0" target="KMT2D_N" id="8" />
+      <edge source="0" target="PTEN_N" id="9" />
+      <edge source="0" target="KRAS_M" id="10" />
+      <edge source="0" target="BRIP1_M" id="11" />
+      <edge source="0" target="BRCA2_M" id="12" />
+      <edge source="0" target="JAK2_M" id="13" />
+      <edge source="0" target="TP53_N" id="14" />
+      <edge source="0" target="EXT1_M" id="15" />
+      <edge source="0" target="ERCC3_N" id="16" />
+      <edge source="0" target="CUL3_N" id="17" />
+      <edge source="0" target="KEAP1_M" id="18" />
+      <edge source="0" target="APC_M" id="19" />
+      <edge source="0" target="STK11_M" id="20" />
+      <edge source="COL2A1_M" target="DICER1_M" id="21" />
+      <edge source="PTPRB_M" target="FANCM_M" id="22" />
+      <edge source="KMT2D_N" target="PTEN_N" id="23" />
+      <edge source="KRAS_M" target="BRIP1_M" id="24" />
+      <edge source="BRCA2_M" target="JAK2_M" id="25" />
+      <edge source="TP53_N" target="EXT1_M" id="26" />
+      <edge source="ERCC3_N" target="CUL3_N" id="27" />
+      <edge source="KEAP1_M" target="APC_M" id="28" />
+      <edge source="STK11_M" target="KRAS_M" id="29" />
+    </edges>
+  </graph>
+</gexf>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="0" label="0" />
+      <node id="BHMT2_M" label="BHMT2_M" />
+      <node id="KRAS_M" label="KRAS_M">
+        <attvalues>
+          <attvalue for="0" value="NEB_N" />
+        </attvalues>
+      </node>
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="PTCH1_M" label="PTCH1_M" />
+      <node id="NEB_N" label="NEB_N">
+        <attvalues>
+          <attvalue for="0" value="KRAS_M" />
+        </attvalues>
+      </node>
+      <node id="PIK3CG_N" label="PIK3CG_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="BHMT2_M" id="0" />
+      <edge source="0" target="KRAS_M" id="1" />
+      <edge source="0" target="PTEN_N" id="2" />
+      <edge source="0" target="PTPRB_M" id="3" />
+      <edge source="0" target="PTCH1_M" id="4" />
+      <edge source="0" target="NEB_N" id="5" />
+      <edge source="0" target="PIK3CG_N" id="6" />
+      <edge source="KRAS_M" target="PTEN_N" id="7" />
+      <edge source="PTPRB_M" target="PTCH1_M" id="8" />
+      <edge source="PTPRB_M" target="PIK3CG_N" id="9" />
+      <edge source="NEB_N" target="PTEN_N" id="10" />
+    </edges>
+  </graph>
+</gexf>

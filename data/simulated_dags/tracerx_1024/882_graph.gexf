@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="HIST1H4E_M" label="HIST1H4E_M" />
+      <node id="SPEN_N" label="SPEN_N" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="PTPRB_M" label="PTPRB_M" />
+      <node id="0" label="0" />
+      <node id="MAP3K13_M" label="MAP3K13_M" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+    </nodes>
+    <edges>
+      <edge source="HIST1H4E_M" target="SPEN_N" id="0" />
+      <edge source="COL5A2_M" target="PTPRB_M" id="1" />
+      <edge source="0" target="MAP3K13_M" id="2" />
+      <edge source="0" target="NF1_M" id="3" />
+      <edge source="0" target="SMARCA4_M" id="4" />
+      <edge source="0" target="HIST1H4E_M" id="5" />
+      <edge source="0" target="SPEN_N" id="6" />
+      <edge source="0" target="COL5A2_M" id="7" />
+      <edge source="0" target="PTPRB_M" id="8" />
+    </edges>
+  </graph>
+</gexf>

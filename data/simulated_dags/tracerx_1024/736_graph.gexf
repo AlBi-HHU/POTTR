@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="SH2B3_M" label="SH2B3_M" />
+      <node id="ARHGAP35_N" label="ARHGAP35_N" />
+      <node id="ASXL1_M" label="ASXL1_M" />
+      <node id="CTCF_M" label="CTCF_M" />
+      <node id="0" label="0" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="PIK3CA_M" label="PIK3CA_M" />
+      <node id="SGK223_M" label="SGK223_M" />
+      <node id="FGFR3_M" label="FGFR3_M" />
+      <node id="EP300_M" label="EP300_M" />
+      <node id="NEB_N" label="NEB_N">
+        <attvalues>
+          <attvalue for="0" value="KEAP1_M" />
+        </attvalues>
+      </node>
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="LAMA4_N" label="LAMA4_N" />
+      <node id="NCOA6_M" label="NCOA6_M" />
+      <node id="KEAP1_M" label="KEAP1_M">
+        <attvalues>
+          <attvalue for="0" value="NEB_N" />
+        </attvalues>
+      </node>
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="PATZ1_M" label="PATZ1_M" />
+      <node id="SMAD4_M" label="SMAD4_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="PLCG2_M" label="PLCG2_M" />
+      <node id="FANCC_M" label="FANCC_M" />
+      <node id="PRRX1_M" label="PRRX1_M" />
+      <node id="CIC_M" label="CIC_M" />
+      <node id="NOTCH2_M" label="NOTCH2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+    </nodes>
+    <edges>
+      <edge source="SH2B3_M" target="ARHGAP35_N" id="0" />
+      <edge source="ASXL1_M" target="CTCF_M" id="1" />
+      <edge source="0" target="PTPRC_M" id="2" />
+      <edge source="0" target="SMAD4_M" id="3" />
+      <edge source="0" target="STK11_M" id="4" />
+      <edge source="0" target="SH2B3_M" id="5" />
+      <edge source="0" target="ARHGAP35_N" id="6" />
+      <edge source="0" target="ASXL1_M" id="7" />
+      <edge source="0" target="CTCF_M" id="8" />
+      <edge source="0" target="PIK3CA_M" id="9" />
+      <edge source="0" target="SGK223_M" id="10" />
+      <edge source="0" target="FGFR3_M" id="11" />
+      <edge source="0" target="EP300_M" id="12" />
+      <edge source="0" target="NEB_N" id="13" />
+      <edge source="0" target="SMARCA4_M" id="14" />
+      <edge source="0" target="LAMA4_N" id="15" />
+      <edge source="0" target="NCOA6_M" id="16" />
+      <edge source="0" target="KEAP1_M" id="17" />
+      <edge source="0" target="ASXL2_M" id="18" />
+      <edge source="0" target="PATZ1_M" id="19" />
+      <edge source="0" target="PLCG2_M" id="20" />
+      <edge source="0" target="FANCC_M" id="21" />
+      <edge source="0" target="PRRX1_M" id="22" />
+      <edge source="0" target="CIC_M" id="23" />
+      <edge source="0" target="NOTCH2_M" id="24" />
+      <edge source="0" target="DICER1_M" id="25" />
+      <edge source="0" target="KRAS_M" id="26" />
+      <edge source="0" target="UBR5_M" id="27" />
+      <edge source="PIK3CA_M" target="SGK223_M" id="28" />
+      <edge source="FGFR3_M" target="EP300_M" id="29" />
+      <edge source="NEB_N" target="SMARCA4_M" id="30" />
+      <edge source="LAMA4_N" target="NCOA6_M" id="31" />
+      <edge source="KEAP1_M" target="SMARCA4_M" id="32" />
+      <edge source="ASXL2_M" target="PATZ1_M" id="33" />
+      <edge source="PLCG2_M" target="FANCC_M" id="34" />
+      <edge source="PRRX1_M" target="CIC_M" id="35" />
+      <edge source="NOTCH2_M" target="DICER1_M" id="36" />
+      <edge source="KRAS_M" target="UBR5_M" id="37" />
+    </edges>
+  </graph>
+</gexf>

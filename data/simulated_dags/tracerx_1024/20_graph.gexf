@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="SH2B3_M" label="SH2B3_M" />
+      <node id="FAS_M" label="FAS_M" />
+      <node id="FAT1_N" label="FAT1_N" />
+    </nodes>
+    <edges>
+      <edge source="0" target="SH2B3_M" id="0" />
+      <edge source="0" target="FAS_M" id="1" />
+      <edge source="0" target="FAT1_N" id="2" />
+      <edge source="FAS_M" target="FAT1_N" id="3" />
+    </edges>
+  </graph>
+</gexf>

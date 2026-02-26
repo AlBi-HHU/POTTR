@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="0" label="0" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+      <node id="STIM1_M" label="STIM1_M" />
+      <node id="PRRX1_M" label="PRRX1_M" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="NF1_M" label="NF1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="TNFAIP3_M" label="TNFAIP3_M" />
+      <node id="POLE_N" label="POLE_N" />
+      <node id="CASP8_M" label="CASP8_M" />
+    </nodes>
+    <edges>
+      <edge source="0" target="TP53_M" id="0" />
+      <edge source="0" target="NF1_M" id="1" />
+      <edge source="0" target="COL5A2_M" id="2" />
+      <edge source="0" target="STIM1_M" id="3" />
+      <edge source="0" target="PRRX1_M" id="4" />
+      <edge source="0" target="ARID1A_N" id="5" />
+      <edge source="0" target="SMARCA4_M" id="6" />
+      <edge source="0" target="TNFAIP3_M" id="7" />
+      <edge source="0" target="POLE_N" id="8" />
+      <edge source="0" target="CASP8_M" id="9" />
+      <edge source="COL5A2_M" target="STIM1_M" id="10" />
+      <edge source="PRRX1_M" target="ARID1A_N" id="11" />
+      <edge source="SMARCA4_M" target="TNFAIP3_M" id="12" />
+      <edge source="POLE_N" target="CASP8_M" id="13" />
+    </edges>
+  </graph>
+</gexf>

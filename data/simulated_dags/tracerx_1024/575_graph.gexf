@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="AXIN2_M" label="AXIN2_M" />
+      <node id="SDHAF2_M" label="SDHAF2_M" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="0" label="0" />
+      <node id="SETD2_M" label="SETD2_M" />
+      <node id="KMT2D_N" label="KMT2D_N" />
+      <node id="KMT2C_M" label="KMT2C_M" />
+      <node id="MTOR_N" label="MTOR_N" />
+      <node id="TP53_M" label="TP53_M" />
+    </nodes>
+    <edges>
+      <edge source="AXIN2_M" target="SDHAF2_M" id="0" />
+      <edge source="DICER1_M" target="SMARCA4_M" id="1" />
+      <edge source="SMARCA4_M" target="ASXL2_M" id="2" />
+      <edge source="0" target="SETD2_M" id="3" />
+      <edge source="0" target="MTOR_N" id="4" />
+      <edge source="0" target="TP53_M" id="5" />
+      <edge source="0" target="AXIN2_M" id="6" />
+      <edge source="0" target="SDHAF2_M" id="7" />
+      <edge source="0" target="DICER1_M" id="8" />
+      <edge source="0" target="SMARCA4_M" id="9" />
+      <edge source="0" target="ASXL2_M" id="10" />
+      <edge source="0" target="KMT2D_N" id="11" />
+      <edge source="0" target="KMT2C_M" id="12" />
+      <edge source="KMT2D_N" target="KMT2C_M" id="13" />
+    </edges>
+  </graph>
+</gexf>

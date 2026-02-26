@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <nodes>
+      <node id="FANCG_M" label="FANCG_M" />
+      <node id="KRAS_M" label="KRAS_M" />
+      <node id="TP53_M" label="TP53_M" />
+      <node id="CHD4_M" label="CHD4_M" />
+      <node id="RNF43_M" label="RNF43_M" />
+      <node id="UBR5_M" label="UBR5_M" />
+      <node id="NOTCH1_N" label="NOTCH1_N" />
+      <node id="FLCN_M" label="FLCN_M" />
+      <node id="STK11_N" label="STK11_N" />
+      <node id="SETDB1_M" label="SETDB1_M" />
+      <node id="CNOT3_M" label="CNOT3_M" />
+      <node id="PLXNB2_M" label="PLXNB2_M" />
+      <node id="0" label="0" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="MBD1_N" label="MBD1_N" />
+      <node id="MGA_M" label="MGA_M" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="STK11_M" label="STK11_M" />
+      <node id="SMARCA4_M" label="SMARCA4_M" />
+      <node id="NRAS_M" label="NRAS_M" />
+      <node id="CYLD_M" label="CYLD_M" />
+      <node id="CHD8_M" label="CHD8_M" />
+    </nodes>
+    <edges>
+      <edge source="FANCG_M" target="KRAS_M" id="0" />
+      <edge source="TP53_M" target="CHD4_M" id="1" />
+      <edge source="RNF43_M" target="UBR5_M" id="2" />
+      <edge source="NOTCH1_N" target="FLCN_M" id="3" />
+      <edge source="STK11_N" target="SETDB1_M" id="4" />
+      <edge source="CNOT3_M" target="PLXNB2_M" id="5" />
+      <edge source="0" target="TP53_N" id="6" />
+      <edge source="0" target="POT1_M" id="7" />
+      <edge source="0" target="NRAS_M" id="8" />
+      <edge source="0" target="FANCG_M" id="9" />
+      <edge source="0" target="KRAS_M" id="10" />
+      <edge source="0" target="TP53_M" id="11" />
+      <edge source="0" target="CHD4_M" id="12" />
+      <edge source="0" target="RNF43_M" id="13" />
+      <edge source="0" target="UBR5_M" id="14" />
+      <edge source="0" target="NOTCH1_N" id="15" />
+      <edge source="0" target="FLCN_M" id="16" />
+      <edge source="0" target="STK11_N" id="17" />
+      <edge source="0" target="SETDB1_M" id="18" />
+      <edge source="0" target="CNOT3_M" id="19" />
+      <edge source="0" target="PLXNB2_M" id="20" />
+      <edge source="0" target="MBD1_N" id="21" />
+      <edge source="0" target="MGA_M" id="22" />
+      <edge source="0" target="STK11_M" id="23" />
+      <edge source="0" target="SMARCA4_M" id="24" />
+      <edge source="0" target="CYLD_M" id="25" />
+      <edge source="0" target="CHD8_M" id="26" />
+      <edge source="MBD1_N" target="MGA_M" id="27" />
+      <edge source="STK11_M" target="SMARCA4_M" id="28" />
+      <edge source="CYLD_M" target="CHD8_M" id="29" />
+    </edges>
+  </graph>
+</gexf>

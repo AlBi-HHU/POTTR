@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2026-02-20">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="cluster_nodes" type="string" />
+    </attributes>
+    <nodes>
+      <node id="TP53_M" label="TP53_M" />
+      <node id="PTPRC_M" label="PTPRC_M" />
+      <node id="0" label="0" />
+      <node id="KRAS_M" label="KRAS_M">
+        <attvalues>
+          <attvalue for="0" value="SMARCA4_M,STK11_N" />
+        </attvalues>
+      </node>
+      <node id="EGFR_M" label="EGFR_M" />
+      <node id="SERPINB13_M" label="SERPINB13_M" />
+      <node id="POT1_M" label="POT1_M" />
+      <node id="TP53_N" label="TP53_N" />
+      <node id="CASP8_N" label="CASP8_N" />
+      <node id="B2M_N" label="B2M_N" />
+      <node id="ARID1A_N" label="ARID1A_N" />
+      <node id="DICER1_M" label="DICER1_M" />
+      <node id="PTEN_N" label="PTEN_N" />
+      <node id="ASXL1_N" label="ASXL1_N">
+        <attvalues>
+          <attvalue for="0" value="BHMT2_M" />
+        </attvalues>
+      </node>
+      <node id="MTOR_M" label="MTOR_M" />
+      <node id="BHMT2_M" label="BHMT2_M">
+        <attvalues>
+          <attvalue for="0" value="ASXL1_N" />
+        </attvalues>
+      </node>
+      <node id="KLF6_M" label="KLF6_M" />
+      <node id="MGA_N" label="MGA_N" />
+      <node id="SMARCA4_M" label="SMARCA4_M">
+        <attvalues>
+          <attvalue for="0" value="KRAS_M,STK11_N" />
+        </attvalues>
+      </node>
+      <node id="STK11_N" label="STK11_N">
+        <attvalues>
+          <attvalue for="0" value="KRAS_M,SMARCA4_M" />
+        </attvalues>
+      </node>
+      <node id="KEAP1_M" label="KEAP1_M" />
+      <node id="CEP76_M" label="CEP76_M" />
+      <node id="NFE2L2_M" label="NFE2L2_M" />
+      <node id="ASXL2_M" label="ASXL2_M" />
+      <node id="SETD2_N" label="SETD2_N" />
+      <node id="COL5A2_M" label="COL5A2_M" />
+    </nodes>
+    <edges>
+      <edge source="TP53_M" target="PTPRC_M" id="0" />
+      <edge source="TP53_M" target="B2M_N" id="1" />
+      <edge source="TP53_M" target="MGA_N" id="2" />
+      <edge source="TP53_M" target="COL5A2_M" id="3" />
+      <edge source="PTPRC_M" target="ASXL2_M" id="4" />
+      <edge source="0" target="KRAS_M" id="5" />
+      <edge source="0" target="TP53_N" id="6" />
+      <edge source="0" target="CASP8_N" id="7" />
+      <edge source="0" target="KLF6_M" id="8" />
+      <edge source="0" target="NFE2L2_M" id="9" />
+      <edge source="0" target="SETD2_N" id="10" />
+      <edge source="0" target="TP53_M" id="11" />
+      <edge source="0" target="PTPRC_M" id="12" />
+      <edge source="0" target="EGFR_M" id="13" />
+      <edge source="0" target="SERPINB13_M" id="14" />
+      <edge source="0" target="POT1_M" id="15" />
+      <edge source="0" target="B2M_N" id="16" />
+      <edge source="0" target="ARID1A_N" id="17" />
+      <edge source="0" target="DICER1_M" id="18" />
+      <edge source="0" target="PTEN_N" id="19" />
+      <edge source="0" target="ASXL1_N" id="20" />
+      <edge source="0" target="MTOR_M" id="21" />
+      <edge source="0" target="BHMT2_M" id="22" />
+      <edge source="0" target="MGA_N" id="23" />
+      <edge source="0" target="SMARCA4_M" id="24" />
+      <edge source="0" target="STK11_N" id="25" />
+      <edge source="0" target="KEAP1_M" id="26" />
+      <edge source="0" target="CEP76_M" id="27" />
+      <edge source="0" target="ASXL2_M" id="28" />
+      <edge source="0" target="COL5A2_M" id="29" />
+      <edge source="KRAS_M" target="PTEN_N" id="30" />
+      <edge source="EGFR_M" target="TP53_M" id="31" />
+      <edge source="SERPINB13_M" target="POT1_M" id="32" />
+      <edge source="ARID1A_N" target="DICER1_M" id="33" />
+      <edge source="ASXL1_N" target="MTOR_M" id="34" />
+      <edge source="BHMT2_M" target="MTOR_M" id="35" />
+      <edge source="SMARCA4_M" target="PTEN_N" id="36" />
+      <edge source="STK11_N" target="PTEN_N" id="37" />
+      <edge source="KEAP1_M" target="CEP76_M" id="38" />
+    </edges>
+  </graph>
+</gexf>
