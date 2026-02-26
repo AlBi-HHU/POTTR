@@ -7,7 +7,8 @@ import math
 import networkx as nx
 import itertools
 from filelock import FileLock
-from create_graphs import add_attributes, get_graphs_parallel, get_graphs_single_thread
+from read_input_dags import read_multiple_graphs_per_evolution
+
 
 def print_graph(tree):
     nx.draw(tree,with_labels=True)
@@ -267,50 +268,18 @@ def compute_statistics(probs , supp_traj , n):
     return freq_traj , t_stat , t_stat_norm , avg_ , var_ , pval
 
 
-def run_stat_significancce_test(support_file, graph_file, output_file, minp='', permutation_type=0):
+def run_stat_significancce_test(support_file: str, graph_file: str, output_file: str, cores: int, minp: str='', permutation_type: int=0):
     verbose = 0
     reading_ = True
     seps = ["->-", "-/-", "-?-"]
-    graphs_list = list()
 
     # Updated by Sara
-    if graph_file.endswith('.txt'):
-        fin_graphs = open(graph_file,"r")
-        for i, line in enumerate(fin_graphs):
-            line = line.replace("\n","")
-            graph_ = load_graph(line, str(i) + '-0')
-            graphs_list.append(graph_)
-        fin_graphs.close()
-        if verbose == 1:
-            print("loaded",len(graphs_list),"graphs")
+    # out_dir will actually not be used if verbose is False
+    out_dir = output_file.replace('/significance_output.txt', '')
+    graphs_dict = read_multiple_graphs_per_evolution(path=graph_file, out=out_dir,
+                                                     parallel_processes=cores, verbose_flag=False)
+    graphs_list = [graph for id in graphs_dict for graph in graphs_dict[id]]
 
-    elif os.path.isdir(graph_file):
-        lines = []
-        line_ids = []
-        for file in glob.glob(graph_file + '/*.txt'):
-            patient_file = file.split('/')[-1]
-            # require digits for patient id "\d+"
-            patient = re.search(r'(.*\d+\d*).*\.txt', patient_file).group(1)
-            with open(file, 'r') as f:
-                for line in f:
-                    lines.append(line)
-                    line_ids.append(patient)
-
-        graphs_list = get_graphs_parallel(lines, line_ids)
-
-        # allow for graphs in gexf format
-        gexflist = glob.glob(graph_file + '/*.gexf')
-        for gexf_file in gexflist:
-            file_name = gexf_file.split('/')[-1]
-            name = re.search(r'(.*\d+\d*).*\.gexf', file_name).group(1)
-            # read in graph from gexf file
-            graph = nx.read_gexf(gexf_file)
-            # add root node and connect it to all other nodes
-            graph.add_node('0')
-            graph.add_edges_from([('0', node) for node in graph.nodes if node != '0'])
-            graph = nx.transitive_closure_dag(graph)
-            graph.name = str(name) + '-0'
-            graphs_list.append(graph)
 
     # Sara added range and readlines here
     with open(support_file,"r") as file:
