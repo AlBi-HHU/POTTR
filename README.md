@@ -1,5 +1,7 @@
 # POTTR
 
+[![DOI](https://zenodo.org/badge/1099147926.svg)](https://doi.org/10.5281/zenodo.19500695)
+
 POsets for Temporal Trajectory Resolution (POTTR) is a combinatorial method to identify maximum recurrent trajectories in biological processes described by sequences of events with a temporal ordering.
 POTTR models these processes, such as tumor formation or cell differentiation, as incomplete posets.
 A recurrent trajectory is a set of events, like mutations, that follow the same incomplete partial order across distinct incomplete posets.
