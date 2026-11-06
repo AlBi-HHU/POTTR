@@ -1,6 +1,9 @@
-# POTTR
-
 [![DOI](https://zenodo.org/badge/1099147926.svg)](https://doi.org/10.5281/zenodo.19500695)
+#
+
+<img src="hat_pottr_logo.png">
+
+#
 
 POsets for Temporal Trajectory Resolution (POTTR) is a combinatorial method to identify maximum recurrent trajectories in biological processes described by sequences of events with a temporal ordering.
 POTTR models these processes, such as tumor formation or cell differentiation, as incomplete posets.
@@ -61,9 +64,9 @@ The following arguments are available:
 | -k <k>            | --k <k>                            | Number k of incomplete posets to search for common trajectory                                                                           |
 | -rt <threshold>   | --resolution_threshold <threshold> | Optional threshold of orders a ≺ b that must be observed in the data to resolve a hidden order a ~ b to a ≺ b (default=1)               |
 | -rf               | --resolution_frequency             | Optional flag to only resolve hidden orders a ~ b in the direction of the most frequent order, i.e. either a ≺ b or b ≺ a, but not both |
-| -c <cores>        | --cores <cores>                    | Number cores / threads to use (default 1); 0 uses all available cores                                                |
+| -c <cores>        | --cores <cores>                    | Number cores / threads to use (default 1); 0 uses all available cores                                                                   |
 | -parallel         | --parallelize                      | Enable parallel processing for creating conflict graph                                                                                  |
-| -pool <pool size> | --solution-pool-size <pool size>   | Solution pool size for Gurobi to retrieve multiple solutions                                                                            |
+| -pool <pool size> | --solution-pool-size <pool size>   | Maximum number of trajectories of maximum size to report (default 1); 0 reports all                                                     |
 | -v                | --verbose                          | Increase output verbosity                                                                                                               |
 | -dots             | --draw_dots                        | Create trajectory png files (only recommended for small instances)                                                                      |
 
