@@ -61,7 +61,7 @@ The following arguments are available:
 | -k <k>            | --k <k>                            | Number k of incomplete posets to search for common trajectory                                                                           |
 | -rt <threshold>   | --resolution_threshold <threshold> | Optional threshold of orders a ≺ b that must be observed in the data to resolve a hidden order a ~ b to a ≺ b (default=1)               |
 | -rf               | --resolution_frequency             | Optional flag to only resolve hidden orders a ~ b in the direction of the most frequent order, i.e. either a ≺ b or b ≺ a, but not both |
-| -c <cores>        | --cores <cores>                    | Number cores / threads Gurobi should use; default 0, Gurobi will use all available cores                                                |
+| -c <cores>        | --cores <cores>                    | Number cores / threads to use (default 1); 0 uses all available cores                                                |
 | -parallel         | --parallelize                      | Enable parallel processing for creating conflict graph                                                                                  |
 | -pool <pool size> | --solution-pool-size <pool size>   | Solution pool size for Gurobi to retrieve multiple solutions                                                                            |
 | -v                | --verbose                          | Increase output verbosity                                                                                                               |
@@ -78,10 +78,10 @@ This you can achieve through the parameters `--resolution_threshold` and `--reso
 In the [code](code/) directory execute:
 
 ```shell
-python run_POTTR.py --dags ../Data/test_data/ --output-path ../Data/output -k 3 -v
+python run_POTTR.py --dags ../data/test_data/ --output-path ../data/output -k 3 -v
 ```
 
-### Program ouput
+### Program output
 ```
 output
 ├── converted_graphs.txt -- identified maximum recurrent trajectories and all input DAGs supporting each trajectory

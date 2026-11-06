@@ -1,5 +1,5 @@
 import argparse
-import pandas as pd
+from pandas import read_csv
 
 
 def get_parser():
@@ -13,7 +13,7 @@ def get_parser():
 
 
 def convert(input_file, dir):
-    df = pd.read_csv(input_file)
+    df = read_csv(input_file)
     output = dir + '/converted_graphs.txt'
     with open(output, 'w') as file:
         for row in df[['Support', 'Edges', 'Supporting Graphs']].iterrows():

@@ -1,74 +1,50 @@
-import os
-import itertools
-import networkx as nx
-import numpy as np
+from os import cpu_count
+from itertools import combinations
+from networkx import Graph, DiGraph, MultiGraph
+from numpy import sum
 from collections import defaultdict
-from scipy.special import comb
 from multiprocessing import Pool
 
 
+def process_graph_relations(graph: DiGraph) -> tuple[str, frozenset, set, set, set, set, set]:
+    incomparable, cluster = set(), set()
+    for node1, node2 in combinations(graph.nodes, 2):
+        if graph.has_edge(node1, node2) or graph.has_edge(node2, node1):
+            continue
+        # cluster attributes are symmetric, checking for node1 is sufficient
+        if node1 in graph.nodes[node2].get('cluster_nodes', ()):
+            cluster.add(frozenset((node1, node2)))
+        # node pair must be incomparable
+        else:
+            incomparable.add(frozenset((node1, node2)))
+
+    directed_edges = set(graph.edges)
+    reversed_edges = {(v, u) for u, v in directed_edges}
+    undirected_edges = {frozenset(e) for e in graph.edges}
+    return graph.name, frozenset(graph.nodes), directed_edges, reversed_edges, undirected_edges, incomparable, cluster
+
+
 def get_conflict_graph_for_pair(graph_pair: list):
-    # add nodes and edges from first graph
-    nodes = set(graph_pair[0].nodes)
-    union_edges = set(graph_pair[0].edges)
-    cluster_node_dict = defaultdict(set)
-    incomparable_dict = defaultdict(set)
-    for graph in graph_pair:
-        # if nodes or edges differ from first graph, they are removed from intersection
-        nodes.intersection_update(set(graph.nodes))
-        union_edges.update(set(graph.edges))
+    name1, N1, D1, R1, U1, I1, C1 = graph_pair[0]
+    name2, N2, D2, R2, U2, I2, C2 = graph_pair[1]
+    shared = N1 & N2
+    # {frozenset(e) for e in D1 & R2}: add conflicts of elements in opposite order
+    # | (U1 & I2) | (I1 & U2): add conflicts of ordered vs incomparable elements
+    # | (I1 & C2) | (C1 & I2): add conflicts of incomparable vs clustered elements
+    conflicts = {frozenset(e) for e in D1 & R2} | (U1 & I2) | (I1 & U2) | (I1 & C2) | (C1 & I2)
 
-        for node1, node2 in itertools.combinations(graph.nodes, 2):
-            if (node1, node2) not in graph.edges and (node2, node1) not in graph.edges:
-                # check if node1 and node2 are in a cluster
-                if 'cluster_nodes' in graph.nodes[node1]:
-                    if node2 in graph.nodes[node1]['cluster_nodes']:
-                        cluster_node_dict[node1].add(node2)
-                        cluster_node_dict[node2].add(node1)
-                    else:
-                        incomparable_dict[node1].add(node2)
-                        incomparable_dict[node2].add(node1)
-                else:
-                    incomparable_dict[node1].add(node2)
-                    incomparable_dict[node2].add(node1)
+    conflict_graph = Graph()
+    conflict_graph.name = ':'.join(sorted([name1, name2]))
+    conflict_graph.add_nodes_from(shared)
+    conflict_graph.add_edges_from(conflicts)
 
-    conflict_graph = nx.Graph()
-    conflict_graph.name = ':'.join(sorted([graph.name for graph in graph_pair]))
-    conflict_graph.add_nodes_from(nodes)
     potential_conflicts = defaultdict()
-    for node_pair in itertools.combinations(nodes, 2):
-        node1, node2 = node_pair
-        conflict_row = [0, 0, 0, 0]
-
-        # if node1 precedes node2 in any graph set row entry 0 to 1
-        if (node1, node2) in union_edges:
-            conflict_row[0] = 1
-        # if node2 precedes node1 in any graph set row entry 1 to 1
-        if (node2, node1) in union_edges:
-            conflict_row[1] = 1
-        # if node1 and node2 are incomparable set row entry 2 to 1
-        if node2 in incomparable_dict[node1]:
-            conflict_row[2] = 1
-        # if node1 and node2 are in the same cluster set row entry 3 to 1
-        if node2 in cluster_node_dict[node1]:
-            conflict_row[3] = 1
-
-        # add edge if conflict
-        summed_3cols = np.sum(conflict_row[:3])
-        summed_last2cols = np.sum(conflict_row[-2:])
-        if summed_3cols > 1 or summed_last2cols > 1:
-            conflict_graph.add_edge(node1, node2)
-
-        # without resolution threshold, we can resolve clusters when observing a directed edge for a node pair;
-        # however, if we only want to resolve clusters when we observe a required amount of directed edges, we
-        # keep the cluster and edge pairs as a potential conflict and add an edge between the two nodes if the
-        # threshold is not met; otherwise, no edge is added to the conflict graph
-        if conflict_row[0] and conflict_row[3]:
-            edge_graph_name = graph_pair[0].name if (node1, node2) in graph_pair[0].edges else graph_pair[1].name
-            potential_conflicts[(node1, node2)] = (conflict_graph.name, edge_graph_name)
-        if conflict_row[1] and conflict_row[3]:
-            edge_graph_name = graph_pair[0].name if (node2, node1) in graph_pair[0].edges else graph_pair[1].name
-            potential_conflicts[(node2, node1)] = (conflict_graph.name, edge_graph_name)
+    for node1, node2 in (U1 & C2):
+        edge = (node1, node2) if (node1, node2) in D1 else (node2, node1)
+        potential_conflicts[edge] = (conflict_graph.name, name1)
+    for node1, node2 in (C1 & U2):
+        edge = (node1, node2) if (node1, node2) in D2 else (node2, node1)
+        potential_conflicts[edge] = (conflict_graph.name, name2)
 
     return conflict_graph, potential_conflicts
 
@@ -94,15 +70,13 @@ def process_split(split: list):
     return conflict_graphs, potential_conflicts_dict
 
 
-def get_conflict_graphs_parallel(graph_pairs: list, verbose: bool=False, num_workers=os.cpu_count()):
+def get_conflict_graphs_parallel(graph_pairs: list, verbose: bool=False, num_workers: int=cpu_count()):
     if verbose:
         print('Create pairwise conflict graphs')
 
     # list of pairs
-    if num_workers:
-        split_size = max(1, len(graph_pairs) // num_workers)
-    else:
-        split_size = max(1, len(graph_pairs) // os.cpu_count())
+    num_workers = num_workers or cpu_count()
+    split_size = max(1, len(graph_pairs) // num_workers)
 
     # list of pairs is split into chunks
     splits = [graph_pairs[i:i + split_size] for i in range(0, len(graph_pairs), split_size)]
@@ -133,16 +107,16 @@ def get_conflict_graphs_single_thread(graph_pairs: list, verbose: bool=False):
     if verbose:
         print('Create union conflict graph')
 
-    union_graph = nx.MultiGraph()
+    union_graph = MultiGraph()
     union_edges_dict = dict()
 
     potential_conflicts_dict = dict()
     for graph_pair in graph_pairs:
         conflict_graph, potential_conflicts = get_conflict_graph_for_pair(graph_pair)
         potential_conflicts_dict = collect_potential_conflicts(potential_conflicts, potential_conflicts_dict)
-        key = frozenset(set(graph.name for graph in graph_pair))
+        key = frozenset((graph_pair[0][0], graph_pair[1][0]))
         union_edges_dict[key] = conflict_graph.edges
-        union_graph.add_edges_from(conflict_graph.edges, label=':'.join(graph.name for graph in graph_pair))
+        union_graph.add_edges_from(conflict_graph.edges, label=':'.join([graph_pair[0][0], graph_pair[1][0]]))
         union_graph.add_nodes_from(conflict_graph.nodes)
 
     return union_graph, potential_conflicts_dict
@@ -151,7 +125,7 @@ def get_conflict_graphs_single_thread(graph_pairs: list, verbose: bool=False):
 def get_union_conflict_graph(pairwise_conflict_graphs: list, verbose: bool=False):
     if verbose:
         print('Create union conflict graph parallel')
-    union_graph = nx.MultiGraph()
+    union_graph = MultiGraph()
     union_edges_dict = dict()
 
     for conflict_graph in pairwise_conflict_graphs:
@@ -163,7 +137,7 @@ def get_union_conflict_graph(pairwise_conflict_graphs: list, verbose: bool=False
     return union_graph
 
 
-def add_low_frequency_edges_union_graph(union_graph: nx.MultiGraph, potential_conflicts: dict):
+def add_low_frequency_edges_union_graph(union_graph: MultiGraph, potential_conflicts: dict):
     keys = list(potential_conflicts.keys())
     for key in keys:
         node1, node2 = key
@@ -186,7 +160,7 @@ def add_low_frequency_edges_union_graph(union_graph: nx.MultiGraph, potential_co
     return
 
 
-def add_resolution_threshold_edges(union_graph: nx.MultiGraph, potential_conflicts: dict, threshold: int):
+def add_resolution_threshold_edges(union_graph: MultiGraph, potential_conflicts: dict, threshold: int):
     keys = list(potential_conflicts.keys())
     for key in keys:
         if len(potential_conflicts[key]['edge_graph_names']) < threshold:

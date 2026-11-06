@@ -6,12 +6,21 @@ import numpy as np
 import math
 import networkx as nx
 import itertools
+import POTTR_compute_significance
 from filelock import FileLock
 from read_input_dags import read_multiple_graphs_per_evolution
 
 
 def print_graph(tree):
     nx.draw(tree,with_labels=True)
+
+
+def write_min_pvalue(file, min_pvalue):
+    with FileLock(file + ".lock"):
+        fout_ = open(file, "a")
+        fout_.write(str(min_pvalue) + "\n")
+        fout_.close()
+
 
 def load_graph(line, name):
     edges_ = line.split(" ")
@@ -32,12 +41,14 @@ def load_graph(line, name):
             #G.add_edge(nodes[0] , nodes[1], label="?")
             #G.add_edge(nodes[1] , nodes[0], label="?")
             # modifications by Sara
-            if a in G and 'cluster_nudes' in G.nodes[a]:
-                G.nodes[a]['cluster_nodes'].append(b)
+            if a in G and 'cluster_nodes' in G.nodes[a]:
+                if b not in G.nodes[a]['cluster_nodes']:
+                    G.nodes[a]['cluster_nodes'].append(b)
             else:
                 G.add_node(a, cluster_nodes=[b])
-            if b in G and 'cluster_nudes' in G.nodes[b]:
-                G.nodes[b]['cluster_nodes'].append(a)
+            if b in G and 'cluster_nodes' in G.nodes[b]:
+                if a not in G.nodes[b]['cluster_nodes']:
+                    G.nodes[b]['cluster_nodes'].append(a)
             else:
                 G.add_node(b, cluster_nodes=[a])
     # Sara: changed "g" to "0"
@@ -114,7 +125,6 @@ def compute_pvalue_fast(probs , supp_traj , debug_pval=0):
     return pval
 
 def compute_pvalue_exact(probs , supp_traj , debug_pval=0):
-
     # consider only non-zero entries
     probs_ = []
     for p_ in probs:
@@ -268,18 +278,15 @@ def compute_statistics(probs , supp_traj , n):
     return freq_traj , t_stat , t_stat_norm , avg_ , var_ , pval
 
 
-def run_stat_significancce_test(support_file: str, graph_file: str, output_file: str, cores: int, minp: str='', permutation_type: int=0):
+def run_stat_significancce_test(support_file: str, graphs_dict: dict, output_file: str, minp: str=''):
     verbose = 0
     reading_ = True
     seps = ["->-", "-/-", "-?-"]
 
     # Updated by Sara
-    # out_dir will actually not be used if verbose is False
-    out_dir = output_file.replace('/significance_output.txt', '')
-    graphs_dict = read_multiple_graphs_per_evolution(path=graph_file, out=out_dir,
-                                                     parallel_processes=cores, verbose_flag=False)
-    graphs_list = [graph for id in graphs_dict for graph in graphs_dict[id]]
-
+    # out_dir will actually not be used
+    # out_dir = output_file.replace('/significance_output.txt', '')
+    # graphs_list = [graph for id in graphs_dict for graph in graphs_dict[id]]
 
     # Sara added range and readlines here
     with open(support_file,"r") as file:
@@ -305,69 +312,69 @@ def run_stat_significancce_test(support_file: str, graph_file: str, output_file:
 
     min_pval = 1.
     fout_ = open(output_file,"w")
-    fout_.write("edges_traj;traj_occ_list;traj_alt_occ_list;traj_supp;traj_freq;traj_exp_ind;traj_var_ind;t_stat_ind;t_stat_norm_ind;pval_ind;traj_exp_perm;traj_var_perm;t_stat_perm;t_stat_norm_perm;pval_perm;traj_exp_topol;traj_var_topol;t_stat_topol;t_stat_norm_topol;pval_topol\n")
+    fout_.write("edges_traj;traj_occ_list;traj_alt_occ_list;traj_supp;traj_freq;traj_exp_ind;traj_var_ind;t_stat_ind;t_stat_norm_ind;pval_ind;traj_exp_perm;traj_var_perm;t_stat_perm;t_stat_norm_perm;pval_perm;traj_POTTR;traj_var_POTTR;t_stat_POTTR;t_stat_norm_POTTR;pval_POTTR;resolution_evidence;support_score;\n")
     for (trajectory , supp_traj , trans_ids) in trajectories_list:
-        trans_id = 0
-        trans_ids_allnodes = []
         id_index_map = {}
-        for graph_ in graphs_list:
-            if set(trajectory.nodes).issubset(set(graph_.nodes)):
-                # changes made by Sara
-                # trans_ids_allnodes.append(trans_id)
-                trans_ids_allnodes.append(graph_.name)
-                id_index_map[graph_.name] = trans_id
-            trans_id += 1
+        for patient in graphs_dict:
+            for i, graph_ in enumerate(graphs_dict[patient]):
+                if set(trajectory.nodes).issubset(set(graph_.nodes)):
+                    # Changes made by Sara
+                    if patient in id_index_map:
+                        id_index_map[patient].append(i)
+                    else:
+                        id_index_map[patient] = [i]
 
         if verbose == 1:
-            print(supp_traj,len(trans_ids_allnodes),trajectory.edges)
-        #print("  ",trans_ids_allnodes)
-        #print("  ",trans_ids)
+            print(supp_traj,len(id_index_map.keys()),trajectory.edges)
 
         probs_ind = []
         probs_perm = []
         automorph_traj = compute_num_automorph(trajectory)
-        for graph_id in trans_ids_allnodes:
-            # Modifications by Sara to account for new orders
-            index = id_index_map[graph_id]
-            if str(graph_id) in trans_ids and (not set(trajectory.edges).issubset(set(graphs_list[index].edges))):
-                ordered_graph = graphs_list[index].copy()
-                for edge in trajectory.edges:
-                    if edge not in ordered_graph.edges:
-                        ordered_graph.add_edge(edge[0], edge[1])
-                        ordered_graph = nx.transitive_closure_dag(ordered_graph)
-                prob_graph_indip, prob_graph_perm = compute_prob(trajectory, ordered_graph, automorph_traj)
-                print(prob_graph_indip, prob_graph_perm)
-            else:
-                prob_graph_indip , prob_graph_perm = compute_prob(trajectory, graphs_list[index], automorph_traj)
-            probs_ind.append(prob_graph_indip)
-            probs_perm.append(prob_graph_perm)
-        # third test: look at all trees
-        n = float(len(graphs_list))
-        if permutation_type >= 2:
-            prob_topologies = 0.
-            for graph_ in graphs_list:
-                prob_graph_indip , prob_graph_perm = compute_prob(trajectory , graph_ , automorph_traj)
-                prob_topologies += prob_graph_indip/n
-                #print("prob_graph_indip",prob_graph_indip)
-            probs_topologies = [prob_topologies for graph_id in trans_ids_allnodes]
+        # Modifications by Sara to account for new orders and multiple trees per patient
+        for patient_id, indices in id_index_map.items():
+            patient_probs_ind = []
+            patient_probs_perm = []
+            for index in indices:
+                graph = graphs_dict[patient_id][index]
+                if str(graph.name) in trans_ids and (not set(trajectory.edges).issubset(set(graph.edges))):
+                    ordered_graph = graph.copy()
+                    for edge in trajectory.edges:
+                        if edge not in ordered_graph.edges:
+                            ordered_graph.add_edge(edge[0], edge[1])
+                            ordered_graph = nx.transitive_closure_dag(ordered_graph)
+                    prob_graph_indip, prob_graph_perm = compute_prob(trajectory, ordered_graph, automorph_traj)
+                else:
+                    prob_graph_indip , prob_graph_perm = compute_prob(trajectory, graph, automorph_traj)
+                patient_probs_ind.append(prob_graph_indip)
+                patient_probs_perm.append(prob_graph_perm)
+            # Sara: Average over probablities computed per patient to not treat patient trees independently
+            patient_avg_probs_ind = sum(patient_probs_ind) / len(patient_probs_ind)
+            patient_avg_probs_perm = sum(patient_probs_perm) / len(patient_probs_perm)
+            probs_ind.append(patient_avg_probs_ind)
+            probs_perm.append(patient_avg_probs_perm)
 
+        n = len(graphs_dict.keys())
         # compute all pvalues
         freq_traj , t_stat_ind , t_stat_ind_norm , avg_ind , var_ind , pval_indip = compute_statistics(probs_ind , supp_traj , n)
         freq_traj , t_stat_perm , t_stat_perm_norm , avg_perm , var_perm , pval_perm = compute_statistics(probs_perm , supp_traj , n)
-        if permutation_type >= 2:
-            freq_traj , t_stat_topol , t_stat_topol_norm , avg_topol , var_topol , pval_topol = compute_statistics(probs_topologies , supp_traj , n)
-        #print(probs)
-        #print(np.array(probs).mean())
+
+        # Changes made by Sara
+        # add POTTR statistical test, based on MASTRO's test, returns probability for current trajectory
+        per_patient_probs, n_POTTR, candidate_graphs = POTTR_compute_significance.compute_stat_significance_POTTR(trajectory, graphs_dict)
+        freq_traj_POTTR, t_stat_POTTR, t_stat_norm_POTTR, avg_POTTR, var_POTTR, pval_POTTR = compute_statistics(per_patient_probs, supp_traj, n_POTTR)
+        #print('Freq MASTRO', freq_traj, 'Freq POTTR', freq_traj_POTTR, 'Supp mastro', supp_traj, 'supp pottr', supp_traj_POTTR)
+        #print('n MASTRO', n, 'n POTTR', n)
+        # compute the probabilities per patient that a random order of the patient's clusters fits the trajectory
+        per_patient_support_probs, true_support, edge_support = POTTR_compute_significance.compute_support_probs(trajectory, graphs_dict)
+        # evidence score is 1 if all patients fit the trajectory and smaller the more orders rely on resolved clusters
+        evidence_support = sum(per_patient_support_probs) / true_support
 
         if verbose == 1:
             print("obs freq",freq_traj, "exp" , avg_ind ,"var", var_ind ,"t-stat", t_stat_ind ,"t-stat-norm", t_stat_ind_norm,"pval", pval_indip )
 
-        min_pval_cand = pval_indip
-        if permutation_type == 1:
-            min_pval_cand = pval_perm
+        min_pval_cand = pval_POTTR
         if min_pval_cand < min_pval:
             min_pval = min(min_pval,min_pval_cand)
-            min_traj = (trajectory , supp_traj , trans_ids)
 
         str_to_output = "["
         edge_id = 0
@@ -378,7 +385,7 @@ def run_stat_significancce_test(support_file: str, graph_file: str, output_file:
             edge_id += 1
         str_to_output = str_to_output+"];"
         str_to_output = str_to_output+str(trans_ids)+";"
-        str_to_output = str_to_output+str(trans_ids_allnodes)+";"
+        str_to_output = str_to_output+str(candidate_graphs)+";"
         str_to_output = str_to_output+str(supp_traj)+";"
         str_to_output = str_to_output+str(freq_traj)+";"
         # independent test
@@ -393,23 +400,22 @@ def run_stat_significancce_test(support_file: str, graph_file: str, output_file:
         str_to_output = str_to_output+str(t_stat_perm)+";"
         str_to_output = str_to_output+str(t_stat_perm_norm)+";"
         str_to_output = str_to_output+str(pval_perm)+";"
-        # non-fixed topologies test
-        if permutation_type >= 2:
-            str_to_output = str_to_output+str(avg_topol)+";"
-            str_to_output = str_to_output+str(var_topol)+";"
-            str_to_output = str_to_output+str(t_stat_topol)+";"
-            str_to_output = str_to_output+str(t_stat_topol_norm)+";"
-            str_to_output = str_to_output+str(pval_topol)
+        # POTTR test
+        str_to_output = str_to_output + str(avg_POTTR) + ";"
+        str_to_output = str_to_output + str(var_POTTR) + ";"
+        str_to_output = str_to_output + str(t_stat_POTTR) + ";"
+        str_to_output = str_to_output + str(t_stat_norm_POTTR) + ";"
+        str_to_output = str_to_output + str(pval_POTTR) + ";"
+        str_to_output = str_to_output + str(evidence_support) + ";"
+        str_to_output = str_to_output + str(edge_support) + ";"
         str_to_output = str_to_output+"\n"
         fout_.write(str_to_output)
 
     fout_.close()
 
-    print("min pvalue",min_pval)
-    # print(min_traj[0].edges,min_traj[1],min_traj[2])
+    if verbose:
+        print("min pvalue",min_pval)
 
     if minp:
-        with FileLock(minp+".lock"):
-            fout_ = open(minp,"a")
-            fout_.write(str(min_pval)+"\n")
-            fout_.close()
+        write_min_pvalue(minp, min_pval)
+

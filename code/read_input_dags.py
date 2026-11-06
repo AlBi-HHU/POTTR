@@ -8,7 +8,7 @@ import re
 
 import pandas as pd
 import networkx as nx
-from create_graphs import get_graphs_parallel, get_graphs_single_thread
+from create_graphs import get_graphs_parallel
 
 # ---------------------------------------------------------------------------- #
 #                               GLOBAL VARIABLES                               #

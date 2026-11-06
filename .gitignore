@@ -2,7 +2,7 @@
 ._*
 
 .idea/
-Code/**/__pycache__
-Data/output/
+code/**/__pycache__
+data/output/
 **/*.sol
 **/venv*

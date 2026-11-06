@@ -10,17 +10,59 @@ from gurobipy import GRB
 # ---------------------------------------------------------------------------- #
 
 
-def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_graphs: dict, k: int, cores: int, solution_pool_size: int=5000, verbose: bool=False):
+def get_max_support_graphs(node_set: frozenset, union_conflict_graph: nx.MultiGraph, input_graphs: dict):
+    """
+    For a fixed trajectory node set, select the maximum number of input graphs that contain all trajectory nodes and
+    have no conflict among the trajectory nodes. At most one graph per patient, as graphs of the same patient are not
+    compared in the conflict graph.
+    """
+    s = gp.Model('support')
+    s.setParam('OutputFlag', 0)
+
+    graph_vars = {g.name: s.addVar(vtype=GRB.BINARY, name=g.name)
+                  for patient in input_graphs for g in input_graphs[patient] if node_set.issubset(g.nodes)}
+
+    for patient in input_graphs:
+        patient_vars = [graph_vars[g.name] for g in input_graphs[patient] if g.name in graph_vars]
+        if len(patient_vars) > 1:
+            s.addConstr(gp.quicksum(patient_vars) <= 1, 'Select at most one graph per patient')
+
+    # trajectory nodes are fixed, so every conflict edge among them forbids selecting both of its graphs
+    for _, _, label in union_conflict_graph.subgraph(node_set).edges(data='label'):
+        g1, g2 = label.split(':')
+        if g1 in graph_vars and g2 in graph_vars:
+            s.addConstr(graph_vars[g1] + graph_vars[g2] <= 1, 'Conflict between graphs ' + g1 + ' ' + g2)
+
+    s.setObjective(gp.quicksum(graph_vars.values()), GRB.MAXIMIZE)
+    s.optimize()
+
+    return [g for patient in input_graphs for g in input_graphs[patient]
+            if g.name in graph_vars and graph_vars[g.name].X > 0.5]
+
+
+def enumerate_max_trajectories(model, where):
+    """
+    Gurobi callback: record each new trajectory node set and exclude it with a lazy constraint on the node variables,
+    which excludes all graph combinations leading to the same node set.
+    """
+    if where != GRB.Callback.MIPSOL:
+        return
+    values = model.cbGetSolution(model._node_vars)
+    node_set = frozenset(n for n, v in zip(model._node_names, values) if v > 0.5)
+    if node_set not in model._found:
+        model._found.append(node_set)
+    model.cbLazy(gp.quicksum(model._nodes[n] for n in node_set) <= len(node_set) - 1)
+    # 0 searches for all trajectories until no feasible solution is left
+    if model._max_trajectories and len(model._found) >= model._max_trajectories:
+        model.terminate()
+
+
+def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_graphs: dict, k: int, cores: int, solution_pool_size: int=1, verbose: bool=False):
     m = gp.Model('POTTR')
     if cores > 0:
         m.setParam('Threads', cores)
     m.setParam('OutputFlag', verbose)
     m.setParam('Seed', 42)
-
-    if solution_pool_size > 0:
-        m.setParam('PoolSearchMode', 2)  # Search for alternative optimal solutions
-        m.setParam('PoolGap', 0.00001)
-        m.setParam('PoolSolutions', solution_pool_size)
 
     # define variables
     nodes = gp.tupledict()
@@ -45,15 +87,17 @@ def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_grap
 
     for edge in edges:
         node_names, graph_names = edge.split(';')
-        # if both graphs of a conflict edge are selected, edge must be active
         g1, g2 = graph_names.split(':')
         p1, _ = g1.split('-')
         p2, _ = g2.split('-')
-        m.addConstr(edges[edge] >= graphs[p1][g1] + graphs[p2][g2] - 1,
-                    'Activate edge ' + edge + ' for graphs ' + g1 + ' ' + g2)
-        # independent set constraint
         a, b = node_names.split('->-')
-        m.addConstr(nodes[a] + nodes[b] <= 2 - edges[edge], 'Forbidden to include both nodes ' + a + ' ' + b)
+        # if both graphs of a conflict edge are selected, edge must be active
+        # m.addConstr(edges[edge] >= graphs[p1][g1] + graphs[p2][g2] - 1, 'Activate edge ' + edge + ' for graphs ' + g1 + ' ' + g2)
+        # independent set constraint
+        # m.addConstr(nodes[a] + nodes[b] <= 2 - edges[edge], 'Forbidden to include both nodes ' + a + ' ' + b)
+        # combined to one constraint:
+        m.addConstr(nodes[a] + nodes[b] <= 2 - (graphs[p1][g1] + graphs[p2][g2] - 1),
+                    'Forbidden to include both nodes ' + a + ' ' + b + ' if graphs ' + g1 + ' ' + g2 + ' are selected')
 
     for patient in input_graphs:
         # in case of multiple graphs per patient, we ensure that at most one can be selected per patient
@@ -70,21 +114,34 @@ def find_max_k_common_trajectory(union_conflict_graph: nx.MultiGraph, input_grap
 
     m.optimize()
 
-    max_size = int(m.ObjVal)
-    print('Size of a maximum trajectory for this instance is ', max_size)
-
     node_selection = []
     graph_selection = []
-    if m.Status == GRB.OPTIMAL:
-        for i in range(m.SolCount):
-            m.setParam('SolutionNumber', i)
-            if int(m.PoolObjVal) == max_size:
-                solution_nodes = sorted([n for n in nodes if nodes[n].Xn > 0.5])
-                solution_graphs = []
-                for patient in input_graphs:
-                    solution_graphs.extend([g for g in input_graphs[patient] if graphs[patient][g.name].Xn > 0.5])
-                if solution_nodes not in node_selection:
-                    node_selection.append(solution_nodes)
-                    graph_selection.append(solution_graphs)
+    if m.Status != GRB.OPTIMAL:
+        return node_selection, graph_selection
+
+    max_size = round(m.ObjVal)
+    print('Size of a maximum trajectory for this instance is ', max_size - 1) # report size without root node
+    first_node_set = frozenset(n for n in nodes if nodes[n].X > 0.5)
+    found = [first_node_set]
+
+    if solution_pool_size == 0 or solution_pool_size > 1:
+        # search further trajectories of maximum size, each node set is reported only once
+        m.addConstr(gp.quicksum(nodes) == max_size, 'Trajectory of maximum size')
+        m.addConstr(gp.quicksum(nodes[n] for n in first_node_set) <= max_size - 1, 'Exclude first trajectory')
+        m.setParam('LazyConstraints', 1)
+        m._nodes = nodes
+        m._node_names, m._node_vars = list(nodes.keys()), list(nodes.values())
+        m._found = found
+        m._max_trajectories = solution_pool_size
+        # ends infeasible once all trajectories of maximum size are excluded
+        m.optimize(enumerate_max_trajectories)
+        if m.Status == GRB.INFEASIBLE:
+            print('No further trajectories of maximum size exist (the infeasible model above is expected)')
+
+    print('Number of trajectories found:', len(found), '| maximum trajectory size (objective value):', max_size - 1) # report size without root node
+
+    for node_set in found:
+        node_selection.append(sorted(node_set))
+        graph_selection.append(get_max_support_graphs(node_set, union_conflict_graph, input_graphs))
 
     return node_selection, graph_selection

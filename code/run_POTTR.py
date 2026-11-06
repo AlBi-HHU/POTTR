@@ -4,13 +4,19 @@
 # ---------------------------------------------------------------------------- #
 import os
 import argparse
-import itertools
 import POTTR
 import compute_support
 import convert_to_mastro_format
-import networkx as nx
+from networkx import (is_directed_acyclic_graph,
+                      transitive_reduction,
+                      relabel_nodes,
+                      write_gexf,
+                      drawing,
+                      DiGraph)
+from itertools import combinations, product
+from collections import defaultdict
 from read_input_dags import read_multiple_graphs_per_evolution
-from create_graphs import add_attributes, get_graphs_parallel, get_graphs_single_thread
+from create_graphs import add_attributes, filter_graphs
 from compute_conflict_graph import *
 from MASTRO_significance_test import compute_significance
 from draw_trajectory import draw_trajectory_graph
@@ -35,15 +41,17 @@ def get_parser():
     parser.add_argument('--k', '-k', required=True, dest='k', type=int,
                         help='Number k of incomplete posets to search for common trajectory')
     parser.add_argument('--resolution_threshold', '-rt', dest='resolution_threshold', type=int,
-                        help='Number of edges required to resolve a cluster')
+                        help='Number of edges required to resolve a cluster (optional)')
     parser.add_argument('--resolution_frequency', '-rf', action='store_true',
-                        help='Only allow resolution in the direction of the the most frequent edge for a cluster node pair')
+                        help='Only allow resolution in the direction of the the most frequent edge for a cluster node pair (optional)')
     parser.add_argument('--cores', '-c', dest='cores', type=int, default=1,
-                        help='Number cores / threads Gurobi should use; default 0, Gurobi will use all available cores')
+                        help='Number cores / threads to use (default 1); 0 uses all available cores')
     parser.add_argument('--parallelize', '-parallel', action='store_true',
                         help='Enable parallel processing')
-    parser.add_argument('--solution-pool-size', '-pool', default=0, dest='pool_size', type=int,
-                        help='Solution pool size for Gurobi to retrieve multiple solutions')
+    parser.add_argument('--solution-pool-size', '-pool', dest='pool_size', type=int, default=1,
+                        help='Maximum number of trajectories of maximum size to report (default 1); 0 reports all')
+    parser.add_argument('--minp', '-minp', dest='minp', type=str, default='',
+                        help="Absolute path to file where to append minimum pvalue (optional)")
     parser.add_argument('--verbose', '-v', action='store_true',
                         help='Increase output verbosity')
     parser.add_argument('--draw_dots', '-dots', action='store_true',
@@ -56,16 +64,6 @@ def log(string):
         print(string)
 
 
-def label_match(G1, G2):
-    if set(G1.nodes) != set(G2.nodes):
-        return False
-
-    if set(G1.edges) != set(G2.edges):
-        return False
-
-    return True
-
-
 def filter_duplicates(trajectories):
     """
     ILP might return the same trajectory multiple times but with a different graph selection. Filter out duplicated
@@ -73,25 +71,22 @@ def filter_duplicates(trajectories):
     This might cause a combination of trajectories found in multiple trees of the same patient.
     """
 
-    indices_to_remove = []
-    for i, G in enumerate(trajectories):
-        for j in range(i+1, len(trajectories)):
-            # check if graph j is the same as G, if so, remove it
-            if nx.is_isomorphic(G, trajectories[j]) and label_match(G, trajectories[j]):
-                indices_to_remove.append(j)
-                G_name = G.graph.get('name').split(':')
-                traj_name = trajectories[j].graph.get('name').split(':')
-                new_name = list(set(G_name) | set(traj_name))
-                new_name = ':'.join(new_name)
-                G.name = new_name
+    unique_trajectories = dict()
+    n_duplicates = 0
+    for T in trajectories:
+        key = compute_support.trajectory_key(T)
+        if key in unique_trajectories:
+            n_duplicates += 1
+            traj = unique_trajectories[key]
+            traj_name = traj.graph.get('name').split(':')
+            T_name = T.graph.get('name').split(':')
+            new_name = ':'.join(list(set(traj_name) | set(T_name)))
+            traj.name = new_name
+        else:
+            unique_trajectories[key] = T
 
-    print('Number of duplicates', len(indices_to_remove))
-    unique_trajectories = []
-    for i, tra in enumerate(trajectories):
-        if i not in indices_to_remove:
-            unique_trajectories.append(tra)
-
-    return unique_trajectories
+    log('Number of duplicates ' + str(n_duplicates))
+    return list(unique_trajectories.values())
 
 
 def main():
@@ -101,6 +96,9 @@ def main():
 
     global parallel
     parallel = args.parallelize
+
+    k = args.k
+    cores = args.cores or os.cpu_count()
 
     directory = os.path.expanduser(args.path + '/')
     os.makedirs(directory, exist_ok=True)
@@ -112,23 +110,32 @@ def main():
     log(f'Reading dags {dags}')
 
     # graphs will be transformed into a dict of graphs
-    graphs_dict = read_multiple_graphs_per_evolution(path=dags, out=directory,
-                                                     parallel_processes=args.cores, verbose_flag=verbose)
+    input_graphs_dict = read_multiple_graphs_per_evolution(path=dags, out=directory,
+                                                           parallel_processes=cores, verbose_flag=verbose)
+
+    if len(input_graphs_dict) < k:
+        print(f'Value of k is larger than number of patients, set k to maximum value of {len(input_graphs_dict)}')
+        k = len(input_graphs_dict)
+
+    # remove nodes that are less frequent than k as they will not be part of the solution
+    reduced_graphs_dict = filter_graphs(input_graphs_dict, k)
+    relations_dict = dict()
+    for patient, graphs in reduced_graphs_dict.items():
+        relations_dict[patient] = []
+        for graph in graphs:
+            relation_list = process_graph_relations(graph)
+            relations_dict[patient].append(relation_list)
+
     # since graphs is a dictionary, the graph pairs for the conflict computation must be computed from the dict values
     graph_pairs = []
-    for p1, p2 in itertools.combinations(graphs_dict.keys(), 2):
-        for g1, g2 in itertools.product(graphs_dict[p1], graphs_dict[p2]):
+    for p1, p2 in combinations(relations_dict.keys(), 2):
+        for g1, g2 in product(relations_dict[p1], relations_dict[p2]):
             graph_pairs.append([g1, g2])
-
-    k = args.k
-    if len(graphs_dict) < k:
-        print(f'Value of k is larger than number of patients, set k to maximum value of {len(graphs_dict)}')
-        k = len(graphs_dict)
 
     # create union conflict graph
     if parallel:
         log('Create pairwise conflict graphs parallel')
-        pairwise_conflict_graphs, potential_conflicts = get_conflict_graphs_parallel(graph_pairs=graph_pairs, verbose=verbose, num_workers=args.cores)
+        pairwise_conflict_graphs, potential_conflicts = get_conflict_graphs_parallel(graph_pairs=graph_pairs, verbose=verbose, num_workers=cores)
         log('Compute union conflict graph')
         union_graph = get_union_conflict_graph(pairwise_conflict_graphs=pairwise_conflict_graphs, verbose=verbose)
     else:
@@ -143,9 +150,9 @@ def main():
 
     log('Start ILP')
     node_selection_list, graph_selection_list = POTTR.find_max_k_common_trajectory(union_conflict_graph=union_graph,
-                                                                                   input_graphs=graphs_dict,
+                                                                                   input_graphs=input_graphs_dict,
                                                                                    k=k,
-                                                                                   cores=args.cores,
+                                                                                   cores=cores,
                                                                                    solution_pool_size=args.pool_size,
                                                                                    verbose=verbose)
 
@@ -156,7 +163,7 @@ def main():
     trajectories = []
     for i, graph_list in enumerate(graph_selection_list):
         log(f'Solution {i+1} of {len(graph_selection_list)}')
-        max_trajectory = nx.DiGraph()
+        max_trajectory = DiGraph()
         max_trajectory.add_node('0')
         names = []
         all_edges = set()
@@ -174,50 +181,49 @@ def main():
             if len(all_edges) > 0:
                 symm_diff = all_edges ^ set(edges)
                 if len(symm_diff) > 0:
-                    is_new_order = symm_diff
+                    is_new_order.update(symm_diff)
             all_edges.update(set(edges))
 
             if args.draw_dots:
-                dot = nx.drawing.nx_pydot.to_pydot(graph)
+                dot = drawing.nx_pydot.to_pydot(graph)
                 dot.write_png(directory + 'input_graph_' + graph.name + '.png')
 
         if len(is_new_order) > 0:
             print('Trajectory introduces order!', names, is_new_order)
             with open(os.path.join(directory, 'resolution.txt'), 'a') as f:
-                f.write(graph.name + ' new order ' + ','.join('%s %s' % x for x in list(is_new_order)))
+                f.write(';'.join(names) + ' new order ' + ','.join('%s %s' % x for x in list(is_new_order)) + '\n')
 
         if len(max_trajectory.nodes) != len(node_selection_list[i]):
             print('Error: Nodes added to max trajectory that were not selected!')
             exit(-1)
 
-        if nx.is_directed_acyclic_graph(max_trajectory):
-            max_trajectory = nx.transitive_reduction(max_trajectory)
+        cluster_nodes = defaultdict(set)
+        for a, b in combinations(max_trajectory.nodes, 2):
+            if max_trajectory.has_edge(a, b) or max_trajectory.has_edge(b, a):
+                continue
+            if any(b in g.nodes[a].get('cluster_nodes', ()) for g in graph_list):
+                cluster_nodes[a].add(b)
+                cluster_nodes[b].add(a)
+
+        if is_directed_acyclic_graph(max_trajectory):
+            max_trajectory = transitive_reduction(max_trajectory)
+            max_trajectory.add_nodes_from((n, {'cluster_nodes': members}) for n, members in cluster_nodes.items())
             max_trajectory.name = ':'.join(names)
         else:
             print('Max Trajectory is no DAG!')
             print(names)
             print(max_trajectory.edges)
             for graph in graph_list:
-                if not nx.is_directed_acyclic_graph(graph):
+                if not is_directed_acyclic_graph(graph):
                     print('Selected input graph is no DAG!', graph.name)
             exit(-1)
-
-        for node_pair in list(itertools.combinations(max_trajectory.nodes, 2)):
-            a, b = node_pair
-            if a in max_trajectory.neighbors(b) or b in max_trajectory.neighbors(a):
-                continue
-            for g in graph_list:
-                if 'cluster_nodes' in g.nodes[a]:
-                    if b in g.nodes[a]['cluster_nodes']:
-                        add_attributes(a, b, max_trajectory)
-                        add_attributes(b, a, max_trajectory)
 
         trajectories.append(max_trajectory)
 
     # filter out duplicate results reported by ILP
     trajectories = filter_duplicates(trajectories)
     log('Compute support')
-    support_file = compute_support.compute_support(trajectories, graphs_dict, directory)
+    support_file = compute_support.compute_support(trajectories, input_graphs_dict, directory)
     log('Convert to output format')
     converted_file = convert_to_mastro_format.convert(support_file, directory)
 
@@ -226,30 +232,41 @@ def main():
     with open(os.path.join(gexf_directory, 'traj_graphs_names.csv'), 'w') as f:
         f.write('trajectory,input graphs\n')
         for i, traj in enumerate(trajectories):
-            traj_copy = nx.DiGraph()
+            traj_copy = DiGraph()
             traj_copy.add_edges_from(traj.edges())
             traj_copy.add_nodes_from(traj.nodes())
             mapping = {n: ','.join(sorted(list(v) + [n])) for n, attrs in traj.nodes(data=True) for v in attrs.values()}
-            traj_copy = nx.relabel_nodes(traj_copy, mapping)
+            traj_copy = relabel_nodes(traj_copy, mapping)
             # must convert node attributes, which are sets, to lists to write gexf
             # nx.set_node_attributes(traj, {n: {k: list(v) for k, v in attr.items()} for n, attr in traj.nodes(data=True)})
-            nx.write_gexf(traj_copy, gexf_directory + str(i) + '_trajectory.gexf')
+            write_gexf(traj_copy, gexf_directory + str(i) + '_trajectory.gexf')
             f.write(str(i) + ',' + traj.name + '\n')
 
     if args.draw_dots:
         log('Draw trajectories')
         draw_trajectory_graph(converted_file, directory)
 
-    # run MASTRO significance test if trajectories are small enough, e.g. fewer than 10 nodes
+    out_minp = ''
+    if args.minp:
+        out_minp = os.path.abspath(os.path.join(args.minp, 'minp_values.txt'))
+        os.makedirs(args.minp, exist_ok=True)
+
+    if not trajectories or len(trajectories[0].nodes) <= 1:
+        print('No trajectory found!')
+        if args.minp:
+            compute_significance.write_min_pvalue(out_minp, 1)
+        return 0
+
+    # run POTTR & MASTRO significance test if trajectories are small enough, e.g. fewer than 10 nodes
     if len(trajectories[0].nodes) < 13:
         log('Run significance test')
         results_significance = os.path.join(directory, 'significance_output.txt')
-        compute_significance.run_stat_significancce_test(support_file=converted_file, graph_file=dags,
-                                                         output_file=results_significance, cores=args.cores)
+        compute_significance.run_stat_significancce_test(support_file=converted_file, graphs_dict=input_graphs_dict,
+                                                         output_file=results_significance, minp=out_minp)
     else:
         print('Trajectory size is too large to execute the significance test.')
 
-    trajectory_size = len(list(trajectories[0].nodes))
+    trajectory_size = len(list(trajectories[0].nodes)) - 1
     return trajectory_size
 
 
